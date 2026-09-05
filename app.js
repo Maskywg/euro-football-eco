@@ -1710,7 +1710,7 @@ function generateFallbackSquad(club) {
 }
 
 /* ==========================================================================
-   Interactive 3D Football Particle World Animation
+   Interactive 3D Soccer Player Shooting Animation (3D Striker & Goal)
    ========================================================================== */
 function init3DBackground() {
   const canvas = document.getElementById('bg-3d-canvas');
@@ -1726,181 +1726,578 @@ function init3DBackground() {
     height = canvas.height = window.innerHeight;
   });
 
-  // 3D Sphere geometry (Football cage / celestial soccer network)
-  const NUM_POINTS = 160;
-  const SPHERE_RADIUS = Math.min(width, height) * 0.42;
-  const points = [];
-
-  // Generate fibonacci sphere points
-  const phi = Math.PI * (3 - Math.sqrt(5)); // Golden ratio angle
-  for (let i = 0; i < NUM_POINTS; i++) {
-    const y = 1 - (i / (NUM_POINTS - 1)) * 2; // y goes from 1 to -1
-    const radiusAtY = Math.sqrt(1 - y * y);
-    const theta = phi * i;
-
-    const x = Math.cos(theta) * radiusAtY;
-    const z = Math.sin(theta) * radiusAtY;
-
-    points.push({
-      ox: x * SPHERE_RADIUS,
-      oy: y * SPHERE_RADIUS,
-      oz: z * SPHERE_RADIUS,
-      x: 0,
-      y: 0,
-      z: 0,
-      size: Math.random() * 2 + 2,
-      pulse: Math.random() * Math.PI,
-      isStar: i % 12 === 0
-    });
-  }
-
-  // Floating background ambient particles
-  const AMBIENT_COUNT = 65;
-  const ambientParticles = [];
-  for (let i = 0; i < AMBIENT_COUNT; i++) {
-    ambientParticles.push({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      z: Math.random() * 400 - 200,
-      vx: (Math.random() - 0.5) * 0.4,
-      vy: (Math.random() - 0.5) * 0.4,
-      size: Math.random() * 2.5 + 1,
-      alpha: Math.random() * 0.6 + 0.2
-    });
-  }
-
-  // Camera & Rotation variables
-  let rotX = 0;
-  let rotY = 0;
-  let targetRotX = 0;
-  let targetRotY = 0;
-  let mouseX = 0;
-  let mouseY = 0;
+  // Mouse interaction for camera tilt / parallax
+  let mouseX = 0, mouseY = 0;
+  let camRotX = 0.12, camRotY = -0.28;
+  let targetCamRotX = 0.12, targetCamRotY = -0.28;
 
   window.addEventListener('mousemove', (e) => {
     mouseX = (e.clientX - width / 2) / (width / 2);
     mouseY = (e.clientY - height / 2) / (height / 2);
-    targetRotX = mouseY * 0.5;
-    targetRotY = mouseX * 0.6;
+    targetCamRotX = 0.12 + mouseY * 0.2;
+    targetCamRotY = -0.28 + mouseX * 0.35;
   });
 
-  // Main 3D animation loop
-  let frame = 0;
+  // Ambient particles & turf grass sparkles
+  const SPARKLE_COUNT = 60;
+  const sparkles = [];
+  for (let i = 0; i < SPARKLE_COUNT; i++) {
+    sparkles.push({
+      x: (Math.random() - 0.5) * 1400,
+      y: Math.random() * 250 - 50,
+      z: (Math.random() - 0.5) * 1200,
+      vx: (Math.random() - 0.5) * 0.6,
+      vz: (Math.random() - 0.5) * 0.6,
+      size: Math.random() * 2 + 1,
+      alpha: Math.random() * 0.5 + 0.2
+    });
+  }
+
+  // 3D Goal Geometry
+  const goalWidth = 340;
+  const goalHeight = 160;
+  const goalDepth = 110;
+  const goalX = 380;
+  const goalY = 80;
+  const goalZ = 120;
+
+  // 3D Pitch lines (Penalty box, spot, goal line)
+  const pitchLines = [
+    // Goal line
+    { p1: [goalX, goalY + goalHeight, goalZ - 180], p2: [goalX, goalY + goalHeight, goalZ + 180] },
+    // 6-yard box
+    { p1: [goalX, goalY + goalHeight, goalZ - 110], p2: [goalX - 90, goalY + goalHeight, goalZ - 110] },
+    { p1: [goalX - 90, goalY + goalHeight, goalZ - 110], p2: [goalX - 90, goalY + goalHeight, goalZ + 110] },
+    { p1: [goalX - 90, goalY + goalHeight, goalZ + 110], p2: [goalX, goalY + goalHeight, goalZ + 110] },
+    // Penalty box
+    { p1: [goalX, goalY + goalHeight, goalZ - 230], p2: [goalX - 220, goalY + goalHeight, goalZ - 230] },
+    { p1: [goalX - 220, goalY + goalHeight, goalZ - 230], p2: [goalX - 220, goalY + goalHeight, goalZ + 230] },
+    { p1: [goalX - 220, goalY + goalHeight, goalZ + 230], p2: [goalX, goalY + goalHeight, goalZ + 230] }
+  ];
+
+  // Ball Trail effect
+  const ballTrail = [];
+  const MAX_TRAIL = 22;
+
+  // Cycle states: 0: Run-up, 1: Backswing & Kick, 2: Ball in Flight / Follow-through, 3: Goal & Net Ripple, 4: Celebration reset
+  let animTime = 0;
+
+  function project3D(x, y, z, cx, cy, fov) {
+    // Apply camera rotation
+    const cosY = Math.cos(camRotY), sinY = Math.sin(camRotY);
+    const cosX = Math.cos(camRotX), sinX = Math.sin(camRotX);
+
+    // Rotate around Y
+    const x1 = x * cosY - z * sinY;
+    const z1 = z * cosY + x * sinY;
+
+    // Rotate around X
+    const y1 = y * cosX - z1 * sinX;
+    const z2 = z1 * cosX + y * sinX + 700; // view distance offset
+
+    if (z2 <= 20) return null; // Behind camera
+    const scale = fov / z2;
+    return {
+      x: x1 * scale + cx,
+      y: y1 * scale + cy,
+      z: z2,
+      scale: scale
+    };
+  }
+
+  function drawBone(p1, p2, color, widthVal, glow) {
+    if (!p1 || !p2) return;
+    ctx.beginPath();
+    ctx.moveTo(p1.x, p1.y);
+    ctx.lineTo(p2.x, p2.y);
+    ctx.strokeStyle = color;
+    ctx.lineWidth = widthVal;
+    ctx.lineCap = 'round';
+    if (glow) {
+      ctx.shadowColor = glow;
+      ctx.shadowBlur = 8;
+    }
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+  }
+
+  function drawSphereNode(p, radius, fillStyle, glowColor) {
+    if (!p) return;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, Math.max(1, radius * p.scale), 0, Math.PI * 2);
+    ctx.fillStyle = fillStyle;
+    if (glowColor) {
+      ctx.shadowColor = glowColor;
+      ctx.shadowBlur = 10 * p.scale;
+    }
+    ctx.fill();
+    ctx.shadowBlur = 0;
+  }
+
   function animate() {
     requestAnimationFrame(animate);
-    frame += 0.008;
+    animTime += 0.018;
 
-    // Smooth camera damping
-    rotX += (targetRotX + frame * 0.3 - rotX) * 0.04;
-    rotY += (targetRotY + frame * 0.5 - rotY) * 0.04;
+    // Camera damping
+    camRotX += (targetCamRotX - camRotX) * 0.05;
+    camRotY += (targetCamRotY - camRotY) * 0.05;
 
     ctx.clearRect(0, 0, width, height);
 
     const isDark = document.body.classList.contains('dark-theme');
-    const primaryColor = isDark ? [56, 189, 248] : [2, 132, 199];
-    const accentColor = isDark ? [168, 85, 247] : [124, 58, 237];
-    const goldColor = [245, 158, 11];
+    const cyan = isDark ? '#38bdf8' : '#0284c7';
+    const violet = isDark ? '#c084fc' : '#9333ea';
+    const gold = '#fbbf24';
+    const green = isDark ? '#10b981' : '#059669';
+    const netColor = isDark ? 'rgba(148, 163, 184, 0.22)' : 'rgba(100, 116, 139, 0.18)';
+    const pitchColor = isDark ? 'rgba(56, 189, 248, 0.15)' : 'rgba(2, 132, 199, 0.12)';
 
-    const cx = width * 0.72; // Position 3D football sphere towards the right-center
-    const cy = height * 0.42;
-    const fov = 500;
+    // Camera anchor point in screen space
+    const cx = width > 1024 ? width * 0.62 : width * 0.5;
+    const cy = height * 0.52;
+    const fov = 650;
 
-    // 1. Draw and update ambient floating particles
-    ambientParticles.forEach(p => {
+    // --- 1. Draw Pitch Grid & Penalty Area ---
+    pitchLines.forEach(line => {
+      const sp1 = project3D(line.p1[0], line.p1[1], line.p1[2], cx, cy, fov);
+      const sp2 = project3D(line.p2[0], line.p2[1], line.p2[2], cx, cy, fov);
+      if (sp1 && sp2) {
+        ctx.beginPath();
+        ctx.moveTo(sp1.x, sp1.y);
+        ctx.lineTo(sp2.x, sp2.y);
+        ctx.strokeStyle = pitchColor;
+        ctx.lineWidth = 1.2 * sp1.scale;
+        ctx.stroke();
+      }
+    });
+
+    // --- 2. Ambient turf sparkles / stadium dust ---
+    sparkles.forEach(p => {
       p.x += p.vx;
-      p.y += p.vy;
-      if (p.x < 0) p.x = width;
-      if (p.x > width) p.x = 0;
-      if (p.y < 0) p.y = height;
-      if (p.y > height) p.y = 0;
+      p.z += p.vz;
+      if (p.x < -700) p.x = 700;
+      if (p.x > 700) p.x = -700;
+      if (p.z < -600) p.z = 600;
+      if (p.z > 600) p.z = -600;
 
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fillStyle = isDark
-        ? `rgba(${primaryColor[0]}, ${primaryColor[1]}, ${primaryColor[2]}, ${p.alpha * 0.4})`
-        : `rgba(${primaryColor[0]}, ${primaryColor[1]}, ${primaryColor[2]}, ${p.alpha * 0.25})`;
-      ctx.fill();
+      const sp = project3D(p.x, p.y, p.z, cx, cy, fov);
+      if (sp) {
+        ctx.beginPath();
+        ctx.arc(sp.x, sp.y, p.size * sp.scale, 0, Math.PI * 2);
+        ctx.fillStyle = isDark ? `rgba(56, 189, 248, ${p.alpha * 0.6})` : `rgba(2, 132, 199, ${p.alpha * 0.4})`;
+        ctx.fill();
+      }
     });
 
-    // 2. Rotate 3D Fibonacci Sphere points
-    const cosX = Math.cos(rotX);
-    const sinX = Math.sin(rotX);
-    const cosY = Math.cos(rotY);
-    const sinY = Math.sin(rotY);
+    // --- 3. Animation Phase Calculation ---
+    // Total cycle: 5.5 seconds
+    const cycleDuration = 5.2;
+    const t = animTime % cycleDuration;
+    // Phases:
+    // 0.0 ~ 1.5: Run up towards ball
+    // 1.5 ~ 2.1: Plant foot, powerful windup & violent strike
+    // 2.1 ~ 3.4: Ball rockets into top corner, net violently ripples, player follow-through
+    // 3.4 ~ 4.4: Player arms raised in celebration, ball rolls in net
+    // 4.4 ~ 5.2: Smooth transition fade to start
 
-    const projected = [];
-    points.forEach((p, idx) => {
-      // Rotate around Y
-      let x1 = p.ox * cosY - p.oz * sinY;
-      let z1 = p.oz * cosY + p.ox * sinY;
+    let playerX = 0, playerY = 0, playerZ = 0;
+    let rightLegRot = 0, leftLegRot = 0;
+    let rightKneeBend = 0, leftKneeBend = 0;
+    let torsoTilt = 0, torsoTwist = 0;
+    let rightArmRot = 0, leftArmRot = 0;
+    let ballX = 0, ballY = 0, ballZ = 0;
+    let ballSpin = animTime * 15;
+    let netRipple = 0;
 
-      // Rotate around X
-      let y1 = p.oy * cosX - z1 * sinX;
-      let z2 = z1 * cosX + p.oy * sinX;
+    const ballRestX = -120;
+    const ballRestY = 230;
+    const ballRestZ = 15;
 
-      // Perspective projection
-      const scale = fov / (fov + z2 + 300);
-      const projX = x1 * scale + cx;
-      const projY = y1 * scale + cy;
+    const topCornerX = goalX + 20;
+    const topCornerY = goalY + 18; // Top-right bin of the goal
+    const topCornerZ = goalZ + 95;
 
-      projected.push({
-        x: projX,
-        y: projY,
-        z: z2,
-        scale: scale,
-        isStar: p.isStar,
-        pulse: (Math.sin(frame * 3 + p.pulse) + 1) * 0.5,
-        idx: idx
-      });
-    });
+    if (t < 1.5) {
+      // Phase 1: Running approach
+      const runT = t / 1.5;
+      playerX = -320 + runT * 175; // Runs from -320 to -145
+      playerY = 135;
+      playerZ = -10 + Math.sin(runT * Math.PI * 4) * 8;
 
-    // Sort by depth (painter's algorithm)
-    projected.sort((a, b) => a.z - b.z);
+      const stride = Math.sin(runT * 18);
+      rightLegRot = stride * 0.65;
+      leftLegRot = -stride * 0.65;
+      rightKneeBend = Math.max(0, -stride * 0.9);
+      leftKneeBend = Math.max(0, stride * 0.9);
+      rightArmRot = -stride * 0.7;
+      leftArmRot = stride * 0.7;
+      torsoTilt = 0.18;
 
-    // 3. Draw 3D wireframe interconnected constellation lines (Football tessellation)
-    ctx.lineWidth = 0.8;
-    for (let i = 0; i < projected.length; i++) {
-      const p1 = projected[i];
-      for (let j = i + 1; j < projected.length; j++) {
-        const p2 = projected[j];
-        const dx = p1.x - p2.x;
-        const dy = p1.y - p2.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
+      ballX = ballRestX;
+      ballY = ballRestY;
+      ballZ = ballRestZ;
+    } else if (t < 2.1) {
+      // Phase 2: Kick execution (Backswing to contact at t = 2.05)
+      const kickT = (t - 1.5) / 0.6; // 0 to 1
+      playerX = -145 + kickT * 20;
+      playerY = 135;
+      playerZ = -10;
 
-        // Distance cutoff for mesh connections
-        if (dist < 80 * p1.scale) {
-          const alpha = (1 - dist / (80 * p1.scale)) * Math.max(0.05, p1.scale * 0.35);
-          ctx.beginPath();
-          ctx.moveTo(p1.x, p1.y);
-          ctx.lineTo(p2.x, p2.y);
-          ctx.strokeStyle = p1.isStar || p2.isStar
-            ? `rgba(${goldColor[0]}, ${goldColor[1]}, ${goldColor[2]}, ${alpha * 0.7})`
-            : `rgba(${accentColor[0]}, ${accentColor[1]}, ${accentColor[2]}, ${alpha * 0.5})`;
-          ctx.stroke();
+      if (kickT < 0.65) {
+        // High backswing
+        const pBack = kickT / 0.65;
+        rightLegRot = -0.9 * pBack; // Right leg cocked back
+        rightKneeBend = 1.4 * pBack; // Knee bent
+        leftLegRot = 0.35 * pBack;  // Plant foot forward
+        leftKneeBend = 0.45 * pBack;
+        torsoTilt = -0.15 * pBack;
+        torsoTwist = -0.4 * pBack;
+        rightArmRot = 0.6;
+        leftArmRot = -0.8;
+      } else {
+        // Explosive forward downswing & strike
+        const pDown = (kickT - 0.65) / 0.35;
+        rightLegRot = -0.9 + pDown * 2.2; // Right leg swings aggressively forward
+        rightKneeBend = 1.4 - pDown * 1.1; // Leg straightens at contact
+        leftLegRot = 0.35;
+        leftKneeBend = 0.5;
+        torsoTilt = 0.25 * pDown;
+        torsoTwist = 0.5 * pDown;
+        rightArmRot = 0.6 - pDown * 1.2;
+        leftArmRot = -0.8 + pDown * 1.5;
+      }
+
+      ballX = ballRestX;
+      ballY = ballRestY;
+      ballZ = ballRestZ;
+    } else if (t < 3.4) {
+      // Phase 3: Shot in flight & impact
+      const flightT = (t - 2.1) / 1.3; // 0 to 1
+      playerX = -125;
+      playerY = 135;
+      playerZ = -10;
+
+      // Player follow-through slowly dampens
+      const d = Math.min(1, flightT * 2);
+      rightLegRot = 1.3 - d * 0.6;
+      rightKneeBend = 0.3;
+      leftLegRot = 0.35 - d * 0.2;
+      leftKneeBend = 0.3;
+      torsoTilt = 0.2 - d * 0.1;
+      rightArmRot = -0.6 + d * 0.8;
+      leftArmRot = 0.7 - d * 0.3;
+
+      if (flightT < 0.55) {
+        // Ball travels with curved supersonic arc towards top corner
+        const pFly = flightT / 0.55;
+        // Curve trajectory
+        ballX = ballRestX + pFly * (topCornerX - ballRestX);
+        // Realistic gravity + lift curve
+        ballY = ballRestY + pFly * (topCornerY - ballRestY) - Math.sin(pFly * Math.PI) * 45;
+        ballZ = ballRestZ + pFly * (topCornerZ - ballRestZ) + Math.sin(pFly * Math.PI) * 25; // Swerving curve
+      } else {
+        // Impact into upper 90 net & ripples
+        const pNet = (flightT - 0.55) / 0.45;
+        ballX = topCornerX + Math.sin(pNet * 16) * 6 * (1 - pNet);
+        ballY = topCornerY + pNet * 40; // falls down in the net
+        ballZ = topCornerZ + 8;
+        netRipple = Math.sin(pNet * 18) * (1 - pNet) * 16;
+      }
+    } else {
+      // Phase 4 & 5: Goal Celebration & Re-align
+      const celebT = (t - 3.4) / (cycleDuration - 3.4);
+      playerX = -125;
+      playerY = 135;
+      playerZ = -10;
+
+      // Celebrate with arms in the air
+      const cheer = Math.min(1, celebT * 3);
+      rightArmRot = 0.2 + cheer * 1.5;
+      leftArmRot = 0.4 + cheer * 1.5;
+      rightLegRot = 0.15;
+      leftLegRot = -0.15;
+      rightKneeBend = 0.2;
+      leftKneeBend = 0.2;
+      torsoTilt = -0.12 * cheer;
+
+      ballX = topCornerX;
+      ballY = topCornerY + 110;
+      ballZ = topCornerZ;
+    }
+
+    // Record ball trail
+    ballTrail.push({ x: ballX, y: ballY, z: ballZ, time: t });
+    if (ballTrail.length > MAX_TRAIL) ballTrail.shift();
+
+    // --- 4. Draw 3D Goal and Dynamic Rippling Net ---
+    const gP = [
+      // Front posts: [TopLeft, TopRight, BottomLeft, BottomRight]
+      [goalX, goalY, goalZ - goalWidth / 2],
+      [goalX, goalY, goalZ + goalWidth / 2],
+      [goalX, goalY + goalHeight, goalZ - goalWidth / 2],
+      [goalX, goalY + goalHeight, goalZ + goalWidth / 2],
+      // Back posts:
+      [goalX + goalDepth, goalY + 30, goalZ - goalWidth / 2],
+      [goalX + goalDepth, goalY + 30, goalZ + goalWidth / 2],
+      [goalX + goalDepth, goalY + goalHeight, goalZ - goalWidth / 2],
+      [goalX + goalDepth, goalY + goalHeight, goalZ + goalWidth / 2]
+    ];
+
+    const projGoal = gP.map(p => project3D(p[0], p[1], p[2], cx, cy, fov));
+
+    // Goal frame posts (Thick white/silver tubes)
+    const postColor = isDark ? '#e2e8f0' : '#475569';
+    const postGlow = isDark ? 'rgba(226, 232, 240, 0.4)' : null;
+
+    // Crossbar & front posts
+    drawBone(projGoal[0], projGoal[1], postColor, 3.5 * (projGoal[0]?.scale || 1), postGlow); // Crossbar
+    drawBone(projGoal[0], projGoal[2], postColor, 3.5 * (projGoal[0]?.scale || 1), postGlow); // Left post
+    drawBone(projGoal[1], projGoal[3], postColor, 3.5 * (projGoal[1]?.scale || 1), postGlow); // Right post
+
+    // Back depth support bars
+    drawBone(projGoal[0], projGoal[4], postColor, 2 * (projGoal[0]?.scale || 1));
+    drawBone(projGoal[1], projGoal[5], postColor, 2 * (projGoal[1]?.scale || 1));
+    drawBone(projGoal[2], projGoal[6], postColor, 2 * (projGoal[2]?.scale || 1));
+    drawBone(projGoal[3], projGoal[7], postColor, 2 * (projGoal[3]?.scale || 1));
+    drawBone(projGoal[4], projGoal[5], postColor, 2 * (projGoal[4]?.scale || 1));
+    drawBone(projGoal[6], projGoal[7], postColor, 2 * (projGoal[6]?.scale || 1));
+
+    // Draw net grid with impact ripple deformation
+    const netCols = 9;
+    const netRows = 6;
+    for (let r = 0; r <= netRows; r++) {
+      const fy = r / netRows;
+      const rowPoints = [];
+      for (let c = 0; c <= netCols; c++) {
+        const fz = c / netCols;
+        // Interpolate along the back net
+        const gx = goalX + goalDepth + (netRipple > 0 && fz > 0.6 && fy < 0.5 ? netRipple : 0);
+        const gy = goalY + 30 + fy * (goalHeight - 30);
+        const gz = (goalZ - goalWidth / 2) + fz * goalWidth;
+        const sp = project3D(gx, gy, gz, cx, cy, fov);
+        if (sp) rowPoints.push(sp);
+      }
+      for (let i = 0; i < rowPoints.length - 1; i++) {
+        drawBone(rowPoints[i], rowPoints[i + 1], netColor, 0.8);
+      }
+    }
+
+    // --- 5. Draw 3D Ball Trail ---
+    if (t >= 2.05 && ballTrail.length > 2) {
+      for (let i = 1; i < ballTrail.length; i++) {
+        const bp1 = project3D(ballTrail[i - 1].x, ballTrail[i - 1].y, ballTrail[i - 1].z, cx, cy, fov);
+        const bp2 = project3D(ballTrail[i].x, ballTrail[i].y, ballTrail[i].z, cx, cy, fov);
+        if (bp1 && bp2) {
+          const ratio = i / ballTrail.length;
+          const trailColor = isDark
+            ? `rgba(251, 191, 36, ${ratio * 0.8})`
+            : `rgba(245, 158, 11, ${ratio * 0.6})`;
+          drawBone(bp1, bp2, trailColor, (3 + ratio * 4) * bp2.scale, isDark ? 'rgba(251, 191, 36, 0.6)' : null);
         }
       }
     }
 
-    // 4. Draw 3D nodes & pulsing soccer stellar anchors
-    projected.forEach(p => {
-      const alpha = Math.min(1, Math.max(0.15, (p.scale - 0.4) * 1.5));
-      const radius = Math.max(1, (p.isStar ? 3.8 : 2.2) * p.scale + (p.isStar ? p.pulse * 2 : 0));
-
+    // --- 6. Draw 3D Soccer Ball ---
+    const ballProj = project3D(ballX, ballY, ballZ, cx, cy, fov);
+    if (ballProj) {
+      const bRad = 11 * ballProj.scale;
+      // Ball glow & core
       ctx.beginPath();
-      ctx.arc(p.x, p.y, radius, 0, Math.PI * 2);
-
-      if (p.isStar) {
-        ctx.fillStyle = `rgba(${goldColor[0]}, ${goldColor[1]}, ${goldColor[2]}, ${alpha})`;
-        ctx.shadowColor = `rgba(${goldColor[0]}, ${goldColor[1]}, ${goldColor[2]}, 0.8)`;
-        ctx.shadowBlur = 10 * p.scale;
-      } else {
-        ctx.fillStyle = `rgba(${primaryColor[0]}, ${primaryColor[1]}, ${primaryColor[2]}, ${alpha * 0.85})`;
-        ctx.shadowColor = `rgba(${primaryColor[0]}, ${primaryColor[1]}, ${primaryColor[2]}, 0.4)`;
-        ctx.shadowBlur = 6 * p.scale;
-      }
+      ctx.arc(ballProj.x, ballProj.y, bRad, 0, Math.PI * 2);
+      ctx.fillStyle = '#ffffff';
+      ctx.shadowColor = isDark ? 'rgba(251, 191, 36, 0.9)' : 'rgba(2, 132, 199, 0.5)';
+      ctx.shadowBlur = 14 * ballProj.scale;
       ctx.fill();
-      ctx.shadowBlur = 0; // reset
+      ctx.shadowBlur = 0;
+
+      // Ball 3D pentagon/hexagon pattern markings
+      ctx.strokeStyle = '#1e293b';
+      ctx.lineWidth = 1.5 * ballProj.scale;
+      for (let a = 0; a < 3; a++) {
+        const angle = ballSpin + a * (Math.PI * 2 / 3);
+        const px = ballProj.x + Math.cos(angle) * (bRad * 0.65);
+        const py = ballProj.y + Math.sin(angle) * (bRad * 0.65);
+        ctx.beginPath();
+        ctx.arc(px, py, bRad * 0.28, 0, Math.PI * 2);
+        ctx.fillStyle = '#0f172a';
+        ctx.fill();
+        ctx.stroke();
+      }
+    }
+
+    // --- 7. Draw 3D Striker (Football Player Kinematics) ---
+    // Skeletal Hierarchy:
+    // Pelvis -> Spine -> Chest -> Head
+    // Pelvis -> LeftHip -> LeftKnee -> LeftAnkle
+    // Pelvis -> RightHip -> RightKnee -> RightAnkle
+    // Chest -> LeftShoulder -> LeftElbow -> LeftHand
+    // Chest -> RightShoulder -> RightElbow -> RightHand
+
+    const pScale = 0.9;
+    const pelvis = { x: playerX, y: playerY, z: playerZ };
+
+    // Spine & Head
+    const spineLength = 40 * pScale;
+    const chest = {
+      x: pelvis.x + Math.sin(torsoTilt) * spineLength,
+      y: pelvis.y - Math.cos(torsoTilt) * spineLength,
+      z: pelvis.z + Math.sin(torsoTwist) * 15
+    };
+
+    const neck = {
+      x: chest.x + Math.sin(torsoTilt) * 16 * pScale,
+      y: chest.y - Math.cos(torsoTilt) * 16 * pScale,
+      z: chest.z
+    };
+
+    const head = {
+      x: neck.x + Math.sin(torsoTilt) * 16 * pScale,
+      y: neck.y - Math.cos(torsoTilt) * 16 * pScale,
+      z: neck.z
+    };
+
+    // Right Leg (Kicking Leg)
+    const legLen = 42 * pScale;
+    const rHip = { x: pelvis.x + 8, y: pelvis.y + 6, z: pelvis.z + 12 };
+    const rKnee = {
+      x: rHip.x + Math.sin(rightLegRot) * legLen,
+      y: rHip.y + Math.cos(rightLegRot) * legLen,
+      z: rHip.z + 4
+    };
+    const rAnkle = {
+      x: rKnee.x + Math.sin(rightLegRot - rightKneeBend) * legLen,
+      y: rKnee.y + Math.cos(rightLegRot - rightKneeBend) * legLen,
+      z: rKnee.z + 2
+    };
+
+    // Left Leg (Plant Leg)
+    const lHip = { x: pelvis.x - 8, y: pelvis.y + 6, z: pelvis.z - 12 };
+    const lKnee = {
+      x: lHip.x + Math.sin(leftLegRot) * legLen,
+      y: lHip.y + Math.cos(leftLegRot) * legLen,
+      z: lHip.z - 4
+    };
+    const lAnkle = {
+      x: lKnee.x + Math.sin(leftLegRot - leftKneeBend) * legLen,
+      y: lKnee.y + Math.cos(leftLegRot - leftKneeBend) * legLen,
+      z: lKnee.z - 2
+    };
+
+    // Shoulders & Arms
+    const armLen = 32 * pScale;
+    const rShoulder = { x: chest.x + 12, y: chest.y + 4, z: chest.z + 18 };
+    const rElbow = {
+      x: rShoulder.x + Math.sin(rightArmRot) * armLen,
+      y: rShoulder.y + Math.cos(rightArmRot) * armLen * 0.7,
+      z: rShoulder.z + Math.cos(rightArmRot) * 16
+    };
+    const rHand = {
+      x: rElbow.x + Math.sin(rightArmRot + 0.5) * armLen,
+      y: rElbow.y + Math.cos(rightArmRot + 0.5) * armLen * 0.7,
+      z: rElbow.z + 6
+    };
+
+    const lShoulder = { x: chest.x - 12, y: chest.y + 4, z: chest.z - 18 };
+    const lElbow = {
+      x: lShoulder.x + Math.sin(leftArmRot) * armLen,
+      y: lShoulder.y + Math.cos(leftArmRot) * armLen * 0.7,
+      z: lShoulder.z - Math.cos(leftArmRot) * 16
+    };
+    const lHand = {
+      x: lElbow.x + Math.sin(leftArmRot + 0.5) * armLen,
+      y: lElbow.y + Math.cos(leftArmRot + 0.5) * armLen * 0.7,
+      z: lElbow.z - 6
+    };
+
+    // Project player skeletal points into 2D
+    const sPelvis = project3D(pelvis.x, pelvis.y, pelvis.z, cx, cy, fov);
+    const sChest = project3D(chest.x, chest.y, chest.z, cx, cy, fov);
+    const sNeck = project3D(neck.x, neck.y, neck.z, cx, cy, fov);
+    const sHead = project3D(head.x, head.y, head.z, cx, cy, fov);
+
+    const sRHip = project3D(rHip.x, rHip.y, rHip.z, cx, cy, fov);
+    const sRKnee = project3D(rKnee.x, rKnee.y, rKnee.z, cx, cy, fov);
+    const sRAnkle = project3D(rAnkle.x, rAnkle.y, rAnkle.z, cx, cy, fov);
+
+    const sLHip = project3D(lHip.x, lHip.y, lHip.z, cx, cy, fov);
+    const sLKnee = project3D(lKnee.x, lKnee.y, lKnee.z, cx, cy, fov);
+    const sLAnkle = project3D(lAnkle.x, lAnkle.y, lAnkle.z, cx, cy, fov);
+
+    const sRShoulder = project3D(rShoulder.x, rShoulder.y, rShoulder.z, cx, cy, fov);
+    const sRElbow = project3D(rElbow.x, rElbow.y, rElbow.z, cx, cy, fov);
+    const sRHand = project3D(rHand.x, rHand.y, rHand.z, cx, cy, fov);
+
+    const sLShoulder = project3D(lShoulder.x, lShoulder.y, lShoulder.z, cx, cy, fov);
+    const sLElbow = project3D(lElbow.x, lElbow.y, lElbow.z, cx, cy, fov);
+    const sLHand = project3D(lHand.x, lHand.y, lHand.z, cx, cy, fov);
+
+    // Render Player Skeleton with Cyber-Futuristic Glowing Armor & Joints
+    const bodyGlow = isDark ? 'rgba(56, 189, 248, 0.6)' : 'rgba(2, 132, 199, 0.3)';
+    const kickGlow = isDark ? 'rgba(251, 191, 36, 0.8)' : 'rgba(245, 158, 11, 0.5)';
+    const pSc = sPelvis ? sPelvis.scale : 1;
+
+    // Torso / Spine
+    drawBone(sPelvis, sChest, cyan, 7 * pSc, bodyGlow);
+    drawBone(sChest, sNeck, cyan, 5 * pSc, bodyGlow);
+
+    // Head
+    if (sHead) {
+      drawSphereNode(sHead, 12, isDark ? '#ffffff' : '#0f172a', bodyGlow);
+      // Visor / Face forward indicator
+      ctx.beginPath();
+      ctx.arc(sHead.x + 3 * pSc, sHead.y, 4 * pSc, 0, Math.PI * 2);
+      ctx.fillStyle = gold;
+      ctx.fill();
+    }
+
+    // Left Arm
+    drawBone(sChest, sLShoulder, cyan, 4.5 * pSc, bodyGlow);
+    drawBone(sLShoulder, sLElbow, cyan, 4 * pSc, bodyGlow);
+    drawBone(sLElbow, sLHand, cyan, 3.5 * pSc, bodyGlow);
+    drawSphereNode(sLHand, 4.5, gold);
+
+    // Left Leg (Plant)
+    drawBone(sPelvis, sLHip, cyan, 5 * pSc, bodyGlow);
+    drawBone(sLHip, sLKnee, cyan, 5.5 * pSc, bodyGlow);
+    drawBone(sLKnee, sLAnkle, cyan, 5 * pSc, bodyGlow);
+    drawSphereNode(sLAnkle, 5, violet);
+
+    // Right Arm
+    drawBone(sChest, sRShoulder, cyan, 4.5 * pSc, bodyGlow);
+    drawBone(sRShoulder, sRElbow, cyan, 4 * pSc, bodyGlow);
+    drawBone(sRElbow, sRHand, cyan, 3.5 * pSc, bodyGlow);
+    drawSphereNode(sRHand, 4.5, gold);
+
+    // Right Leg (Striking power leg with dynamic kick highlights!)
+    const strikeColor = (t >= 1.9 && t <= 2.4) ? gold : violet;
+    const strikeGlowEffect = (t >= 1.9 && t <= 2.4) ? kickGlow : bodyGlow;
+    drawBone(sPelvis, sRHip, strikeColor, 5 * pSc, strikeGlowEffect);
+    drawBone(sRHip, sRKnee, strikeColor, 6 * pSc, strikeGlowEffect);
+    drawBone(sRKnee, sRAnkle, strikeColor, 5.5 * pSc, strikeGlowEffect);
+    drawSphereNode(sRAnkle, 6, gold, kickGlow); // Glowing football boot
+
+    // Key Joints
+    [sPelvis, sChest, sRHip, sLHip, sRKnee, sLKnee, sRShoulder, sLShoulder, sRElbow, sLElbow].forEach(j => {
+      drawSphereNode(j, 3.5, gold);
     });
+
+    // --- 8. Dynamic "GOAL!" holographic banner upon scoring ---
+    if (t >= 2.65 && t <= 4.2) {
+      const gAlpha = Math.min(1, (t - 2.65) * 3) * (t > 3.8 ? (4.2 - t) / 0.4 : 1);
+      const bannerSp = project3D(goalX - 60, goalY - 45, goalZ, cx, cy, fov);
+      if (bannerSp) {
+        ctx.save();
+        ctx.translate(bannerSp.x, bannerSp.y);
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.font = `900 ${Math.max(16, 32 * bannerSp.scale)}px sans-serif`;
+        ctx.fillStyle = `rgba(251, 191, 36, ${gAlpha})`;
+        ctx.shadowColor = 'rgba(251, 191, 36, 0.9)';
+        ctx.shadowBlur = 18;
+        ctx.fillText('⚽ GOOOAL!', 0, 0);
+        ctx.restore();
+      }
+    }
   }
 
   animate();
