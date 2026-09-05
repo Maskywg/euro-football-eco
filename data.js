@@ -611,6 +611,7 @@ const footballData = {
       ],
       fw: [
         { num: 9, name: "厄林·哈蘭德 (Erling Haaland)", nat: "挪威 🇳🇴", role: "世界頂級中鋒/進球機器" },
+        { num: 7, name: "伊利曼·恩迪亞耶 (Iliman Ndiaye)", nat: "塞內加爾 🇸🇳", role: "英超6500萬鎊壓哨簽約/頂級爆破邊鋒 🔥新加盟" },
         { num: 24, name: "安托萬·塞梅尼奧 (Antoine Semenyo)", nat: "加納 🇬🇭", role: "英超頂級爆破重砲邊鋒/邊路新核 🔥新加盟" },
         { num: 47, name: "菲爾·福登 (Phil Foden)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "23/24英超最佳球員" },
         { num: 10, name: "傑克·格拉利什 (Jack Grealish)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "左邊鋒/控球核心" },
