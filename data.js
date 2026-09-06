@@ -2273,6 +2273,12 @@ const footballData = {
       { rank: 18, team: "聖埃蒂安", played: 3, won: 0, drawn: 0, lost: 3, gf: 0, ga: 7, gd: "-7", pts: 0, form: ["L", "L", "L"] }
     ]
   },
+  meta: {
+    lastUpdatedDate: "2026-09-06",
+    lastMatchDate: "2026-09-05",
+    intlBreakWindow: "2026-09-01 至 2026-09-08",
+    nextRoundStartDate: "2026-09-12 (週六)"
+  },
   leagueFixtures: {
     "uefa": [
         {
@@ -2369,6 +2375,42 @@ const footballData = {
             "stadium": "西格納伊度納公園 (多特蒙德)",
             "highlight": "黃黑之牆威斯特法倫大戰巴斯克雄獅",
             "isGiant": true,
+            "isCrossLeague": true
+        },
+        {
+            "round": "歐國聯 A 級第 2 輪",
+            "competition": "歐洲國家聯賽 (UEFA Nations League)",
+            "date": "2026-09-09 02:45",
+            "home": "法國",
+            "away": "比利時",
+            "status": "即將上演",
+            "stadium": "里昂安盟球場 (Groupama Stadium)",
+            "highlight": "🌍 國際比賽日強強對話・高盧雄雞 vs 歐洲紅魔",
+            "isGiant": true,
+            "isCrossLeague": true
+        },
+        {
+            "round": "歐國聯 A 級第 2 輪",
+            "competition": "歐洲國家聯賽 (UEFA Nations League)",
+            "date": "2026-09-10 02:45",
+            "home": "荷蘭",
+            "away": "德國",
+            "status": "即將上演",
+            "stadium": "阿姆斯特丹競技場 (Johan Cruyff Arena)",
+            "highlight": "🌍 國際比賽日傳統死敵交鋒・橙衣軍團迎戰日耳曼戰車",
+            "isGiant": true,
+            "isCrossLeague": true
+        },
+        {
+            "round": "歐國聯 A 級第 2 輪",
+            "competition": "歐洲國家聯賽 (UEFA Nations League)",
+            "date": "2026-09-09 02:45",
+            "home": "以色列",
+            "away": "義大利",
+            "status": "即將上演",
+            "stadium": "中立場地 (匈牙利布達佩斯)",
+            "highlight": "🌍 國際比賽日・藍衣軍團歐國聯客場爭勝",
+            "isGiant": false,
             "isCrossLeague": true
         },
         {

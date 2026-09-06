@@ -213,6 +213,12 @@ function renderLeagueDetail(leagueId) {
 
         <!-- Tab 3: Standings Table -->
         <div class="detail-tab-content" id="detail-tab-standings" style="display: none;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+            <span style="font-size: 0.8rem; color: #0284c7; background: rgba(2, 132, 199, 0.1); border: 1px solid rgba(2, 132, 199, 0.25); padding: 0.2rem 0.6rem; border-radius: 6px; font-weight: 600;">
+              🗓️ 最後登錄日期：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-09-06'}（最後完賽日：${(footballData.meta && footballData.meta.lastMatchDate) || '2026-09-05'}）
+            </span>
+            <span style="font-size: 0.8rem; color: var(--text-secondary);">點擊球隊名稱可直接開啟球員陣容</span>
+          </div>
           <div class="standings-table-container">
             <table class="standings-table">
               <thead>
@@ -273,6 +279,10 @@ function renderLeagueDetail(leagueId) {
 
         <!-- Tab 4: Match Fixtures -->
         <div class="detail-tab-content" id="detail-tab-fixtures" style="display: none;">
+          <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 8px; padding: 0.6rem 0.9rem; margin-bottom: 1rem; font-size: 0.8rem; color: var(--text-secondary); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+            <span>🌍 <strong>國際比賽日週 (9/7 - 9/11)</strong>：歐洲俱樂部賽程暫停，本賽季第 4 輪將於 <strong>9/12 (週六)</strong> 登場。</span>
+            <span style="color: #0284c7; font-weight: 600;">最後登錄：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-09-06'}</span>
+          </div>
           <div class="fixtures-container">
             ${(footballData.leagueFixtures && footballData.leagueFixtures[league.id] ? footballData.leagueFixtures[league.id] : []).map(f => {
               const isGiantClash = f.isGiant !== false;
@@ -437,15 +447,45 @@ function initDedicatedStandings() {
       return;
     }
 
+    const metaInfo = footballData.meta || {
+      lastUpdatedDate: "2026-09-06",
+      lastMatchDate: "2026-09-05",
+      intlBreakWindow: "2026-09-01 至 2026-09-11",
+      nextRoundStartDate: "2026-09-12 (週六)"
+    };
+
     container.innerHTML = `
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
         <div>
-          <h3 style="font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.25rem;">${league.name} 完整積分排名榜</h3>
+          <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 0.35rem;">
+            <h3 style="font-size: 1.5rem; color: var(--text-primary); margin: 0;">${league.name} 完整積分排名榜</h3>
+            <span style="font-size: 0.78rem; font-weight: 700; color: #0284c7; background: rgba(2, 132, 199, 0.1); border: 1px solid rgba(2, 132, 199, 0.25); padding: 0.2rem 0.6rem; border-radius: 6px;">
+              🗓️ 最後登錄日期：${metaInfo.lastUpdatedDate}（最後賽事：${metaInfo.lastMatchDate}）
+            </span>
+          </div>
           <span style="color: var(--text-secondary); font-size: 0.9rem;">2026-2027 賽季即時數據・點擊任意球隊可立即檢視現役球員名單</span>
         </div>
         <button class="btn-tab active" style="padding: 0.5rem 1rem; border-radius: 8px;" onclick="jumpToLeagueMap('${league.id}')">
           🗺️ 在地圖查看 ${league.name} 所有主場
         </button>
+      </div>
+
+      <!-- International Match Window Notice Banner -->
+      <div style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(2, 132, 199, 0.08)); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 10px; padding: 0.85rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <span style="font-size: 1.3rem;">🌍</span>
+          <div>
+            <div style="font-size: 0.88rem; font-weight: 700; color: var(--text-primary);">
+              賽程週報說明：9/7 – 9/11 為 FIFA 國際比賽日 (國家隊歐國聯賽期)
+            </div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary);">
+              本週歐洲五大聯賽各俱樂部全面休賽；本賽季下一輪 (第4輪) 將於 <strong>${metaInfo.nextRoundStartDate}</strong> 重燃戰火，下方已為您列出本週末焦點對戰！
+            </div>
+          </div>
+        </div>
+        <div style="font-size: 0.78rem; font-weight: 700; color: #d97706; background: rgba(245, 158, 11, 0.15); padding: 0.3rem 0.75rem; border-radius: 9999px;">
+          9/12 (週六) 週末戰火重燃 ⚽
+        </div>
       </div>
 
       <!-- Standings Table -->
