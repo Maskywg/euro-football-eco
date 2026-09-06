@@ -622,6 +622,7 @@ const footballData = {
         { num: 13, name: "安德里·盧寧 (Andriy Lunin)", nat: "烏克蘭 🇺🇦", role: "歐冠功臣門將" }
       ],
       df: [
+        { num: 12, name: "特倫特·亞歷山大-阿諾德 (Alexander-Arnold)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "世界級長傳大師右後衛 🔥新加盟" },
         { num: 22, name: "安東尼奧·呂迪格 (Antonio Rüdiger)", nat: "德國 🇩🇪", role: "鐵血主力中衛" },
         { num: 3, name: "埃德爾·米利唐 (Éder Militão)", nat: "巴西 🇧🇷", role: "主力中衛" },
         { num: 4, name: "大衛·阿拉巴 (David Alaba)", nat: "奧地利 🇦🇹", role: "後防老將" },
@@ -714,7 +715,7 @@ const footballData = {
       ]
     },
     "利物浦": {
-      manager: "阿爾內·斯洛特 (Arne Slot)",
+      manager: "安東尼·伊勞拉 (Andoni Iraola)",
       captain: "維吉爾·范戴克 (Virgil van Dijk)",
       gk: [
         { num: 1, name: "阿利松·貝克爾 (Alisson Becker)", nat: "巴西 🇧🇷", role: "世界頂級門將" },
@@ -723,10 +724,9 @@ const footballData = {
       df: [
         { num: 4, name: "維吉爾·范戴克 (Virgil van Dijk)", nat: "荷蘭 🇳🇱", role: "隊長/世界第一中衛" },
         { num: 5, name: "易卜拉希馬·科納特 (Ibrahima Konaté)", nat: "法國 🇫🇷", role: "主力中衛" },
-        { num: 66, name: "特倫特·亞歷山大-阿諾德 (Alexander-Arnold)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "傳中大師/右後衛" },
+        { num: 84, name: "康納·布拉德利 (Conor Bradley)", nat: "北愛爾蘭 🇬🇧", role: "主力右後衛超新星" },
         { num: 26, name: "安德魯·羅伯遜 (Andrew Robertson)", nat: "蘇格蘭 🏴󠁧󠁢󠁳󠁣󠁴󠁿", role: "主力左後衛" },
         { num: 2, name: "喬·戈麥斯 (Joe Gomez)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "後防萬金油" },
-        { num: 84, name: "康納·布拉德利 (Conor Bradley)", nat: "北愛爾蘭 🇬🇧", role: "右後衛新星" },
         { num: 21, name: "科斯塔斯·齊米卡斯 (Tsimikas)", nat: "希臘 🇬🇷", role: "左後衛" }
       ],
       mf: [
