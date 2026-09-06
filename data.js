@@ -2163,6 +2163,33 @@ const footballData = {
         { "num": 69, "name": "喬治·米考塔澤 (Georges Mikautadze)", "nat": "喬治亞 🇬🇪", "role": "歐洲盃金靴強力中鋒" },
         { "num": 37, "name": "歐內斯特·努瓦馬 (Ernest Nuamah)", "nat": "加納 🇬🇭", "role": "高速突破手" }
       ]
+    },
+    "布倫特福德": {
+      "manager": "托馬斯·弗蘭克 (Thomas Frank)",
+      "captain": "克里斯蒂安·內爾高 (Christian Nørgaard)",
+      "gk": [
+        { "num": 1, "name": "馬克·弗萊肯 (Mark Flekken)", "nat": "荷蘭 🇳🇱", "role": "主力門將" },
+        { "num": 12, "name": "哈康·瓦爾迪馬森 (Hákon Valdimarsson)", "nat": "冰島 🇮🇸", "role": "副選門將" }
+      ],
+      "df": [
+        { "num": 5, "name": "伊森·皮諾克 (Ethan Pinnock)", "nat": "牙買加 🇯🇲", "role": "高空爭頂定海神針" },
+        { "num": 22, "name": "內森·科林斯 (Nathan Collins)", "nat": "愛爾蘭 🇮🇪", "role": "主力中衛" },
+        { "num": 20, "name": "克里斯托弗·阿耶 (Kristoffer Ajer)", "nat": "挪威 🇳🇴", "role": "帶刀侍衛多面手" },
+        { "num": 2, "name": "阿隆·希基 (Aaron Hickey)", "nat": "蘇格蘭 🏴󠁧󠁢󠁳󠁣󠁴󠁿", "role": "左右全能邊後衛" },
+        { "num": 3, "name": "里科·亨利 (Rico Henry)", "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", "role": "飛翼左後衛" }
+      ],
+      "mf": [
+        { "num": 6, "name": "克里斯蒂安·內爾高 (Christian Nørgaard)", "nat": "丹麥 🇩🇰", "role": "隊長/防守後腰中場大腦" },
+        { "num": 27, "name": "維塔利·亞內爾特 (Vitaly Janelt)", "nat": "德國 🇩🇪", "role": "鐵人跑動型中場" },
+        { "num": 8, "name": "馬蒂亞斯·延森 (Mathias Jensen)", "nat": "丹麥 🇩🇰", "role": "長傳調度中場" },
+        { "num": 18, "name": "法比奧·卡瓦略 (Fabio Carvalho)", "nat": "葡萄牙 🇵🇹", "role": "自利物浦2750萬鎊重磅引進/前場靈動攻擊手 🔥新援" }
+      ],
+      "fw": [
+        { "num": 19, "name": "布萊恩·姆貝莫 (Bryan Mbeumo)", "nat": "喀麥隆 🇨🇲", "role": "蜜蜂軍團頭號王牌射手/邊路突破爆破核心 🔥" },
+        { "num": 11, "name": "約阿訥·維薩 (Yoane Wissa)", "nat": "剛果民主共和國 🇨🇩", "role": "主力高產前鋒/鬼魅跑位" },
+        { "num": 9, "name": "伊戈爾·蒂亞戈 (Igor Thiago)", "nat": "巴西 🇧🇷", "role": "自布魯日3000萬鎊加盟主力強力中鋒 🔥新援" },
+        { "num": 7, "name": "凱文·沙德 (Kevin Schade)", "nat": "德國 🇩🇪", "role": "極速邊鋒突破手" }
+      ]
     }
   },
   leagueStandings: {
