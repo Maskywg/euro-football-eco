@@ -474,22 +474,22 @@ function initDedicatedStandings() {
       <div style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(2, 132, 199, 0.08)); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1.5rem;">
         <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
           <div style="display: flex; align-items: flex-start; gap: 0.75rem; max-width: 800px;">
-            <span style="font-size: 1.6rem; line-height: 1;">🌍</span>
+            <span style="font-size: 1.6rem; line-height: 1;">⚽</span>
             <div>
               <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
-                【9/1 – 9/6 為何無聯賽賽程？】本週為 FIFA 國際比賽日（歐洲國家聯賽賽期）
+                【9/1 聯賽完賽戰報 & 9/2–9/11 國際比賽日休賽說明】
               </div>
               <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0 0 0.4rem 0; line-height: 1.5;">
-                歐洲五大聯賽各俱樂部於 <strong>9/1 至 9/11 全面休賽</strong>，各隊主力球員（姆巴佩、哈蘭德、維爾茨、凱恩等）皆返回國家隊征戰<strong>歐洲國家聯賽 (UEFA Nations League)</strong>。
-                因此國內聯賽在 9/1–9/6 期間無賽事，聯賽下一輪將於 <strong>${metaInfo.nextRoundStartDate}</strong> 重啟！
+                • <strong>9/1 國內聯賽焦點戰果已全數登錄</strong>：英超曼聯 0-3 利物浦、切爾西 1-1 水晶宮；西甲皇馬 2-0 貝蒂斯（姆巴佩雙響）；德甲拜仁 2-0 弗萊堡；意甲尤文 0-0 羅馬；法甲里爾 1-3 巴黎。<br>
+                • <strong>9/2 – 9/11 歐洲俱樂部全面休賽</strong>：球員被徵召參加 <strong>UEFA 歐洲國家聯賽</strong>，五大聯賽將於 <strong>${metaInfo.nextRoundStartDate}</strong> 重啟！
               </p>
               <div style="font-size: 0.82rem; color: var(--color-blue); font-weight: 600;">
-                💡 9/5 – 9/6 期間歐國聯焦點戰果（德5-0匈、荷5-2波黑、愛0-2英、法1-3意、葡2-1克）已收錄於「跨聯盟豪門賽程」！
+                💡 9/5 – 9/6 歐國聯焦點戰果（德5-0匈、法1-3意、葡2-1克）可至「跨聯盟豪門賽程」分頁檢視！
               </div>
             </div>
           </div>
           <button class="btn-tab" style="background: rgba(2, 132, 199, 0.15); border-color: var(--color-blue); color: var(--color-blue); font-weight: 700; padding: 0.5rem 0.9rem; border-radius: 8px; white-space: nowrap;" onclick="const t = document.querySelector('[data-standings-league=uefa]'); if(t) t.click();">
-            ⭐ 前往查看 9/5-9/6 歐國聯戰報
+            ⭐ 檢視 9/5-9/6 歐國聯戰果
           </button>
         </div>
       </div>
