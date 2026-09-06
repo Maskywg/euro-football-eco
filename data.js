@@ -1088,6 +1088,12 @@ const footballData = {
                   "role": "邊路爆破奇兵"
             },
             {
+                  "num": 19,
+                  "name": "布萊恩·姆貝莫 (Bryan Mbeumo)",
+                  "nat": "喀麥隆 🇨🇲",
+                  "role": "以7100萬鎊自布倫特福德重磅引進/右路全能爆破手兼頭號得分手 🔥"
+            },
+            {
                   "num": 16,
                   "name": "阿馬德·迪亞洛 (Amad Diallo)",
                   "nat": "象牙海岸 🇨🇮",
@@ -2185,10 +2191,10 @@ const footballData = {
         { "num": 18, "name": "法比奧·卡瓦略 (Fabio Carvalho)", "nat": "葡萄牙 🇵🇹", "role": "自利物浦2750萬鎊重磅引進/前場靈動攻擊手 🔥新援" }
       ],
       "fw": [
-        { "num": 19, "name": "布萊恩·姆貝莫 (Bryan Mbeumo)", "nat": "喀麥隆 🇨🇲", "role": "蜜蜂軍團頭號王牌射手/邊路突破爆破核心 🔥" },
-        { "num": 11, "name": "約阿訥·維薩 (Yoane Wissa)", "nat": "剛果民主共和國 🇨🇩", "role": "主力高產前鋒/鬼魅跑位" },
+        { "num": 11, "name": "約阿訥·維薩 (Yoane Wissa)", "nat": "剛果民主共和國 🇨🇩", "role": "主力高產前鋒/前場新核心" },
         { "num": 9, "name": "伊戈爾·蒂亞戈 (Igor Thiago)", "nat": "巴西 🇧🇷", "role": "自布魯日3000萬鎊加盟主力強力中鋒 🔥新援" },
-        { "num": 7, "name": "凱文·沙德 (Kevin Schade)", "nat": "德國 🇩🇪", "role": "極速邊鋒突破手" }
+        { "num": 7, "name": "凱文·沙德 (Kevin Schade)", "nat": "德國 🇩🇪", "role": "極速邊鋒突破手" },
+        { "num": 23, "name": "基恩·劉易斯-波特 (Keane Lewis-Potter)", "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", "role": "主力左邊鋒/衝擊力強" }
       ]
     }
   },
