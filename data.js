@@ -738,9 +738,8 @@ const footballData = {
         { num: 19, name: "哈維·埃利奧特 (Harvey Elliott)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "進攻中場" }
       ],
       fw: [
+        { num: 9, name: "亞歷山大·伊薩克 (Alexander Isak)", nat: "瑞典 🇸🇪", role: "1.25億鎊隊史紀錄引進/新主力神鋒 🔥新加盟" },
         { num: 11, name: "穆罕默德·薩拉赫 (Mohamed Salah)", nat: "埃及 🇪🇬", role: "埃及法老/傳奇射手" },
-        { num: 7, name: "路易斯·迪亞斯 (Luis Díaz)", nat: "哥倫比亞 🇨🇴", role: "左路狂飆突破手" },
-        { num: 9, name: "達爾文·努涅斯 (Darwin Núñez)", nat: "烏拉圭 🇺🇾", role: "衝擊型中鋒" },
         { num: 18, name: "科迪·加克波 (Cody Gakpo)", nat: "荷蘭 🇳🇱", role: "左翼/中鋒" },
         { num: 20, name: "迪奧戈·若塔 (Diogo Jota)", nat: "葡萄牙 🇵🇹", role: "禁區終結者" },
         { num: 14, name: "費德里科·基耶薩 (Federico Chiesa)", nat: "義大利 🇮🇹", role: "爆發型邊鋒" }
@@ -768,11 +767,12 @@ const footballData = {
         { num: 42, name: "賈馬爾·穆西亞拉 (Jamal Musiala)", nat: "德國 🇩🇪", role: "世界頂級進攻中場" },
         { num: 16, name: "若昂·帕利尼亞 (João Palhinha)", nat: "葡萄牙 🇵🇹", role: "頂級掃蕩後腰" },
         { num: 45, name: "亞歷山大·帕夫洛維奇 (Aleksandar Pavlović)", nat: "德國 🇩🇪", role: "中場新星" },
-        { num: 8, name: "萊昂·格雷茨卡 (Leon Goretzka)", nat: "德國 🇩🇪", role: "全能B2B中場" },
+        { num: 8, name: "萊昂·格雷茨卡 (Leon GRETZKA)", nat: "德國 🇩🇪", role: "全能B2B中場" },
         { num: 27, name: "康拉德·萊默爾 (Konrad Laimer)", nat: "奧地利 🇦🇹", role: "高壓逼搶悍將" }
       ],
       fw: [
         { num: 9, name: "哈里·凱恩 (Harry Kane)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "世界最強中鋒/歐洲金靴" },
+        { num: 14, name: "路易斯·迪亞斯 (Luis Díaz)", nat: "哥倫比亞 🇨🇴", role: "7500萬歐元重磅加盟/頂級狂飆邊鋒 🔥新加盟" },
         { num: 17, name: "邁克爾·奧利塞 (Michael Olise)", nat: "法國 🇫🇷", role: "頂級邊路新援" },
         { num: 10, name: "勒魯瓦·薩內 (Leroy Sané)", nat: "德國 🇩🇪", role: "爆發力邊鋒" },
         { num: 7, name: "塞爾日·格納布里 (Serge Gnabry)", nat: "德國 🇩🇪", role: "進球前鋒" },
@@ -1329,10 +1329,10 @@ const footballData = {
       ],
       "fw": [
             {
-                  "num": 14,
-                  "name": "亞歷山大·伊薩克 (Alexander Isak)",
-                  "nat": "瑞典 🇸🇪",
-                  "role": "世界級主力中鋒"
+                  "num": 9,
+                  "name": "馬蒂亞斯·費南德斯-帕爾多 (Matias Fernandez-Pardo)",
+                  "nat": "比利時 🇧🇪",
+                  "role": "5100萬鎊自里爾重磅引進/鋒線超新星 🔥新加盟"
             },
             {
                   "num": 10,
