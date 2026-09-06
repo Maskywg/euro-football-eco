@@ -2471,6 +2471,17 @@ const footballData = {
             "isGiant": true
         },
         {
+            "round": "第 4 輪 (完賽)",
+            "date": "2026-09-05",
+            "home": "畢爾包競技",
+            "away": "馬德里競技",
+            "score": "3 - 0",
+            "status": "完賽",
+            "stadium": "聖馬梅斯球場",
+            "highlight": "巴斯克雄獅三球大勝・威廉斯建功",
+            "isGiant": true
+        },
+        {
             "round": "第 3 輪 (完賽)",
             "date": "2026-08-31",
             "home": "巴塞隆納",
