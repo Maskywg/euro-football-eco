@@ -480,8 +480,8 @@ function initDedicatedStandings() {
                 【9/1 聯賽完賽戰報 & 9/2–9/11 國際比賽日休賽說明】
               </div>
               <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0 0 0.4rem 0; line-height: 1.5;">
-                • <strong>9/1 國內聯賽焦點戰果已全數登錄</strong>：英超曼聯 0-3 利物浦、切爾西 1-1 水晶宮；西甲皇馬 2-0 貝蒂斯（姆巴佩雙響）；德甲拜仁 2-0 弗萊堡；意甲尤文 0-0 羅馬；法甲里爾 1-3 巴黎。<br>
-                • <strong>9/2 – 9/11 歐洲俱樂部全面休賽</strong>：球員被徵召參加 <strong>UEFA 歐洲國家聯賽</strong>，五大聯賽將於 <strong>${metaInfo.nextRoundStartDate}</strong> 重啟！
+                • <strong>9/1–9/5 聯賽最新焦點戰報已全數登錄</strong>：西甲<strong>皇家貝蒂斯 1-0 皇家馬德里</strong>（帕洛特第81分鐘絕殺、姆巴佩補時射失點球，皇馬吞賽季首敗）、畢爾包競技 0-1 馬德里競技；英超曼聯 0-3 利物浦、切爾西 1-1 水晶宮；德甲拜仁 2-0 弗萊堡；意甲尤文 0-0 羅馬；法甲里爾 1-3 巴黎。<br>
+                • <strong>國際比賽日休賽說明</strong>：五大聯賽將於 <strong>${metaInfo.nextRoundStartDate}</strong> 重啟！
               </p>
               <div style="font-size: 0.82rem; color: var(--color-blue); font-weight: 600;">
                 💡 9/5 – 9/6 歐國聯焦點戰果（德5-0匈、法1-3意、葡2-1克）可至「跨聯盟豪門賽程」分頁檢視！

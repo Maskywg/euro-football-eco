@@ -2625,6 +2625,17 @@ const footballData = {
         },
         {
             "round": "第 4 輪 (完賽)",
+            "date": "2026-09-04",
+            "home": "皇家貝蒂斯",
+            "away": "皇家馬德里",
+            "score": "1 - 0",
+            "status": "完賽",
+            "stadium": "比利亞馬林球場",
+            "highlight": "帕洛特第81分鐘絕殺・姆巴佩補時射失點球，皇馬吞首敗",
+            "isGiant": true
+        },
+        {
+            "round": "第 4 輪 (完賽)",
             "date": "2026-09-01",
             "home": "皇家馬德里",
             "away": "皇家貝蒂斯",
