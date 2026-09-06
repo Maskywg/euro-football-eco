@@ -280,7 +280,7 @@ function renderLeagueDetail(leagueId) {
         <!-- Tab 4: Match Fixtures -->
         <div class="detail-tab-content" id="detail-tab-fixtures" style="display: none;">
           <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 8px; padding: 0.6rem 0.9rem; margin-bottom: 1rem; font-size: 0.8rem; color: var(--text-secondary); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
-            <span>🌍 <strong>國際比賽日週 (9/7 - 9/11)</strong>：歐洲俱樂部賽程暫停，本賽季第 4 輪將於 <strong>9/12 (週六)</strong> 登場。</span>
+            <span>🌍 <strong>國際比賽日週 (9/1 - 9/11)</strong>：歐洲五大聯賽各俱樂部全面休賽，第 4 輪賽事將於 <strong>9/12 (週六)</strong> 展開。</span>
             <span style="color: #0284c7; font-weight: 600;">最後登錄：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-09-06'}</span>
           </div>
           <div class="fixtures-container">
@@ -471,20 +471,26 @@ function initDedicatedStandings() {
       </div>
 
       <!-- International Match Window Notice Banner -->
-      <div style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(2, 132, 199, 0.08)); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 10px; padding: 0.85rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
-        <div style="display: flex; align-items: center; gap: 0.6rem;">
-          <span style="font-size: 1.3rem;">🌍</span>
-          <div>
-            <div style="font-size: 0.88rem; font-weight: 700; color: var(--text-primary);">
-              賽程週報說明：9/7 – 9/11 為 FIFA 國際比賽日 (國家隊歐國聯賽期)
-            </div>
-            <div style="font-size: 0.8rem; color: var(--text-secondary);">
-              本週歐洲五大聯賽各俱樂部全面休賽；本賽季下一輪 (第4輪) 將於 <strong>${metaInfo.nextRoundStartDate}</strong> 重燃戰火，下方已為您列出本週末焦點對戰！
+      <div style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(2, 132, 199, 0.08)); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1.5rem;">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <div style="display: flex; align-items: flex-start; gap: 0.75rem; max-width: 800px;">
+            <span style="font-size: 1.6rem; line-height: 1;">🌍</span>
+            <div>
+              <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
+                【9/1 – 9/6 為何無聯賽賽程？】本週為 FIFA 國際比賽日（歐洲國家聯賽賽期）
+              </div>
+              <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0 0 0.4rem 0; line-height: 1.5;">
+                歐洲五大聯賽各俱樂部於 <strong>9/1 至 9/11 全面休賽</strong>，各隊主力球員（姆巴佩、哈蘭德、維爾茨、凱恩等）皆返回國家隊征戰<strong>歐洲國家聯賽 (UEFA Nations League)</strong>。
+                因此國內聯賽在 9/1–9/6 期間無賽事，聯賽下一輪將於 <strong>${metaInfo.nextRoundStartDate}</strong> 重啟！
+              </p>
+              <div style="font-size: 0.82rem; color: var(--color-blue); font-weight: 600;">
+                💡 9/5 – 9/6 期間歐國聯焦點戰果（德5-0匈、荷5-2波黑、愛0-2英、法1-3意、葡2-1克）已收錄於「跨聯盟豪門賽程」！
+              </div>
             </div>
           </div>
-        </div>
-        <div style="font-size: 0.78rem; font-weight: 700; color: #d97706; background: rgba(245, 158, 11, 0.15); padding: 0.3rem 0.75rem; border-radius: 9999px;">
-          9/12 (週六) 週末戰火重燃 ⚽
+          <button class="btn-tab" style="background: rgba(2, 132, 199, 0.15); border-color: var(--color-blue); color: var(--color-blue); font-weight: 700; padding: 0.5rem 0.9rem; border-radius: 8px; white-space: nowrap;" onclick="const t = document.querySelector('[data-standings-league=uefa]'); if(t) t.click();">
+            ⭐ 前往查看 9/5-9/6 歐國聯戰報
+          </button>
         </div>
       </div>
 
