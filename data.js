@@ -739,7 +739,6 @@ const footballData = {
       ],
       fw: [
         { num: 9, name: "亞歷山大·伊薩克 (Alexander Isak)", nat: "瑞典 🇸🇪", role: "1.25億鎊隊史紀錄引進/新主力神鋒 🔥新加盟" },
-        { num: 11, name: "穆罕默德·薩拉赫 (Mohamed Salah)", nat: "埃及 🇪🇬", role: "埃及法老/傳奇射手" },
         { num: 18, name: "科迪·加克波 (Cody Gakpo)", nat: "荷蘭 🇳🇱", role: "左翼/中鋒" },
         { num: 20, name: "迪奧戈·若塔 (Diogo Jota)", nat: "葡萄牙 🇵🇹", role: "禁區終結者" },
         { num: 14, name: "費德里科·基耶薩 (Federico Chiesa)", nat: "義大利 🇮🇹", role: "爆發型邊鋒" }
