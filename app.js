@@ -1276,6 +1276,15 @@ window.openClubSquadModal = function(clubName) {
     squad = generateFallbackSquad(club);
   }
 
+  const parseName = (rawName) => {
+    if (!rawName) return { zh: '', en: '' };
+    const match = rawName.match(/^(.*?)\s*\((.+?)\)$/);
+    if (match) {
+      return { zh: match[1].trim(), en: match[2].trim() };
+    }
+    return { zh: rawName.trim(), en: '' };
+  };
+
   // Helper for rendering player positions
   const renderGroup = (title, icon, players) => {
     if (!players || players.length === 0) return '';
@@ -1286,18 +1295,22 @@ window.openClubSquadModal = function(clubName) {
           <span class="squad-group-count">${players.length} 人</span>
         </div>
         <div class="squad-players-grid">
-          ${players.map(p => `
+          ${players.map(p => {
+            const names = parseName(p.name);
+            return `
             <div class="player-card">
               <div class="player-num">${p.num || '-'}</div>
               <div class="player-meta">
-                <div class="player-name">${p.name}</div>
+                <div class="player-name-zh">${names.zh}</div>
+                ${names.en ? `<div class="player-name-en">${names.en}</div>` : ''}
                 <div class="player-sub">
                   <span>${p.nat || ''}</span>
                   <span class="player-role-badge">${p.role || '現役成員'}</span>
                 </div>
               </div>
             </div>
-          `).join('')}
+          `;
+          }).join('')}
         </div>
       </div>
     `;
@@ -1324,14 +1337,26 @@ window.openClubSquadModal = function(clubName) {
         <div class="squad-leader-icon">👔</div>
         <div>
           <div class="squad-leader-label">總教練 (Manager)</div>
-          <div class="squad-leader-val">${squad.manager || '教練團體系'}</div>
+          ${(() => {
+            const mNames = parseName(squad.manager || '教練團體系');
+            return `
+              <div class="squad-leader-val-zh">${mNames.zh}</div>
+              ${mNames.en ? `<div class="squad-leader-val-en">${mNames.en}</div>` : ''}
+            `;
+          })()}
         </div>
       </div>
       <div class="squad-leader-item">
         <div class="squad-leader-icon">👑</div>
         <div>
           <div class="squad-leader-label">球隊隊長 (Captain)</div>
-          <div class="squad-leader-val">${squad.captain || '球隊隊長'}</div>
+          ${(() => {
+            const cNames = parseName(squad.captain || '球隊隊長');
+            return `
+              <div class="squad-leader-val-zh">${cNames.zh}</div>
+              ${cNames.en ? `<div class="squad-leader-val-en">${cNames.en}</div>` : ''}
+            `;
+          })()}
         </div>
       </div>
     </div>
