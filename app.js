@@ -482,15 +482,15 @@ function initDedicatedStandings() {
             <span style="font-size: 1.6rem; line-height: 1;">⚽</span>
             <div>
               <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
-                【9/1–9/5 聯賽最新戰報 & 9/6 歐國聯/世預賽戰果全數登錄】
+                【9/6 英超補賽/焦點大戰 & 歐國聯戰果全數即時登錄】
               </div>
               <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0 0 0.4rem 0; line-height: 1.5;">
-                • <strong>9/1–9/5 聯賽戰報已完整登錄</strong>：西甲皇家貝蒂斯 1-0 皇家馬德里、畢爾包 0-1 馬競；英超曼聯 0-3 利物浦、切爾西 1-1 水晶宮；德甲拜仁 2-0 弗萊堡；意甲尤文 0-0 羅馬；法甲里爾 1-3 巴黎。<br>
-                • <strong>9/6 國際比賽日戰果已收錄</strong>：歐國聯德國 5-0 狂勝匈牙利、荷蘭 5-2 波赫、愛爾蘭 0-2 英格蘭（賴斯反戈建功）；世預賽巴西 1-0 厄瓜多（羅德里戈絕殺）、烏拉圭 0-0 巴拉圭（蘇亞雷斯告別戰）。<br>
-                • <strong>聯賽重啟日程</strong>：五大聯賽將於 <strong>${metaInfo.nextRoundStartDate}</strong> 重燃戰火！
+                • <strong>9/6 英超最新焦點戰報</strong>：<strong>阿森納 2-1 切爾西</strong>（羅傑斯閃擊破門，哈弗茨扳平、厄德高致勝助槍手3連勝）、<strong>埃弗頓 2-2 曼聯</strong>；9/5 曼城 1-0 柯文垂、熱刺 0-0 諾丁漢森林。<br>
+                • <strong>9/6 歐國聯與世預賽戰果</strong>：德國 5-0 狂勝匈牙利（穆西亞拉1球3助）、荷蘭 5-2 波赫、愛爾蘭 0-2 英格蘭（賴斯破門）；比利時 3-1 以色列（德布勞內雙響）；巴西 1-0 厄瓜多（羅德里戈絕殺）。<br>
+                • <strong>聯賽重啟日程</strong>：五大聯賽第 4 輪將於 <strong>${metaInfo.nextRoundStartDate}</strong> 重燃戰火！
               </p>
               <div style="font-size: 0.82rem; color: var(--color-blue); font-weight: 600;">
-                💡 完整 9/5 – 9/6 歐國聯與世預賽焦點戰果可至「跨聯盟豪門賽程」分頁檢視！
+                💡 完整 365Scores 賽事數據已即時對齊，點擊球隊可直接開啟球員陣容！
               </div>
             </div>
           </div>
@@ -575,7 +575,7 @@ function initDedicatedStandings() {
           </span>
         </div>
         <div style="margin-top: 0.85rem; padding: 0.65rem 1rem; border-radius: 8px; background: rgba(2, 132, 199, 0.08); border: 1px solid rgba(2, 132, 199, 0.2); font-size: 0.84rem; color: var(--text-secondary); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-          <span>📌 <strong>賽程說明</strong>：因 9/2–9/11 為國際足總 (FIFA) 國際比賽日，${league.name} 各俱樂部全面休賽；英超第4輪將於 <strong>9/12 (週六)</strong> 全面重啟！昨天 (9/6) 各國球星均出戰<strong>「歐國聯與世預賽」</strong>，賽果請點擊右方切換查看 👉</span>
+          <span>📌 <strong>賽況更新</strong>：昨天 (9/6) 英超焦點大戰 <strong>阿森納 2-1 切爾西</strong>（羅傑斯閃擊、厄德高致勝）、<strong>埃弗頓 2-2 曼聯</strong> 已即時錄入！英超第4輪即將於 <strong>9/12 (週六)</strong> 全面重啟；國腳賽事可點擊右方切換查看歐國聯賽況 👉</span>
           <button class="btn-tab" style="padding: 0.3rem 0.75rem; font-size: 0.78rem; background: rgba(2, 132, 199, 0.2); color: var(--color-blue); border-color: var(--color-blue); font-weight: 700; border-radius: 6px;" onclick="const t = document.querySelector('[data-standings-league=uefa]'); if(t) t.click();">
             ⭐ 點此查看 9/6 歐國聯戰果
           </button>

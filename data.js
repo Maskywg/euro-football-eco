@@ -2685,6 +2685,50 @@ const footballData = {
         },
         {
             "round": "第 3 輪 (完賽)",
+            "date": "2026-09-06",
+            "home": "阿森納",
+            "away": "切爾西",
+            "score": "2 - 1",
+            "status": "完賽",
+            "stadium": "酋長球場",
+            "highlight": "🔥 倫敦德比逆轉・羅傑斯閃擊破門，哈弗茨扳平、厄德高致勝助槍手3連勝",
+            "isGiant": true
+        },
+        {
+            "round": "第 3 輪 (完賽)",
+            "date": "2026-09-06",
+            "home": "埃弗頓",
+            "away": "曼徹斯特聯",
+            "score": "2 - 2",
+            "status": "完賽",
+            "stadium": "古迪遜公園球場",
+            "highlight": "雙方互攻大戰・紅魔客場握手言和各取1分",
+            "isGiant": true
+        },
+        {
+            "round": "第 3 輪 (完賽)",
+            "date": "2026-09-05",
+            "home": "曼徹斯特城",
+            "away": "柯文垂城",
+            "score": "1 - 0",
+            "status": "完賽",
+            "stadium": "阿提哈德球場",
+            "highlight": "哈蘭德制勝進球・藍月亮主場小勝升班馬豪取三連勝",
+            "isGiant": false
+        },
+        {
+            "round": "第 3 輪 (完賽)",
+            "date": "2026-09-05",
+            "home": "熱刺",
+            "away": "諾丁漢森林",
+            "score": "0 - 0",
+            "status": "完賽",
+            "stadium": "熱刺熱刺球場",
+            "highlight": "森林鐵血防守逼平熱刺・雙方互交白卷",
+            "isGiant": true
+        },
+        {
+            "round": "第 3 輪 (完賽)",
             "date": "2026-09-01",
             "home": "曼徹斯特聯",
             "away": "利物浦",
