@@ -661,6 +661,7 @@ const footballData = {
         { num: 4, name: "羅納德·阿勞霍 (Ronald Araújo)", nat: "烏拉圭 🇺🇾", role: "後防巨塔" },
         { num: 23, name: "儒勒·孔德 (Jules Koundé)", nat: "法國 🇫🇷", role: "頂級攻守右後衛" },
         { num: 3, name: "亞歷杭德羅·巴爾德 (Alejandro Balde)", nat: "西班牙 🇪🇸", role: "飛翼左後衛" },
+        { num: 12, name: "哈維·埃斯帕爾特 (Xavi Espart)", nat: "西班牙 🇪🇸", role: "拉瑪西亞07後防天才超新星/左右邊衛多面手 🔥新晉一線隊" },
         { num: 5, name: "伊尼戈·馬丁內斯 (Iñigo Martínez)", nat: "西班牙 🇪🇸", role: "資深中衛" },
         { num: 15, name: "安德烈亞斯·克里斯滕森 (Christensen)", nat: "丹麥 🇩🇰", role: "中衛/後腰" },
         { num: 24, name: "埃里克·加西亞 (Eric García)", nat: "西班牙 🇪🇸", role: "防守多面手" }
@@ -671,16 +672,17 @@ const footballData = {
         { num: 6, name: "加維 (Gavi)", nat: "西班牙 🇪🇸", role: "鬥志之魂/全能中場" },
         { num: 20, name: "達尼·奧爾莫 (Dani Olmo)", nat: "西班牙 🇪🇸", role: "2024歐洲盃金靴/進攻核心" },
         { num: 21, name: "弗蘭基·德容 (Frenkie de Jong)", nat: "荷蘭 🇳🇱", role: "推進大腦" },
-        { num: 16, name: "費爾明·洛佩斯 (Fermín López)", nat: "西班牙 🇪🇸", role: "奧運金牌重砲中場" },
-        { num: 17, name: "馬克·卡薩多 (Marc Casadó)", nat: "西班牙 🇪🇸", role: "拉瑪西亞防守中場" }
+        { num: 7, name: "費爾明·洛佩斯 (Fermín López)", nat: "西班牙 🇪🇸", role: "奧運金牌重砲中場" },
+        { num: 17, name: "馬克·卡薩多 (Marc Casadó)", nat: "西班牙 🇪🇸", role: "拉瑪西亞防守中場" },
+        { num: 22, name: "馬克·貝爾納爾 (Marc Bernal)", nat: "西班牙 🇪🇸", role: "拉瑪西亞天才後腰" }
       ],
       fw: [
-        { num: 19, name: "拉明·亞馬爾 (Lamine Yamal)", nat: "西班牙 🇪🇸", role: "歐洲金童/世界第一超新星" },
-        { num: 9, name: "羅伯特·萊萬多夫斯基 (Lewandowski)", nat: "波蘭 🇵🇱", role: "神級中鋒/進球保障" },
-        { num: 11, name: "拉菲尼亞 (Raphinha)", nat: "巴西 🇧🇷", role: "副隊長/邊路發動機" },
-        { num: 7, name: "費蘭·托雷斯 (Ferran Torres)", nat: "西班牙 🇪🇸", role: "攻擊多面手" },
-        { num: 10, name: "安蘇·法蒂 (Ansu Fati)", nat: "西班牙 🇪🇸", role: "邊鋒" },
-        { num: 18, name: "保·維克托 (Pau Víctor)", nat: "西班牙 🇪🇸", role: "鋒線新秀" }
+        { num: 10, name: "拉明·亞馬爾 (Lamine Yamal)", nat: "西班牙 🇪🇸", role: "歐洲金童/巴薩新世代10號王牌超巨" },
+        { num: 11, name: "拉菲尼亞 (Raphinha)", nat: "巴西 🇧🇷", role: "球隊第一隊長/前場全能進攻發動機" },
+        { num: 14, name: "卡里姆·阿德耶米 (Karim Adeyemi)", nat: "德國 🇩🇪", role: "極速爆破重砲前鋒 🔥重磅加盟" },
+        { num: 17, name: "安東尼·戈登 (Anthony Gordon)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "英格蘭國腳頂級邊鋒 🔥新轉入" },
+        { num: 19, name: "魯尼·巴德吉 (Roony Bardghji)", nat: "瑞典 🇸🇪", role: "歐洲金童級爆破邊鋒超新星 🔥新援" },
+        { num: 18, name: "保·維克托 (Pau Víctor)", nat: "西班牙 🇪🇸", role: "新世代主力中鋒/拉瑪西亞射手" }
       ]
     },
     "阿森納": {
