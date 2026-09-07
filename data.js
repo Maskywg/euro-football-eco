@@ -584,7 +584,7 @@ const footballData = {
   ],
   clubSquads: {
     "曼徹斯特城": {
-      manager: "佩普·瓜迪奧拉 (Pep Guardiola)",
+      manager: "恩佐·馬雷斯卡 (Enzo Maresca)",
       captain: "凱文·德布勞內 (Kevin De Bruyne)",
       gk: [
         { num: 31, name: "埃德森 (Ederson)", nat: "巴西 🇧🇷", role: "主力門將" },
@@ -598,20 +598,20 @@ const footballData = {
         { num: 82, name: "里科·劉易斯 (Rico Lewis)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "邊後衛新星" }
       ],
       mf: [
-        { num: 5, name: "埃利奧特·安德森 (Elliot Anderson)", nat: "蘇格蘭 🏴󠁧󠁢󠁳󠁣󠁴󠁿", role: "⭐ 新賽季期待中場(困Top8/小鍋Top9) / 1.16億鎊中場新核心 🔥新加盟" },
-        { num: 8, name: "恩佐·費南德斯 (Enzo Fernández)", nat: "阿根廷 🇦🇷", role: "⭐ 新賽季期待中場(小鍋Top5) / 世界盃冠軍指揮官 🔥新轉入" },
+        { num: 8, name: "恩佐·費南德斯 (Enzo Fernández)", nat: "阿根廷 🇦🇷", role: "⭐ 新賽季期待中場(小鍋Top5) / 1.25億鎊自切爾西加盟/新中場核心司令塔 🔥新轉入" },
+        { num: 5, name: "埃利奧特·安德森 (Elliot Anderson)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "⭐ 新賽季期待中場(困Top8/小鍋Top9) / 1.16億鎊自諾丁漢森林加盟/英格蘭中場新核心 🔥新加盟" },
+        { num: 23, name: "阿尤布·博阿迪 (Ayyoub Bouaddi)", nat: "摩洛哥 🇲🇦", role: "8560萬鎊自里爾重磅引進/摩洛哥頂級中場新星 🔥新加盟" },
         { num: 18, name: "拉揚·謝爾基 (Rayan Cherki)", nat: "法國 🇫🇷", role: "⭐ 新賽季期待中場(困Top2/小鍋Top3) / 法國盤帶魔術師 🔥新轉入" },
         { num: 17, name: "凱文·德布勞內 (Kevin De Bruyne)", nat: "比利時 🇧🇪", role: "中場大腦/傳奇組織核心" },
         { num: 19, name: "伊爾凱·京多安 (İlkay Gündoğan)", nat: "德國 🇩🇪", role: "老將隊魂/中場指揮" },
-        { num: 16, name: "馬特奧·科瓦契奇 (Mateo Kovačić)", nat: "克羅埃西亞 🇭🇷", role: "全能中場" },
-        { num: 27, name: "馬特烏斯·努內斯 (Matheus Nunes)", nat: "葡萄牙 🇵🇹", role: "推進型中場" }
+        { num: 16, name: "馬特奧·科瓦契奇 (Mateo Kovačić)", nat: "克羅埃西亞 🇭🇷", role: "全能中場" }
       ],
       fw: [
         { num: 9, name: "厄林·哈蘭德 (Erling Haaland)", nat: "挪威 🇳🇴", role: "世界頂級中鋒/進球機器" },
-        { num: 7, name: "伊利曼·恩迪亞耶 (Iliman Ndiaye)", nat: "塞內加爾 🇸🇳", role: "英超6500萬鎊壓哨簽約/頂級爆破邊鋒 🔥新加盟" },
-        { num: 24, name: "安托萬·塞梅尼奧 (Antoine Semenyo)", nat: "加納 🇬🇭", role: "英超頂級爆破重砲邊鋒/邊路新核 🔥新加盟" },
         { num: 47, name: "菲爾·福登 (Phil Foden)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "23/24英超最佳球員" },
-        { num: 11, name: "傑雷米·杜庫 (Jérémy Doku)", nat: "比利時 🇧🇪", role: "爆破型邊鋒" }
+        { num: 11, name: "傑雷米·杜庫 (Jérémy Doku)", nat: "比利時 🇧🇪", role: "爆破型邊鋒" },
+        { num: 7, name: "伊利曼·恩迪亞耶 (Iliman Ndiaye)", nat: "塞內加爾 🇸🇳", role: "6500萬鎊加盟邊鋒" },
+        { num: 24, name: "安托萬·塞梅尼奧 (Antoine Semenyo)", nat: "加納 🇬🇭", role: "重砲邊鋒" }
       ]
     },
     "皇家馬德里": {
@@ -695,12 +695,14 @@ const footballData = {
       df: [
         { num: 2, name: "威廉·薩利巴 (William Saliba)", nat: "法國 🇫🇷", role: "世界頂級中衛" },
         { num: 6, name: "加布里埃爾 (Gabriel Magalhães)", nat: "巴西 🇧🇷", role: "防線磐石" },
+        { num: 15, name: "埃茲里·孔薩 (Ezri Konsa)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "5500萬鎊自阿斯頓維拉加盟/英格蘭國腳王牌中衛 🔥新加盟" },
         { num: 4, name: "本·懷特 (Ben White)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "主力右後衛" },
         { num: 12, name: "尤里安·廷伯 (Jurriën Timber)", nat: "荷蘭 🇳🇱", role: "攻守兼備邊後衛" },
         { num: 33, name: "里卡多·卡拉菲奧里 (Calafiori)", nat: "義大利 🇮🇹", role: "義大利國腳後衛" },
         { num: 17, name: "奧列克桑德·津琴科 (Zinchenko)", nat: "烏克蘭 🇺🇦", role: "內收型邊後衛" }
       ],
       mf: [
+        { num: 39, name: "布魯諾·吉馬良斯 (Bruno Guimarães)", nat: "巴西 🇧🇷", role: "⭐ 新賽季期待中場(小鍋Top10) / 7500萬鎊自紐卡索聯挖角隊長加盟/世界級節拍器 🔥重磅加盟" },
         { num: 8, name: "馬丁·厄德高 (Martin Ødegaard)", nat: "挪威 🇳🇴", role: "⭐ 新賽季期待中場(小鍋Top7/困Top9) / 槍手隊長/進攻發動機" },
         { num: 41, name: "德克蘭·賴斯 (Declan Rice)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "⭐ 新賽季期待中場(小鍋Top1/困Top4) / 一億英鎊防守基石" },
         { num: 23, name: "米克爾·梅里諾 (Mikel Merino)", nat: "西班牙 🇪🇸", role: "歐洲盃冠軍中場" },
@@ -710,6 +712,7 @@ const footballData = {
       fw: [
         { num: 7, name: "布卡約·薩卡 (Bukayo Saka)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "槍手太子/世界級右翼" },
         { num: 29, name: "凱·哈弗茨 (Kai Havertz)", nat: "德國 🇩🇪", role: "萬能前鋒/支點中鋒" },
+        { num: 18, name: "克里斯托斯·措利斯 (Christos Tzolis)", nat: "希臘 🇬🇷", role: "3400萬鎊自布魯日加盟/社區盾表現神勇大驚喜 🔥新加盟" },
         { num: 11, name: "加布里埃爾·馬丁內利 (Martinelli)", nat: "巴西 🇧🇷", role: "左路快馬" },
         { num: 9, name: "加布里埃爾·熱蘇斯 (Gabriel Jesus)", nat: "巴西 🇧🇷", role: "靈動中鋒" },
         { num: 19, name: "萊昂德羅·特羅薩德 (Trossard)", nat: "比利時 🇧🇪", role: "關鍵殺手/全能前鋒" },
@@ -726,21 +729,23 @@ const footballData = {
       df: [
         { num: 4, name: "維吉爾·范戴克 (Virgil van Dijk)", nat: "荷蘭 🇳🇱", role: "隊長/世界第一中衛" },
         { num: 5, name: "易卜拉希馬·科納特 (Ibrahima Konaté)", nat: "法國 🇫🇷", role: "主力中衛" },
+        { num: 12, name: "羅納德·阿勞霍 (Ronald Araújo)", nat: "烏拉圭 🇺🇾", role: "自巴塞隆納重磅租借加盟/後防即戰力巨塔 🔥新租入" },
+        { num: 25, name: "熱雷米·雅凱 (Jérémy Jacquet)", nat: "法國 🇫🇷", role: "6000萬鎊自雷恩加盟/法國潛力中衛新星 🔥新加盟" },
         { num: 84, name: "康納·布拉德利 (Conor Bradley)", nat: "北愛爾蘭 🇬🇧", role: "主力右後衛超新星" },
         { num: 26, name: "安德魯·羅伯遜 (Andrew Robertson)", nat: "蘇格蘭 🏴󠁧󠁢󠁳󠁣󠁴󠁿", role: "主力左後衛" },
-        { num: 2, name: "喬·戈麥斯 (Joe Gomez)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "後防萬金油" },
-        { num: 21, name: "科斯塔斯·齊米卡斯 (Tsimikas)", nat: "希臘 🇬🇷", role: "左後衛" }
+        { num: 2, name: "喬·戈麥斯 (Joe Gomez)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "後防萬金油" }
       ],
       mf: [
         { num: 8, name: "多米尼克·索博斯洛伊 (Szoboszlai)", nat: "匈牙利 🇭🇺", role: "⭐ 新賽季期待中場(困Top1/小鍋Top3) / 進攻發電機/重砲手" },
         { num: 10, name: "亞歷克西斯·麥卡利斯特 (Mac Allister)", nat: "阿根廷 🇦🇷", role: "⭐ 新賽季期待中場(困Top7/小鍋Top6) / 世界盃冠軍中場大腦" },
+        { num: 6, name: "莫斯 (Cristhian Mosquera / Mos)", nat: "西班牙 🇪🇸", role: "4000萬歐元自西甲購入/22歲西班牙世界盃/奧運冠軍國腳 🔥新加盟" },
         { num: 38, name: "瑞安·赫拉芬貝赫 (Gravenberch)", nat: "荷蘭 🇳🇱", role: "中場全能組織者" },
         { num: 3, name: "遠藤航 (Wataru Endo)", nat: "日本 🇯🇵", role: "防守中場鐵閘" },
-        { num: 17, name: "柯蒂斯·瓊斯 (Curtis Jones)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "本土中場" },
-        { num: 19, name: "哈維·埃利奧特 (Harvey Elliott)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "進攻中場" }
+        { num: 17, name: "柯蒂斯·瓊斯 (Curtis Jones)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "本土中場" }
       ],
       fw: [
-        { num: 9, name: "亞歷山大·伊薩克 (Alexander Isak)", nat: "瑞典 🇸🇪", role: "1.25億鎊隊史紀錄引進/新主力神鋒 🔥新加盟" },
+        { num: 29, name: "布拉德利·巴爾科拉 (Bradley Barcola)", nat: "法國 🇫🇷", role: "1.23億鎊自巴黎聖日耳曼挖角加盟/破億天價爆破邊鋒 🔥新加盟" },
+        { num: 9, name: "亞歷山大·伊薩克 (Alexander Isak)", nat: "瑞典 🇸🇪", role: "1.25億鎊主力神鋒" },
         { num: 18, name: "科迪·加克波 (Cody Gakpo)", nat: "荷蘭 🇳🇱", role: "左翼/中鋒" },
         { num: 20, name: "迪奧戈·若塔 (Diogo Jota)", nat: "葡萄牙 🇵🇹", role: "禁區終結者" },
         { num: 14, name: "費德里科·基耶薩 (Federico Chiesa)", nat: "義大利 🇮🇹", role: "爆發型邊鋒" }
@@ -876,19 +881,19 @@ const footballData = {
 
     },
     "切爾西": {
-      "manager": "恩佐·馬雷斯卡 (Enzo Maresca)",
+      "manager": "利亞姆·羅塞尼爾 (Liam Rosenior / 主帥A)",
       "captain": "里斯·詹姆斯 (Reece James)",
       "gk": [
+            {
+                  "num": 23,
+                  "name": "埃米利亞諾·馬丁內斯 (Emiliano Martínez / MKZ)",
+                  "nat": "阿根廷 🇦🇷",
+                  "role": "世界盃冠軍/雅辛獎阿根廷國門自阿斯頓維拉加盟鎮守藍軍大門 🔥新加盟"
+            },
             {
                   "num": 1,
                   "name": "羅伯特·桑切斯 (Robert Sánchez)",
                   "nat": "西班牙 🇪🇸",
-                  "role": "主力門將"
-            },
-            {
-                  "num": 12,
-                  "name": "菲利普·約根森 (Filip Jørgensen)",
-                  "nat": "丹麥 🇩🇰",
                   "role": "盃賽門將"
             }
       ],
@@ -898,6 +903,12 @@ const footballData = {
                   "name": "里斯·詹姆斯 (Reece James)",
                   "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
                   "role": "隊長/頂級右後衛"
+            },
+            {
+                  "num": 4,
+                  "name": "洛根·科斯塔 (Logan Costa / 跨)",
+                  "nat": "法國 🇫🇷",
+                  "role": "自西甲比利亞雷阿爾補強引進/法國王牌後衛即戰力 🔥新加盟"
             },
             {
                   "num": 6,
@@ -927,7 +938,7 @@ const footballData = {
                   "num": 21,
                   "name": "約雷爾·哈托 (Jorrel Hato)",
                   "nat": "荷蘭 🇳🇱",
-                  "role": "自阿賈克斯重磅加盟/荷蘭天才左中衛兼左後衛多面手 🔥新加盟"
+                  "role": "荷蘭天才左中衛兼左後衛多面手 🔥新加盟"
             }
       ],
       "mf": [
@@ -1002,7 +1013,7 @@ const footballData = {
       ]
 },
     "曼徹斯特聯": {
-      "manager": "魯本·阿莫林 (Rúben Amorim)",
+      "manager": "麥克·卡里克 (Michael Carrick)",
       "captain": "布魯諾·費南德斯 (Bruno Fernandes)",
       "gk": [
             {
@@ -1058,22 +1069,34 @@ const footballData = {
                   "role": "⭐ 新賽季期待中場(小鍋Top4/困Top5) / 隊長/進攻核心司令塔"
             },
             {
+                  "num": 21,
+                  "name": "尤里·蒂勒曼斯 (Youri Tielemans)",
+                  "nat": "比利時 🇧🇪",
+                  "role": "3500萬鎊自維拉超值挖角/中場組織指揮官 🔥新加盟"
+            },
+            {
+                  "num": 25,
+                  "name": "莫伊塞斯·凱塞多 (Moisés Caicedo)",
+                  "nat": "厄瓜多 🇪🇨",
+                  "role": "7000萬鎊自切爾西引進/頂級鐵血搶斷掃蕩後腰 🔥新加盟"
+            },
+            {
+                  "num": 22,
+                  "name": "基爾南·霍爾 (Kiernan Dewsbury-Hall)",
+                  "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                  "role": "5000萬鎊自切爾西引進/全能B2B中場推進核心 🔥新加盟"
+            },
+            {
                   "num": 37,
                   "name": "科比·梅努 (Kobbie Mainoo)",
                   "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
                   "role": "青訓天才中場大腦"
             },
             {
-                  "num": 25,
-                  "name": "曼努埃爾·烏加特 (Manuel Ugarte)",
-                  "nat": "烏拉圭 🇺🇾",
-                  "role": "搶斷掃蕩後腰"
-            },
-            {
                   "num": 18,
                   "name": "卡塞米羅 (Casemiro)",
                   "nat": "巴西 🇧🇷",
-                  "role": "防守鐵閘"
+                  "role": "防守鐵閘/經驗老將"
             }
       ],
       "fw": [
@@ -1116,7 +1139,7 @@ const footballData = {
       ]
 },
     "熱刺": {
-      "manager": "安格·波斯特科格魯 (Ange Postecoglou)",
+      "manager": "羅伯托·德澤爾比 (Roberto De Zerbi)",
       "captain": "孫興慜 (Son Heung-min)",
       "gk": [
             {
@@ -1140,6 +1163,18 @@ const footballData = {
                   "role": "世界最高速頂級中衛"
             },
             {
+                  "num": 5,
+                  "name": "揚·保羅·范赫克 (Jan Paul van Hecke)",
+                  "nat": "荷蘭 🇳🇱",
+                  "role": "自布萊頓引進/德澤爾比昔日愛將/與范德文合組荷蘭雙塔中衛 🔥新加盟"
+            },
+            {
+                  "num": 26,
+                  "name": "安德魯·羅伯遜 (Andrew Robertson)",
+                  "nat": "蘇格蘭 🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+                  "role": "老將經驗左閘/英超傳奇邊衛 🔥新加盟"
+            },
+            {
                   "num": 13,
                   "name": "德斯特尼·烏多吉 (Destiny Udogie)",
                   "nat": "義大利 🇮🇹",
@@ -1154,22 +1189,28 @@ const footballData = {
       ],
       "mf": [
             {
+                  "num": 8,
+                  "name": "桑德羅·托納利 (Sandro Tonali)",
+                  "nat": "義大利 🇮🇹",
+                  "role": "1億英鎊自紐卡索重磅引進/義大利全能中場大師 🔥新加盟"
+            },
+            {
+                  "num": 6,
+                  "name": "費南德斯 (Mateus Fernandes / M費)",
+                  "nat": "葡萄牙 🇵🇹",
+                  "role": "8500萬鎊自西漢姆聯引進/新賽季期待中場(困Top10) 🔥新加盟"
+            },
+            {
                   "num": 10,
                   "name": "詹姆斯·麥迪森 (James Maddison)",
                   "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-                  "role": "⭐ 新賽季期待中場(困Top10) / 前場創造力核心司令塔"
+                  "role": "前場創造力核心司令塔"
             },
             {
                   "num": 21,
                   "name": "德揚·庫盧塞夫斯基 (Dejan Kulusevski)",
                   "nat": "瑞典 🇸🇪",
                   "role": "全能中前場發動機"
-            },
-            {
-                  "num": 8,
-                  "name": "伊夫·比蘇馬 (Yves Bissouma)",
-                  "nat": "馬利 🇲🇱",
-                  "role": "防守後腰"
             },
             {
                   "num": 29,
@@ -1184,6 +1225,18 @@ const footballData = {
                   "name": "孫興慜 (Son Heung-min)",
                   "nat": "韓國 🇰🇷",
                   "role": "傳奇隊長/亞洲天王/頭號射手"
+            },
+            {
+                  "num": 28,
+                  "name": "薩維奧 (Sávio)",
+                  "nat": "巴西 🇧🇷",
+                  "role": "與哈欽森合計1.3億鎊自曼城打包重磅引進/邊路爆破殺器 🔥新加盟"
+            },
+            {
+                  "num": 11,
+                  "name": "歐馬·哈欽森 (Omari Hutchinson)",
+                  "nat": "英格蘭/牙買加 🇯🇲",
+                  "role": "與薩維奧合計1.3億鎊自曼城引進/極速盤帶新星邊翼 🔥新加盟"
             },
             {
                   "num": 19,
@@ -1202,12 +1255,6 @@ const footballData = {
                   "name": "理查利森 (Richarlison)",
                   "nat": "巴西 🇧🇷",
                   "role": "強力前鋒"
-            },
-            {
-                  "num": 28,
-                  "name": "薩維奧 (Sávio)",
-                  "nat": "巴西 🇧🇷",
-                  "role": "7500萬鎊自曼城重磅引進/頂級突破邊翼 🔥新加盟"
             }
       ]
 },
