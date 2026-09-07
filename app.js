@@ -433,11 +433,16 @@ function initDedicatedStandings() {
 
         <!-- Fixtures List Header -->
         <div style="margin-bottom: 1.25rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.25rem;">📅 跨聯盟焦點豪門對決賽程 (每週賽程更新)</h3>
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+            <div>
+              <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.25rem;">📅 跨聯盟焦點豪門對決賽程 (每週賽程更新)</h3>
+              <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                <span style="color: var(--text-secondary); font-size: 0.88rem;">點擊對戰球隊名稱即可直接檢視該隊完整一線球員名單與球星陣容</span>
+                <a href="https://www.365scores.com/zh-tw" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; color: var(--color-blue); text-decoration: underline; font-weight: 600;">🔗 數據即時對齊自 365Scores (zh-tw)</a>
+              </div>
+            </div>
             <span style="color: var(--color-blue); font-size: 0.85rem; font-weight: 600;">共 ${fixtures.length} 場重磅焦點賽事</span>
           </div>
-          <span style="color: var(--text-secondary); font-size: 0.88rem;">點擊對戰球隊名稱即可直接檢視該隊完整一線球員名單與球星陣容</span>
         </div>
 
         <div class="fixtures-container">
@@ -560,7 +565,10 @@ function initDedicatedStandings() {
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
           <div>
             <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.25rem;">📅 ${league.name} 近期焦點德比與豪門對決賽程 (每週更新)</h3>
-            <span style="color: var(--text-secondary); font-size: 0.88rem;">點擊對戰球隊可直接開啟該隊球員名單</span>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span style="color: var(--text-secondary); font-size: 0.88rem;">點擊對戰球隊可直接開啟該隊球員名單</span>
+              <a href="https://www.365scores.com/zh-tw" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; color: var(--color-blue); text-decoration: underline; font-weight: 600;">🔗 數據即時對齊自 365Scores (zh-tw)</a>
+            </div>
           </div>
           <span style="font-size: 0.8rem; color: #d97706; background: rgba(245, 158, 11, 0.1); padding: 0.25rem 0.6rem; border-radius: 6px; font-weight: 600;">
             🔥 標註「豪門對決」代表強強對碰焦點賽事

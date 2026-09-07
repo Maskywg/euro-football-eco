@@ -2515,6 +2515,32 @@ const footballData = {
             "isCrossLeague": true
         },
         {
+            "round": "歐國聯 A 級第 1 輪 (完賽)",
+            "competition": "歐洲國家聯賽 (UEFA Nations League)",
+            "date": "2026-09-06",
+            "home": "比利時",
+            "away": "以色列",
+            "score": "3 - 1",
+            "status": "完賽",
+            "stadium": "匈牙利德布勒森納吉耶爾代球場 (中立場)",
+            "highlight": "🌍 德布勞內梅開二度・蒂勒曼斯建功，歐洲紅魔3-1旗開得勝",
+            "isGiant": true,
+            "isCrossLeague": true
+        },
+        {
+            "round": "歐國聯 B 級第 1 輪 (完賽)",
+            "competition": "歐洲國家聯賽 (UEFA Nations League)",
+            "date": "2026-09-06",
+            "home": "威爾斯",
+            "away": "土耳其",
+            "score": "0 - 0",
+            "status": "完賽",
+            "stadium": "卡迪夫城體育場",
+            "highlight": "🌍 貝拉米執教首秀・雙方激烈對碰互交白卷",
+            "isGiant": false,
+            "isCrossLeague": true
+        },
+        {
             "round": "世預賽南美區 第 7 輪 (完賽)",
             "competition": "2026世界盃南美區外圍賽",
             "date": "2026-09-06",
