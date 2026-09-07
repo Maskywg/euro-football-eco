@@ -477,19 +477,20 @@ function initDedicatedStandings() {
             <span style="font-size: 1.6rem; line-height: 1;">⚽</span>
             <div>
               <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
-                【9/1 聯賽完賽戰報 & 9/2–9/11 國際比賽日休賽說明】
+                【9/1–9/5 聯賽最新戰報 & 9/6 歐國聯/世預賽戰果全數登錄】
               </div>
               <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0 0 0.4rem 0; line-height: 1.5;">
-                • <strong>9/1–9/5 聯賽最新焦點戰報已全數登錄</strong>：西甲<strong>皇家貝蒂斯 1-0 皇家馬德里</strong>（帕洛特第81分鐘絕殺、姆巴佩補時射失點球，皇馬吞賽季首敗）、畢爾包競技 0-1 馬德里競技；英超曼聯 0-3 利物浦、切爾西 1-1 水晶宮；德甲拜仁 2-0 弗萊堡；意甲尤文 0-0 羅馬；法甲里爾 1-3 巴黎。<br>
-                • <strong>國際比賽日休賽說明</strong>：五大聯賽將於 <strong>${metaInfo.nextRoundStartDate}</strong> 重啟！
+                • <strong>9/1–9/5 聯賽戰報已完整登錄</strong>：西甲皇家貝蒂斯 1-0 皇家馬德里、畢爾包 0-1 馬競；英超曼聯 0-3 利物浦、切爾西 1-1 水晶宮；德甲拜仁 2-0 弗萊堡；意甲尤文 0-0 羅馬；法甲里爾 1-3 巴黎。<br>
+                • <strong>9/6 國際比賽日戰果已收錄</strong>：歐國聯德國 5-0 狂勝匈牙利、荷蘭 5-2 波赫、愛爾蘭 0-2 英格蘭（賴斯反戈建功）；世預賽巴西 1-0 厄瓜多（羅德里戈絕殺）、烏拉圭 0-0 巴拉圭（蘇亞雷斯告別戰）。<br>
+                • <strong>聯賽重啟日程</strong>：五大聯賽將於 <strong>${metaInfo.nextRoundStartDate}</strong> 重燃戰火！
               </p>
               <div style="font-size: 0.82rem; color: var(--color-blue); font-weight: 600;">
-                💡 9/5 – 9/6 歐國聯焦點戰果（德5-0匈、法1-3意、葡2-1克）可至「跨聯盟豪門賽程」分頁檢視！
+                💡 完整 9/5 – 9/6 歐國聯與世預賽焦點戰果可至「跨聯盟豪門賽程」分頁檢視！
               </div>
             </div>
           </div>
           <button class="btn-tab" style="background: rgba(2, 132, 199, 0.15); border-color: var(--color-blue); color: var(--color-blue); font-weight: 700; padding: 0.5rem 0.9rem; border-radius: 8px; white-space: nowrap;" onclick="const t = document.querySelector('[data-standings-league=uefa]'); if(t) t.click();">
-            ⭐ 檢視 9/5-9/6 歐國聯戰果
+            ⭐ 檢視 9/6 戰果
           </button>
         </div>
       </div>

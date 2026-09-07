@@ -2346,9 +2346,9 @@ const footballData = {
     ]
   },
   meta: {
-    lastUpdatedDate: "2026-09-06",
-    lastMatchDate: "2026-09-05",
-    intlBreakWindow: "2026-09-01 至 2026-09-08",
+    lastUpdatedDate: "2026-09-07",
+    lastMatchDate: "2026-09-06",
+    intlBreakWindow: "2026-09-01 至 2026-09-11",
     nextRoundStartDate: "2026-09-12 (週六)"
   },
   leagueFixtures: {
@@ -2458,7 +2458,7 @@ const footballData = {
             "score": "5 - 0",
             "status": "完賽",
             "stadium": "杜塞爾多夫水星娛樂競技場",
-            "highlight": "🌍 日耳曼戰車五球狂勝・穆西亞拉維爾茨雙星閃耀",
+            "highlight": "🌍 日耳曼戰車五球狂勝・穆西亞拉1球3助、維爾茨傳射雙星閃耀",
             "isGiant": true,
             "isCrossLeague": true
         },
@@ -2471,7 +2471,7 @@ const footballData = {
             "score": "5 - 2",
             "status": "完賽",
             "stadium": "恩荷芬飛利浦球場",
-            "highlight": "🌍 橙衣軍團進攻風暴・齊爾克澤建功",
+            "highlight": "🌍 橙衣軍團進攻風暴・齊爾克澤傳射、賴因德斯破門",
             "isGiant": true,
             "isCrossLeague": true
         },
@@ -2484,7 +2484,46 @@ const footballData = {
             "score": "0 - 2",
             "status": "完賽",
             "stadium": "都柏林英傑華球場 (Aviva Stadium)",
-            "highlight": "🌍 三獅軍團客場告捷・賴斯、格拉利許破門反戈",
+            "highlight": "🌍 三獅軍團客場告捷・卡斯利執教首秀，賴斯、格拉利許破門反戈",
+            "isGiant": true,
+            "isCrossLeague": true
+        },
+        {
+            "round": "歐國聯 B 級第 1 輪 (完賽)",
+            "competition": "歐洲國家聯賽 (UEFA Nations League)",
+            "date": "2026-09-06",
+            "home": "希臘",
+            "away": "芬蘭",
+            "score": "3 - 0",
+            "status": "完賽",
+            "stadium": "比雷埃夫斯卡萊斯卡基斯球場",
+            "highlight": "🌍 希臘主場3球完勝芬蘭・伊奧尼迪斯梅開二度",
+            "isGiant": false,
+            "isCrossLeague": true
+        },
+        {
+            "round": "世預賽南美區 第 7 輪 (完賽)",
+            "competition": "2026世界盃南美區外圍賽",
+            "date": "2026-09-06",
+            "home": "巴西",
+            "away": "厄瓜多",
+            "score": "1 - 0",
+            "status": "完賽",
+            "stadium": "庫里奇巴庫托佩雷拉球場",
+            "highlight": "🌍 羅德里戈禁區外遠射折射破門絕殺・五星巴西終結世預賽連敗",
+            "isGiant": true,
+            "isCrossLeague": true
+        },
+        {
+            "round": "世預賽南美區 第 7 輪 (完賽)",
+            "competition": "2026世界盃南美區外圍賽",
+            "date": "2026-09-06",
+            "home": "烏拉圭",
+            "away": "巴拉圭",
+            "score": "0 - 0",
+            "status": "完賽",
+            "stadium": "蒙特維多世紀球場",
+            "highlight": "🌍 蘇亞雷斯國家隊告別之戰・主場擊中門柱憾平，正式退役謝幕",
             "isGiant": true,
             "isCrossLeague": true
         },
