@@ -920,9 +920,21 @@ const footballData = {
                   "name": "馬洛·古斯托 (Malo Gusto)",
                   "nat": "法國 🇫🇷",
                   "role": "高速右後衛"
+            },
+            {
+                  "num": 21,
+                  "name": "約雷爾·哈托 (Jorrel Hato)",
+                  "nat": "荷蘭 🇳🇱",
+                  "role": "自阿賈克斯重磅加盟/荷蘭天才左中衛兼左後衛多面手 🔥新加盟"
             }
       ],
       "mf": [
+            {
+                  "num": 17,
+                  "name": "摩根·羅傑斯 (Morgan Rogers)",
+                  "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                  "role": "以1.17億鎊自阿斯頓維拉加盟創英國轉會紀錄/全能前腰邊鋒新星 🔥新加盟"
+            },
             {
                   "num": 20,
                   "name": "科爾·帕爾默 (Cole Palmer)",
