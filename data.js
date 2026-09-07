@@ -598,9 +598,9 @@ const footballData = {
         { num: 82, name: "里科·劉易斯 (Rico Lewis)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "邊後衛新星" }
       ],
       mf: [
-        { num: 5, name: "埃利奧特·安德森 (Elliot Anderson)", nat: "蘇格蘭 🏴󠁧󠁢󠁳󠁣󠁴󠁿", role: "1.16億鎊天價引進/中場新核心 🔥新加盟" },
-        { num: 8, name: "恩佐·費南德斯 (Enzo Fernández)", nat: "阿根廷 🇦🇷", role: "世界盃冠軍/新加盟中場指揮官 🔥新轉入" },
-        { num: 18, name: "拉揚·謝爾基 (Rayan Cherki)", nat: "法國 🇫🇷", role: "法國盤帶魔術師/進攻組織核心 🔥新轉入" },
+        { num: 5, name: "埃利奧特·安德森 (Elliot Anderson)", nat: "蘇格蘭 🏴󠁧󠁢󠁳󠁣󠁴󠁿", role: "⭐ 新賽季期待中場(困Top8/小鍋Top9) / 1.16億鎊中場新核心 🔥新加盟" },
+        { num: 8, name: "恩佐·費南德斯 (Enzo Fernández)", nat: "阿根廷 🇦🇷", role: "⭐ 新賽季期待中場(小鍋Top5) / 世界盃冠軍指揮官 🔥新轉入" },
+        { num: 18, name: "拉揚·謝爾基 (Rayan Cherki)", nat: "法國 🇫🇷", role: "⭐ 新賽季期待中場(困Top2/小鍋Top3) / 法國盤帶魔術師 🔥新轉入" },
         { num: 17, name: "凱文·德布勞內 (Kevin De Bruyne)", nat: "比利時 🇧🇪", role: "中場大腦/傳奇組織核心" },
         { num: 19, name: "伊爾凱·京多安 (İlkay Gündoğan)", nat: "德國 🇩🇪", role: "老將隊魂/中場指揮" },
         { num: 16, name: "馬特奧·科瓦契奇 (Mateo Kovačić)", nat: "克羅埃西亞 🇭🇷", role: "全能中場" },
@@ -699,8 +699,8 @@ const footballData = {
         { num: 17, name: "奧列克桑德·津琴科 (Zinchenko)", nat: "烏克蘭 🇺🇦", role: "內收型邊後衛" }
       ],
       mf: [
-        { num: 8, name: "馬丁·厄德高 (Martin Ødegaard)", nat: "挪威 🇳🇴", role: "槍手隊長/進攻發動機" },
-        { num: 41, name: "德克蘭·賴斯 (Declan Rice)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "一億英鎊身價後腰" },
+        { num: 8, name: "馬丁·厄德高 (Martin Ødegaard)", nat: "挪威 🇳🇴", role: "⭐ 新賽季期待中場(小鍋Top7/困Top9) / 槍手隊長/進攻發動機" },
+        { num: 41, name: "德克蘭·賴斯 (Declan Rice)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "⭐ 新賽季期待中場(小鍋Top1/困Top4) / 一億英鎊防守基石" },
         { num: 23, name: "米克爾·梅里諾 (Mikel Merino)", nat: "西班牙 🇪🇸", role: "歐洲盃冠軍中場" },
         { num: 5, name: "托馬斯·帕爾特伊 (Thomas Partey)", nat: "加納 🇬🇭", role: "後腰屏障" },
         { num: 20, name: "若日尼奧 (Jorginho)", nat: "義大利 🇮🇹", role: "老將節拍器" }
@@ -730,8 +730,8 @@ const footballData = {
         { num: 21, name: "科斯塔斯·齊米卡斯 (Tsimikas)", nat: "希臘 🇬🇷", role: "左後衛" }
       ],
       mf: [
-        { num: 8, name: "多米尼克·索博斯洛伊 (Szoboszlai)", nat: "匈牙利 🇭🇺", role: "進攻發電機/重砲手" },
-        { num: 10, name: "亞歷克西斯·麥卡利斯特 (Mac Allister)", nat: "阿根廷 🇦🇷", role: "世界盃冠軍中場大腦" },
+        { num: 8, name: "多米尼克·索博斯洛伊 (Szoboszlai)", nat: "匈牙利 🇭🇺", role: "⭐ 新賽季期待中場(困Top1/小鍋Top3) / 進攻發電機/重砲手" },
+        { num: 10, name: "亞歷克西斯·麥卡利斯特 (Mac Allister)", nat: "阿根廷 🇦🇷", role: "⭐ 新賽季期待中場(困Top7/小鍋Top6) / 世界盃冠軍中場大腦" },
         { num: 38, name: "瑞安·赫拉芬貝赫 (Gravenberch)", nat: "荷蘭 🇳🇱", role: "中場全能組織者" },
         { num: 3, name: "遠藤航 (Wataru Endo)", nat: "日本 🇯🇵", role: "防守中場鐵閘" },
         { num: 17, name: "柯蒂斯·瓊斯 (Curtis Jones)", nat: "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", role: "本土中場" },
@@ -933,13 +933,13 @@ const footballData = {
                   "num": 17,
                   "name": "摩根·羅傑斯 (Morgan Rogers)",
                   "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-                  "role": "以1.17億鎊自阿斯頓維拉加盟創英國轉會紀錄/全能前腰邊鋒新星 🔥新加盟"
+                  "role": "⭐ 新賽季期待中場(困Top6/小鍋Top8) / 1.17億鎊英格蘭前腰邊鋒 🔥新加盟"
             },
             {
                   "num": 20,
                   "name": "科爾·帕爾默 (Cole Palmer)",
                   "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-                  "role": "英超核心前腰/進攻靈魂"
+                  "role": "⭐ 新賽季期待中場(小鍋Top2/困Top3) / 英超核心前腰/進攻靈魂"
             },
             {
                   "num": 25,
@@ -1053,7 +1053,7 @@ const footballData = {
                   "num": 8,
                   "name": "布魯諾·費南德斯 (Bruno Fernandes)",
                   "nat": "葡萄牙 🇵🇹",
-                  "role": "隊長/進攻核心司令塔"
+                  "role": "⭐ 新賽季期待中場(小鍋Top4/困Top5) / 隊長/進攻核心司令塔"
             },
             {
                   "num": 37,
@@ -1155,7 +1155,7 @@ const footballData = {
                   "num": 10,
                   "name": "詹姆斯·麥迪森 (James Maddison)",
                   "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-                  "role": "前場創造力核心"
+                  "role": "⭐ 新賽季期待中場(困Top10) / 前場創造力核心司令塔"
             },
             {
                   "num": 21,
@@ -1329,7 +1329,7 @@ const footballData = {
                   "num": 39,
                   "name": "布魯諾·吉馬良斯 (Bruno Guimarães)",
                   "nat": "巴西 🇧🇷",
-                  "role": "隊長/世界級中場節拍器"
+                  "role": "⭐ 新賽季期待中場(小鍋Top10) / 隊長/世界級中場節拍器 (評析關注轉會兵工廠可能)"
             },
             {
                   "num": 7,
@@ -2207,6 +2207,33 @@ const footballData = {
         { "num": 9, "name": "伊戈爾·蒂亞戈 (Igor Thiago)", "nat": "巴西 🇧🇷", "role": "自布魯日3000萬鎊加盟主力強力中鋒 🔥新援" },
         { "num": 7, "name": "凱文·沙德 (Kevin Schade)", "nat": "德國 🇩🇪", "role": "極速邊鋒突破手" },
         { "num": 23, "name": "基恩·劉易斯-波特 (Keane Lewis-Potter)", "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", "role": "主力左邊鋒/衝擊力強" }
+      ]
+    },
+    "諾丁漢森林": {
+      "manager": "努諾·埃斯皮里托·桑托 (Nuno Espírito Santo)",
+      "captain": "摩根·吉布斯-懷特 (Morgan Gibbs-White)",
+      "gk": [
+        { "num": 26, "name": "馬茨·塞爾斯 (Matz Sels)", "nat": "比利時 🇧🇪", "role": "主力國門" },
+        { "num": 33, "name": "卡洛斯·米格爾 (Carlos Miguel)", "nat": "巴西 🇧🇷", "role": "204cm巨人高門將" }
+      ],
+      "df": [
+        { "num": 5, "name": "穆里略 (Murillo)", "nat": "巴西 🇧🇷", "role": "主力王牌巴西中衛" },
+        { "num": 31, "name": "尼古拉·米連科維奇 (Nikola Milenković)", "nat": "塞爾維亞 🇷🇸", "role": "防線鐵閘中衛" },
+        { "num": 34, "name": "奧拉·埃納 (Ola Aina)", "nat": "奈及利亞 🇳🇬", "role": "主力攻守兼備邊後衛" },
+        { "num": 7, "name": "內科·威廉斯 (Neco Williams)", "nat": "威爾斯 🏴󠁧󠁢󠁷󠁬󠁳󠁿", "role": "右後衛助攻好手" }
+      ],
+      "mf": [
+        { "num": 10, "name": "摩根·吉布斯-懷特 (Morgan Gibbs-White)", "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", "role": "⭐ 新賽季期待中場(小鍋Top8) / 隊長/前場進攻核心司令塔" },
+        { "num": 8, "name": "埃利奧特·安德森 (Elliot Anderson)", "nat": "蘇格蘭 🏴󠁧󠁢󠁳󠁣󠁴󠁿", "role": "⭐ 新賽季期待中場(困Top8/小鍋Top9) / 前場全能中場大腦 (3500萬鎊自紐卡加盟/引曼城高額轉會傳聞)" },
+        { "num": 22, "name": "賴恩·耶茨 (Ryan Yates)", "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", "role": "副隊長/鐵血硬漢後腰" },
+        { "num": 28, "name": "達尼洛 (Danilo)", "nat": "巴西 🇧🇷", "role": "巴西全能中場" },
+        { "num": 16, "name": "尼古拉斯·多明格斯 (Nicolás Domínguez)", "nat": "阿根廷 🇦🇷", role: "阿根廷跑動型中場" }
+      ],
+      "fw": [
+        { "num": 11, "name": "克里斯·伍德 (Chris Wood)", "nat": "紐西蘭 🇳🇿", "role": "主力支點高中鋒/進球機器" },
+        { "num": 14, "name": "卡勒姆·哈德森-奧多伊 (Hudson-Odoi)", "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", "role": "左路內切爆射邊鋒" },
+        { "num": 21, "name": "安東尼·埃蘭加 (Anthony Elanga)", "nat": "瑞典 🇸🇪", "role": "極速反擊爆破手" },
+        { "num": 9, "name": "塔伊沃·阿沃尼伊 (Taiwo Awoniyi)", "nat": "奈及利亞 🇳🇬", "role": "強力前鋒" }
       ]
     }
   },

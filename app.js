@@ -1351,7 +1351,7 @@ window.openClubSquadModal = function(clubName) {
                 ${names.en ? `<div class="player-name-en">${names.en}</div>` : ''}
                 <div class="player-sub">
                   <span>${p.nat || ''}</span>
-                  <span class="player-role-badge">${p.role || '現役成員'}</span>
+                  <span class="player-role-badge ${(p.role && (p.role.includes('⭐') || p.role.includes('★'))) ? 'star-player' : ''}">${p.role || '現役成員'}</span>
                 </div>
               </div>
             </div>
