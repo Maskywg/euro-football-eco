@@ -574,6 +574,12 @@ function initDedicatedStandings() {
             🔥 標註「豪門對決」代表強強對碰焦點賽事
           </span>
         </div>
+        <div style="margin-top: 0.85rem; padding: 0.65rem 1rem; border-radius: 8px; background: rgba(2, 132, 199, 0.08); border: 1px solid rgba(2, 132, 199, 0.2); font-size: 0.84rem; color: var(--text-secondary); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+          <span>📌 <strong>賽程說明</strong>：因 9/2–9/11 為國際足總 (FIFA) 國際比賽日，${league.name} 各俱樂部全面休賽；英超第4輪將於 <strong>9/12 (週六)</strong> 全面重啟！昨天 (9/6) 各國球星均出戰<strong>「歐國聯與世預賽」</strong>，賽果請點擊右方切換查看 👉</span>
+          <button class="btn-tab" style="padding: 0.3rem 0.75rem; font-size: 0.78rem; background: rgba(2, 132, 199, 0.2); color: var(--color-blue); border-color: var(--color-blue); font-weight: 700; border-radius: 6px;" onclick="const t = document.querySelector('[data-standings-league=uefa]'); if(t) t.click();">
+            ⭐ 點此查看 9/6 歐國聯戰果
+          </button>
+        </div>
       </div>
 
       <div class="fixtures-container">
