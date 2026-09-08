@@ -840,15 +840,14 @@ const footballData = {
         { num: 17, name: "維蒂尼亞 (Vitinha)", nat: "葡萄牙 🇵🇹", role: "巴黎中場大腦" },
         { num: 87, name: "若昂·內維斯 (João Neves)", nat: "葡萄牙 🇵🇹", role: "億元級全能中場天才" },
         { num: 33, name: "沃倫·扎伊爾-埃梅里 (Zaïre-Emery)", nat: "法國 🇫🇷", role: "法國18歲天才國腳" },
-        { num: 8, name: "法比安·魯伊斯 (Fabián Ruiz)", nat: "西班牙 🇪🇸", role: "2024歐洲盃最佳中場" },
-        { num: 19, name: "李剛仁 (Kang-in Lee)", nat: "韓國 🇰🇷", role: "亞洲金童/邊路組織核心" }
+        { num: 8, name: "法比安·魯伊斯 (Fabián Ruiz)", nat: "西班牙 🇪🇸", role: "2024歐洲盃最佳中場" }
       ],
       fw: [
-        { num: 10, name: "奧斯曼·登貝萊 (Ousmane Dembélé)", nat: "法國 🇫🇷", role: "頂級雙足邊路爆破手" },
-        { num: 29, name: "布拉德利·巴爾科拉 (Bradley Barcola)", nat: "法國 🇫🇷", role: "法甲進球榜首/左路新王" },
+        { num: 10, name: "奧斯曼·登貝萊 (Ousmane Dembélé)", nat: "法國 🇫🇷", role: "頂級雙足邊路爆破手/前場進攻核心" },
         { num: 9, name: "貢薩洛·拉莫斯 (Gonçalo Ramos)", nat: "葡萄牙 🇵🇹", role: "主力中鋒" },
         { num: 23, name: "蘭達爾·科洛·穆阿尼 (Kolo Muani)", nat: "法國 🇫🇷", role: "全能前鋒" },
-        { num: 11, name: "馬爾科·阿森西奧 (Marco Asensio)", nat: "西班牙 🇪🇸", role: "重砲前鋒" }
+        { num: 11, name: "馬爾科·阿森西奧 (Marco Asensio)", nat: "西班牙 🇪🇸", role: "重砲前鋒" },
+        { num: 14, name: "德西雷·杜埃 (Désiré Doué)", nat: "法國 🇫🇷", role: "5000萬歐引進之法國超新星爆破邊鋒 🔥" }
       ]
     },
     "柯文垂城": {
@@ -1469,6 +1468,12 @@ const footballData = {
                   "name": "馬科斯·略倫特 (Marcos Llorente)",
                   "nat": "西班牙 🇪🇸",
                   "role": "全能戰士"
+            },
+            {
+                  "num": 10,
+                  "name": "李剛仁 (Kang-in Lee)",
+                  "nat": "韓國 🇰🇷",
+                  "role": "約3500-4000萬歐自PSG重磅加盟/前場組織策應核心 🔥新加盟"
             }
       ],
       "fw": [
