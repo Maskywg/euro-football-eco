@@ -954,18 +954,6 @@ const footballData = {
                   "role": "⭐ 新賽季期待中場(小鍋Top2/困Top3) / 英超核心前腰/進攻靈魂"
             },
             {
-                  "num": 25,
-                  "name": "莫伊塞斯·凱塞多 (Moisés Caicedo)",
-                  "nat": "厄瓜多 🇪🇨",
-                  "role": "億元級防守鐵閘/主力後腰"
-            },
-            {
-                  "num": 22,
-                  "name": "基爾南·霍爾 (Kiernan Dewsbury-Hall)",
-                  "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-                  "role": "全能中場組織"
-            },
-            {
                   "num": 45,
                   "name": "羅密歐·拉維亞 (Roméo Lavia)",
                   "nat": "比利時 🇧🇪",
@@ -1262,24 +1250,18 @@ const footballData = {
       "captain": "約翰·麥金 (John McGinn)",
       "gk": [
             {
-                  "num": 23,
-                  "name": "埃米利亞諾·馬丁內斯 (Emiliano Martínez)",
-                  "nat": "阿根廷 🇦🇷",
-                  "role": "世界最佳門將/雅辛獎得主"
+                  "num": 25,
+                  "name": "羅賓·奧爾森 (Robin Olsen)",
+                  "nat": "瑞典 🇸🇪",
+                  "role": "守門員"
             }
       ],
       "df": [
             {
-                  "num": 4,
-                  "name": "埃茲里·孔薩 (Ezri Konsa)",
-                  "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-                  "role": "英格蘭國腳中衛"
-            },
-            {
                   "num": 14,
                   "name": "保·托雷斯 (Pau Torres)",
                   "nat": "西班牙 🇪🇸",
-                  "role": "出球大師中衛"
+                  "role": "出球大師中衛/防線領袖"
             },
             {
                   "num": 12,
@@ -1292,6 +1274,12 @@ const footballData = {
                   "name": "馬蒂·卡什 (Matty Cash)",
                   "nat": "波蘭 🇵🇱",
                   "role": "右後衛"
+            },
+            {
+                  "num": 3,
+                  "name": "迭戈·卡洛斯 (Diego Carlos)",
+                  "nat": "巴西 🇧🇷",
+                  "role": "強力中後衛"
             }
       ],
       "mf": [
@@ -1302,16 +1290,16 @@ const footballData = {
                   "role": "隊長/前場壓迫核心"
             },
             {
-                  "num": 8,
-                  "name": "尤里·蒂勒曼斯 (Youri Tielemans)",
-                  "nat": "比利時 🇧🇪",
-                  "role": "重砲調度中場"
-            },
-            {
                   "num": 24,
                   "name": "阿馬杜·奧納納 (Amadou Onana)",
                   "nat": "比利時 🇧🇪",
                   "role": "中場巨人屏障"
+            },
+            {
+                  "num": 44,
+                  "name": "布巴卡爾·卡馬拉 (Boubacar Kamara)",
+                  "nat": "法國 🇫🇷",
+                  "role": "防守後腰"
             }
       ],
       "fw": [
@@ -1374,22 +1362,22 @@ const footballData = {
       ],
       "mf": [
             {
-                  "num": 39,
-                  "name": "布魯諾·吉馬良斯 (Bruno Guimarães)",
-                  "nat": "巴西 🇧🇷",
-                  "role": "⭐ 新賽季期待中場(小鍋Top10) / 隊長/世界級中場節拍器 (評析關注轉會兵工廠可能)"
-            },
-            {
                   "num": 7,
                   "name": "喬林頓 (Joelinton)",
                   "nat": "巴西 🇧🇷",
-                  "role": "中場推土機"
+                  "role": "中場推土機/防守中軸"
             },
             {
-                  "num": 8,
-                  "name": "桑德羅·托納利 (Sandro Tonali)",
-                  "nat": "義大利 🇮🇹",
-                  "role": "義大利國腳頂級中場"
+                  "num": 28,
+                  "name": "喬·威洛克 (Joe Willock)",
+                  "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                  "role": "中場推進手"
+            },
+            {
+                  "num": 36,
+                  "name": "肖恩·朗斯塔夫 (Sean Longstaff)",
+                  "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+                  "role": "勤勉覆蓋型中場"
             }
       ],
       "fw": [
