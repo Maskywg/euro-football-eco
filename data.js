@@ -2388,27 +2388,27 @@ const footballData = {
     ]
   },
   meta: {
-    lastUpdatedDate: "2026-09-07",
-    lastMatchDate: "2026-09-06",
+    lastUpdatedDate: "2026-09-10",
+    lastMatchDate: "2026-09-09",
     intlBreakWindow: "2026-09-01 至 2026-09-11",
     nextRoundStartDate: "2026-09-12 (週六)"
   },
   leagueFixtures: {
     "uefa": [
         {
-            "round": "歐冠 第 1 輪",
+            "round": "歐冠 第 1 輪 (瑞士輪)",
             "competition": "歐洲冠軍聯賽 (UCL)",
             "date": "2026-09-16 03:00",
             "home": "曼徹斯特城",
             "away": "國際米蘭",
             "status": "即將上演",
             "stadium": "阿提哈德球場 (曼徹斯特)",
-            "highlight": "歐冠決賽重演・英意霸主天王山戰役",
+            "highlight": "歐冠決賽重演・英意霸主天王山戰役・36隊瑞士制聯賽首輪",
             "isGiant": true,
             "isCrossLeague": true
         },
         {
-            "round": "歐冠 第 1 輪",
+            "round": "歐冠 第 1 輪 (瑞士輪)",
             "competition": "歐洲冠軍聯賽 (UCL)",
             "date": "2026-09-16 03:00",
             "home": "皇家馬德里",
@@ -2420,19 +2420,19 @@ const footballData = {
             "isCrossLeague": true
         },
         {
-            "round": "歐冠 第 1 輪",
+            "round": "歐冠 第 1 輪 (瑞士輪)",
             "competition": "歐洲冠軍聯賽 (UCL)",
             "date": "2026-09-17 03:00",
             "home": "巴黎聖日耳曼",
             "away": "阿森納",
             "status": "即將上演",
             "stadium": "王子公園體育場 (巴黎)",
-            "highlight": "法英跨國豪門強強碰撞・阿爾特塔作客舊主",
+            "highlight": "法英跨國豪門強強碰撞・阿爾特塔作客舊主・巴爾科拉離隊後首場歐戰",
             "isGiant": true,
             "isCrossLeague": true
         },
         {
-            "round": "歐冠 第 1 輪",
+            "round": "歐冠 第 1 輪 (瑞士輪)",
             "competition": "歐洲冠軍聯賽 (UCL)",
             "date": "2026-09-17 03:00",
             "home": "AC米蘭",
@@ -2444,7 +2444,7 @@ const footballData = {
             "isCrossLeague": true
         },
         {
-            "round": "歐冠 第 1 輪",
+            "round": "歐冠 第 1 輪 (瑞士輪)",
             "competition": "歐洲冠軍聯賽 (UCL)",
             "date": "2026-09-18 03:00",
             "home": "馬德里競技",
@@ -2456,7 +2456,7 @@ const footballData = {
             "isCrossLeague": true
         },
         {
-            "round": "歐冠 第 1 輪",
+            "round": "歐冠 第 1 輪 (瑞士輪)",
             "competition": "歐洲冠軍聯賽 (UCL)",
             "date": "2026-09-18 03:00",
             "home": "尤文圖斯",
@@ -2468,6 +2468,32 @@ const footballData = {
             "isCrossLeague": true
         },
         {
+            "round": "歐冠 資格賽附加賽第 2 回合 (完賽)",
+            "competition": "歐洲冠軍聯賽 (UCL 資格賽)",
+            "date": "2026-08-29",
+            "home": "加拉塔薩雷",
+            "away": "伯爾尼年輕人",
+            "score": "0 - 1 (總比分 2-4)",
+            "status": "完賽",
+            "stadium": "伊斯坦堡公營體育場",
+            "highlight": "🏆 瑞士年輕人客場絕殺・總比分4-2淘汰土超冠軍挺進36強正賽",
+            "isGiant": false,
+            "isCrossLeague": true
+        },
+        {
+            "round": "歐冠 資格賽附加賽第 2 回合 (完賽)",
+            "competition": "歐洲冠軍聯賽 (UCL 資格賽)",
+            "date": "2026-08-28",
+            "home": "薩爾斯堡紅牛",
+            "away": "基輔迪納摩",
+            "score": "1 - 1 (總比分 3-1)",
+            "status": "完賽",
+            "stadium": "薩爾斯堡紅牛競技場",
+            "highlight": "🏆 奧地利霸主總比分3-1鎖定36強正賽席位",
+            "isGiant": false,
+            "isCrossLeague": true
+        },
+        {
             "round": "歐聯 第 1 輪",
             "competition": "歐洲聯賽 (UEL)",
             "date": "2026-09-24 03:00",
@@ -2475,7 +2501,7 @@ const footballData = {
             "away": "羅馬",
             "status": "即將上演",
             "stadium": "老特拉福球場 (曼徹斯特)",
-            "highlight": "紅魔主場迎戰紅狼・歐聯最受矚目大戰",
+            "highlight": "紅魔主場迎戰紅狼・卡里克歐戰首秀最受矚目大戰",
             "isGiant": true,
             "isCrossLeague": true
         },
@@ -2488,6 +2514,45 @@ const footballData = {
             "status": "即將上演",
             "stadium": "西格納伊度納公園 (多特蒙德)",
             "highlight": "黃黑之牆威斯特法倫大戰巴斯克雄獅",
+            "isGiant": true,
+            "isCrossLeague": true
+        },
+        {
+            "round": "歐國聯 A 級第 2 輪 (完賽)",
+            "competition": "歐洲國家聯賽 (UEFA Nations League)",
+            "date": "2026-09-10 02:45",
+            "home": "荷蘭",
+            "away": "德國",
+            "score": "2 - 2",
+            "status": "完賽",
+            "stadium": "阿姆斯特丹競技場 (Johan Cruyff Arena)",
+            "highlight": "🌍 宿敵巔峰對攻・賴因德斯閃擊、昂達夫傳射、鄧弗里斯扳平",
+            "isGiant": true,
+            "isCrossLeague": true
+        },
+        {
+            "round": "歐國聯 A 級第 2 輪 (完賽)",
+            "competition": "歐洲國家聯賽 (UEFA Nations League)",
+            "date": "2026-09-09 02:45",
+            "home": "法國",
+            "away": "比利時",
+            "score": "2 - 0",
+            "status": "完賽",
+            "stadium": "里昂安盟球場 (Groupama Stadium)",
+            "highlight": "🌍 高盧雄雞重返勝軌・穆阿尼補射破門、登貝萊世界波建功",
+            "isGiant": true,
+            "isCrossLeague": true
+        },
+        {
+            "round": "歐國聯 A 級第 2 輪 (完賽)",
+            "competition": "歐洲國家聯賽 (UEFA Nations League)",
+            "date": "2026-09-09 02:45",
+            "home": "以色列",
+            "away": "義大利",
+            "score": "1 - 2",
+            "status": "完賽",
+            "stadium": "中立場地 (匈牙利布達佩斯)",
+            "highlight": "🌍 藍衣軍團豪取二連勝・弗拉泰西破門、基恩補射建功",
             "isGiant": true,
             "isCrossLeague": true
         },
