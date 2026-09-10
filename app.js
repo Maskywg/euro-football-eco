@@ -431,6 +431,75 @@ function initDedicatedStandings() {
           </div>
         </div>
 
+        <!-- Standings Table for UEFA Swiss Model 36 Teams -->
+        <div style="margin-bottom: 2.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; flex-wrap: wrap; gap: 0.5rem;">
+            <div>
+              <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.25rem;">📊 2026/27 歐冠 36 強瑞士制單一積分榜 (即時排名)</h3>
+              <span style="color: var(--text-secondary); font-size: 0.88rem;">第 1～8 名直接晉級 16 強，第 9～24 名進入兩回合淘汰附加賽爭取另 8 席</span>
+            </div>
+            <span style="font-size: 0.8rem; color: #0284c7; background: rgba(2, 132, 199, 0.1); border: 1px solid rgba(2, 132, 199, 0.25); padding: 0.2rem 0.6rem; border-radius: 6px; font-weight: 600;">
+              🗓️ 賽事進度：第 1 輪將於 9/16 重磅揭幕・資格賽已全數完賽
+            </span>
+          </div>
+
+          <div class="standings-table-container">
+            <table class="standings-table">
+              <thead>
+                <tr>
+                  <th>排名</th>
+                  <th style="text-align: left; padding-left: 1.25rem;">參賽豪門俱樂部</th>
+                  <th>備註 / 檔位</th>
+                  <th>已賽</th>
+                  <th>勝</th>
+                  <th>平</th>
+                  <th>負</th>
+                  <th>進球</th>
+                  <th>失球</th>
+                  <th>淨勝</th>
+                  <th>積分</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${standings.map(row => {
+                  let rankClass = 'rank-normal';
+                  let zoneStyle = '';
+                  if (row.rank <= 8) {
+                    rankClass = 'rank-ucl';
+                    zoneStyle = 'background: rgba(2, 132, 199, 0.05);';
+                  } else if (row.rank <= 24) {
+                    rankClass = 'rank-uel';
+                    zoneStyle = 'background: rgba(234, 88, 12, 0.03);';
+                  }
+
+                  return `
+                    <tr style="${zoneStyle}" onclick="openClubSquadModal('${row.team}')" title="點擊查看 ${row.team} 現役陣容">
+                      <td><span class="rank-badge ${rankClass}">${row.rank}</span></td>
+                      <td class="col-team" style="padding-left: 1.25rem; font-weight: 600;">
+                        <span>${row.team}</span>
+                      </td>
+                      <td style="font-size: 0.82rem; color: var(--text-secondary); text-align: left;">${row.note || ''}</td>
+                      <td>${row.played}</td>
+                      <td>${row.won}</td>
+                      <td>${row.drawn}</td>
+                      <td>${row.lost}</td>
+                      <td>${row.gf}</td>
+                      <td>${row.ga}</td>
+                      <td>${row.gd}</td>
+                      <td class="col-pts">${row.pts}</td>
+                    </tr>
+                  `;
+                }).join('')}
+              </tbody>
+            </table>
+          </div>
+          <div class="standings-legend" style="margin-top: 0.85rem;">
+            <div class="standings-legend-item"><span class="legend-dot" style="background: var(--color-blue);"></span> 1-8 名：直接晉級歐冠 16 強 (直通淘汰賽)</div>
+            <div class="standings-legend-item"><span class="legend-dot" style="background: #ea580c;"></span> 9-24 名：參加兩回合淘汰附加賽 (爭奪另 8 席 16 強)</div>
+            <div class="standings-legend-item"><span class="legend-dot" style="background: #ef4444;"></span> 25-36 名：直接淘汰出局 (不再降入歐聯盃)</div>
+          </div>
+        </div>
+
         <!-- Fixtures List Header -->
         <div style="margin-bottom: 1.25rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
