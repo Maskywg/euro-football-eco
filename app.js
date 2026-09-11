@@ -439,7 +439,7 @@ function initDedicatedStandings() {
               <span style="color: var(--text-secondary); font-size: 0.88rem;">第 1～8 名直接晉級 16 強，第 9～24 名進入兩回合淘汰附加賽爭取另 8 席</span>
             </div>
             <span style="font-size: 0.8rem; color: #0284c7; background: rgba(2, 132, 199, 0.1); border: 1px solid rgba(2, 132, 199, 0.25); padding: 0.2rem 0.6rem; border-radius: 6px; font-weight: 600;">
-              🗓️ 賽事進度：第 1 輪將於 9/16 重磅揭幕・資格賽已全數完賽
+              🗓️ 賽事進度：第 1 輪已全數完賽 (9/8 - 9/10)・PSG與拜仁領跑積分榜
             </span>
           </div>
 
