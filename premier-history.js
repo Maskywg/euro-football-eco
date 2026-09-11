@@ -11,6 +11,7 @@ const timelineData = [
     year: '1863',
     category: 'ancient',
     title: '倫敦共濟會酒館：英足總誕生與現代足球規則成型',
+    image: 'assets/premier/freemasons_1863_rules.jpg',
     desc: '1863年10月26日，11所倫敦俱樂部代表在共濟會酒館（Freemasons\' Tavern）聚會，正式創立世界歷史最悠久的足球主管機構英足總（The FA）。正式通過禁止用手持球、禁止踢人絆人的《劍橋規則》，宣告現代足球（Association Football）與橄欖球（Rugby）正式分流。',
     tags: ['共濟會酒館', '英足總誕生', '現代足球始祖', '劍橋規則']
   },
@@ -18,6 +19,7 @@ const timelineData = [
     year: '1888',
     category: 'ancient',
     title: '世界第一個職業聯賽創立：老英甲與普雷斯頓不敗雙冠',
+    image: 'assets/premier/preston_1888.jpg',
     desc: '阿斯頓維拉董事威廉·麥格雷戈寫信提議建立固定主客場聯賽，1888年「英格蘭足球聯賽」（The Football League）誕生，12支創始球隊參賽。首屆冠軍普雷斯頓北區（Preston North End）創下整季聯賽與足總盃均不敗奪冠的「最初的不敗之師」（The Proud Preston）。',
     tags: ['世界首個職業聯賽', '老英甲起源', '雙循環積分之祖', '普雷斯頓不敗']
   },
@@ -84,6 +86,7 @@ const timelineData = [
     year: '2015 - 2016',
     category: 'miracle',
     title: '1 比 5000 狐狸城童話：萊斯特城震撼全球體壇',
+    image: 'assets/premier/leicester_2016.jpg',
     desc: '季前博彩公司開出 1 賠 5000 的天文奪冠賠率，前一季還在為保級苦戰的萊斯特城，在義大利教頭拉涅利帶領下，瓦爾迪連場破門破紀錄、坎特無處不在的攔截，締造了世界體育史上最不可思議的平民神話。',
     tags: ['1賠5000天文賠率', '狐狸城童話', '瓦爾迪勵志傳奇', '拉涅利']
   },
