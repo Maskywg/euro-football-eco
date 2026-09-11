@@ -1,0 +1,862 @@
+/* Spain Football History & El Clásico Special Theme */
+:root {
+  --spain-red: #c60b1e;
+  --spain-yellow: #ffc400;
+  --real-blue: #00529f;
+  --real-gold: #cfa856;
+  --barca-blue: #004d98;
+  --barca-garnet: #a50044;
+  --bg-dark: #090c15;
+  --bg-card: rgba(18, 24, 38, 0.75);
+  --bg-card-hover: rgba(28, 36, 56, 0.9);
+  --border-glass: rgba(255, 255, 255, 0.1);
+  --border-gold: rgba(255, 196, 0, 0.35);
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --accent-gold: #fbbf24;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(198, 11, 30, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(255, 196, 0, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(0, 77, 152, 0.08) 0%, transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Nav Header */
+.special-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(9, 12, 21, 0.85);
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.nav-brand-badge {
+  background: linear-gradient(135deg, var(--spain-red), var(--spain-yellow));
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--spain-yellow);
+}
+
+.nav-back-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-glass);
+  color: #fff !important;
+  padding: 0.45rem 0.95rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.nav-back-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Container */
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Section Common */
+.section {
+  padding: 4.5rem 0;
+}
+
+.section-title-wrap {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.badge-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--spain-yellow);
+  background: rgba(255, 196, 0, 0.12);
+  border: 1px solid rgba(255, 196, 0, 0.3);
+  padding: 0.3rem 0.85rem;
+  border-radius: 9999px;
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #ffffff 40%, #e2e8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.85rem;
+}
+
+.section-intro {
+  color: var(--text-muted);
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+
+/* Glass Card */
+.glass-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+/* Hero Section */
+.hero-special {
+  padding: 5rem 0 3.5rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.hero-special h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -1px;
+}
+
+.gradient-spain {
+  background: linear-gradient(120deg, #ff4e50, #f9d423, #ff4e50);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
+.hero-lead {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  max-width: 780px;
+  margin: 0 auto 2.2rem auto;
+  line-height: 1.7;
+}
+
+.hero-video-callout {
+  background: linear-gradient(135deg, rgba(198, 11, 30, 0.25), rgba(255, 196, 0, 0.15));
+  border: 1px solid rgba(255, 196, 0, 0.3);
+  padding: 1.25rem 1.75rem;
+  border-radius: 14px;
+  max-width: 800px;
+  margin: 0 auto 2.5rem auto;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: left;
+}
+
+.video-icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+
+.video-callout-text h4 {
+  font-size: 1.05rem;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.video-callout-text p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin-bottom: 0.5rem;
+}
+
+.video-callout-text a {
+  color: var(--spain-yellow);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.video-callout-text a:hover {
+  text-decoration: underline;
+}
+
+/* Quick Jump Pill Navigation */
+.quick-pills {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.quick-pill-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  color: #e2e8f0;
+  padding: 0.6rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.quick-pill-btn:hover {
+  background: rgba(255, 196, 0, 0.18);
+  border-color: var(--spain-yellow);
+  color: var(--spain-yellow);
+  transform: translateY(-2px);
+}
+
+/* Section: The Concept of El Clásico */
+.clasico-anatomy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.anatomy-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.anatomy-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--spain-red), var(--spain-yellow));
+}
+
+.anatomy-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.anatomy-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.anatomy-header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.anatomy-card p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.anatomy-badge-note {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  color: #facc15;
+  border-left: 3px solid #facc15;
+}
+
+/* Dual Comparison: Real Madrid vs Barcelona */
+.rivalry-duel {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.club-side {
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  backdrop-filter: blur(12px);
+}
+
+.club-side.real {
+  background: linear-gradient(145deg, rgba(0, 82, 159, 0.22), rgba(18, 24, 38, 0.85));
+  border: 1px solid rgba(0, 82, 159, 0.45);
+}
+
+.club-side.barca {
+  background: linear-gradient(145deg, rgba(165, 0, 68, 0.22), rgba(0, 77, 152, 0.2));
+  border: 1px solid rgba(165, 0, 68, 0.45);
+}
+
+.club-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.club-crest-text {
+  font-size: 2.2rem;
+}
+
+.club-side h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.club-motto {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.club-side ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.club-side li {
+  font-size: 0.92rem;
+  color: #e2e8f0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Section: Interactive Timeline */
+.timeline-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  color: var(--text-muted);
+  padding: 0.5rem 1.1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--spain-yellow);
+  color: #000;
+  border-color: var(--spain-yellow);
+}
+
+.timeline-wrapper {
+  position: relative;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.timeline-wrapper::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--spain-red), var(--spain-yellow), #00529f);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1.5px;
+  border-radius: 3px;
+}
+
+.timeline-node {
+  padding: 10px 35px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.timeline-node.left {
+  left: 0;
+}
+
+.timeline-node.right {
+  left: 50%;
+}
+
+.timeline-node::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: -8px;
+  background-color: var(--bg-dark);
+  border: 3px solid var(--spain-yellow);
+  top: 24px;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(255, 196, 0, 0.8);
+}
+
+.timeline-node.right::after {
+  left: -8px;
+}
+
+.timeline-content {
+  padding: 1.4rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: 14px;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 196, 0, 0.4);
+}
+
+.timeline-year {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 800;
+  background: rgba(255, 196, 0, 0.15);
+  color: var(--spain-yellow);
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content h3 {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.6rem;
+}
+
+.timeline-content p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.timeline-tags {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.tag-item {
+  font-size: 0.72rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Section: Tactics & Philosophies */
+.tactics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.tactics-card {
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.tactics-pill {
+  align-self: flex-start;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.pill-barca {
+  background: rgba(165, 0, 68, 0.25);
+  color: #f43f5e;
+  border: 1px solid rgba(165, 0, 68, 0.5);
+}
+
+.pill-real {
+  background: rgba(0, 82, 159, 0.25);
+  color: #60a5fa;
+  border: 1px solid rgba(0, 82, 159, 0.5);
+}
+
+.pill-spain {
+  background: rgba(255, 196, 0, 0.25);
+  color: #facc15;
+  border: 1px solid rgba(255, 196, 0, 0.5);
+}
+
+.tactics-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.85rem;
+}
+
+.tactics-desc {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.tactics-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: auto;
+  border-top: 1px solid var(--border-glass);
+  padding-top: 1rem;
+}
+
+.tactics-features li {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tactics-features li strong {
+  color: #e2e8f0;
+}
+
+/* Stats Comparison */
+.stats-table-wrapper {
+  overflow-x: auto;
+  margin-top: 2rem;
+}
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.stats-table th, 
+.stats-table td {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.stats-table th {
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.95rem;
+  color: #e2e8f0;
+}
+
+.stats-table td {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.real-stat {
+  color: #60a5fa;
+}
+
+.barca-stat {
+  color: #f43f5e;
+}
+
+.stat-label {
+  font-weight: 500;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Interactive Quiz */
+.quiz-box {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.5rem;
+}
+
+.quiz-question {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quiz-option-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  color: #cbd5e1;
+  text-align: left;
+  padding: 1.1rem 1.4rem;
+  border-radius: 12px;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.quiz-option-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 196, 0, 0.4);
+  color: #fff;
+}
+
+.quiz-result {
+  margin-top: 2rem;
+  padding: 1.75rem;
+  border-radius: 12px;
+  background: rgba(255, 196, 0, 0.1);
+  border: 1px solid rgba(255, 196, 0, 0.3);
+  text-align: center;
+  display: none;
+}
+
+.quiz-result h3 {
+  font-size: 1.4rem;
+  color: var(--spain-yellow);
+  margin-bottom: 0.5rem;
+}
+
+.quiz-result p {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.quiz-restart-btn {
+  margin-top: 1.2rem;
+  background: var(--spain-yellow);
+  color: #000;
+  font-weight: 700;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Footer */
+.special-footer {
+  padding: 3rem 0;
+  border-top: 1px solid var(--border-glass);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.special-footer a {
+  color: var(--spain-yellow);
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-special h1 {
+    font-size: 2.2rem;
+  }
+  
+  .rivalry-duel {
+    grid-template-columns: 1fr;
+  }
+  
+  .timeline-wrapper::after {
+    left: 20px;
+  }
+  
+  .timeline-node {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 15px;
+  }
+  
+  .timeline-node.right {
+    left: 0%;
+  }
+  
+  .timeline-node::after {
+    left: 12px;
+  }
+}
+
+/* Additional Historical Image Styles */
+.hero-banner-img-box {
+  max-width: 1000px;
+  margin: 2.2rem auto 2.5rem auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 196, 0, 0.2);
+  border: 1px solid rgba(255, 196, 0, 0.35);
+  position: relative;
+}
+
+.hero-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.hero-banner-img-box:hover .hero-banner-img {
+  transform: scale(1.02);
+}
+
+.timeline-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0.85rem 0;
+  border: 1px solid var(--border-glass);
+}
+
+.tactics-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--border-glass);
+}
+
+/* Photo Gallery Section */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery-card {
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 196, 0, 0.45);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-caption {
+  padding: 1rem 1.2rem;
+}
+
+.gallery-caption h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.gallery-caption p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
