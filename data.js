@@ -2281,8 +2281,8 @@ const footballData = {
   },
   leagueStandings: {
     epl: [
-      { rank: 1, team: "曼徹斯特城", played: 3, won: 3, drawn: 0, lost: 0, gf: 9, ga: 2, gd: "+7", pts: 9, form: ["W", "W", "W"] },
-      { rank: 2, team: "利物浦", played: 3, won: 3, drawn: 0, lost: 0, gf: 7, ga: 0, gd: "+7", pts: 9, form: ["W", "W", "W"] },
+      { rank: 1, team: "曼徹斯特城", played: 4, won: 3, drawn: 1, lost: 0, gf: 11, ga: 4, gd: "+7", pts: 10, form: ["W", "W", "W", "D"] },
+      { rank: 2, team: "利物浦", played: 4, won: 3, drawn: 1, lost: 0, gf: 9, ga: 2, gd: "+7", pts: 10, form: ["W", "W", "W", "D"] },
       { rank: 3, team: "布萊頓", played: 3, won: 2, drawn: 1, lost: 0, gf: 6, ga: 2, gd: "+4", pts: 7, form: ["W", "W", "D"] },
       { rank: 4, team: "阿森納", played: 3, won: 2, drawn: 1, lost: 0, gf: 5, ga: 1, gd: "+4", pts: 7, form: ["W", "W", "D"] },
       { rank: 5, team: "紐卡索聯", played: 3, won: 2, drawn: 1, lost: 0, gf: 4, ga: 2, gd: "+2", pts: 7, form: ["W", "D", "W"] },
@@ -2426,10 +2426,10 @@ const footballData = {
     ]
   },
   meta: {
-    lastUpdatedDate: "2026-09-11",
-    lastMatchDate: "2026-09-10",
-    intlBreakWindow: "2026-09-01 至 2026-09-11",
-    nextRoundStartDate: "2026-09-12 (週六)"
+    lastUpdatedDate: "2026-09-12",
+    lastMatchDate: "2026-09-12",
+    intlBreakWindow: "2026-09-01 至 2026-09-11 (已結束)",
+    nextRoundStartDate: "2026-09-12 (聯賽已重燃戰火)"
   },
   leagueFixtures: {
     "uefa": [
@@ -2860,13 +2860,14 @@ const footballData = {
     ],
     "epl": [
         {
-            "round": "第 4 輪",
+            "round": "第 4 輪 (完賽)",
             "date": "2026-09-12 20:30",
             "home": "曼徹斯特城",
             "away": "利物浦",
-            "status": "即將上演",
+            "score": "2 - 2",
+            "status": "完賽",
             "stadium": "阿提哈德球場",
-            "highlight": "🔥 2026/27 爭冠天王山對決",
+            "highlight": "🔥 爭冠天王山峰迴路轉・哈蘭德閃擊、薩拉赫傳射、福登世界波扳平，兩強同積10分領跑",
             "isGiant": true
         },
         {

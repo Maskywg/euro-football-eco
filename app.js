@@ -551,20 +551,19 @@ function initDedicatedStandings() {
             <span style="font-size: 1.6rem; line-height: 1;">⚽</span>
             <div>
               <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
-                【9/6 英超補賽/焦點大戰 & 歐國聯戰果全數即時登錄】
+                【9/12 歐洲五大聯賽重磅重啟・英超爭冠天王山戰報即時登錄】
               </div>
               <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0 0 0.4rem 0; line-height: 1.5;">
-                • <strong>9/6 英超最新焦點戰報</strong>：<strong>阿森納 2-1 切爾西</strong>（羅傑斯閃擊破門，哈弗茨扳平、厄德高致勝助槍手3連勝）、<strong>埃弗頓 2-2 曼聯</strong>；9/5 曼城 1-0 柯文垂、熱刺 0-0 諾丁漢森林。<br>
-                • <strong>9/6 歐國聯與世預賽戰果</strong>：德國 5-0 狂勝匈牙利（穆西亞拉1球3助）、荷蘭 5-2 波赫、愛爾蘭 0-2 英格蘭（賴斯破門）；比利時 3-1 以色列（德布勞內雙響）；巴西 1-0 厄瓜多（羅德里戈絕殺）。<br>
-                • <strong>聯賽重啟日程</strong>：五大聯賽第 4 輪將於 <strong>${metaInfo.nextRoundStartDate}</strong> 重燃戰火！
+                • <strong>9/12 英超最新戰報</strong>：<strong>曼城 2-2 利物浦</strong>（哈蘭德開賽閃擊、薩拉赫傳射逆轉、福登世界波扳平，雙雄同積10分持續領跑積分榜！）；後續阿森納對決切爾西、曼聯迎戰阿斯頓維拉即將打響。<br>
+                • <strong>歐冠最新動態</strong>：2026/27 歐冠 36 強瑞士制第 1 輪已全數完賽，PSG 與拜仁大捷領跑，切換上方「跨聯盟歐戰」分頁即可查閱完整 36 隊積分榜！
               </p>
               <div style="font-size: 0.82rem; color: var(--color-blue); font-weight: 600;">
-                💡 完整 365Scores 賽事數據已即時對齊，點擊球隊可直接開啟球員陣容！
+                💡 完整 365Scores 賽事數據已即時對齊，點擊球隊可直接開啟現役球員陣容！
               </div>
             </div>
           </div>
           <button class="btn-tab" style="background: rgba(2, 132, 199, 0.15); border-color: var(--color-blue); color: var(--color-blue); font-weight: 700; padding: 0.5rem 0.9rem; border-radius: 8px; white-space: nowrap;" onclick="const t = document.querySelector('[data-standings-league=uefa]'); if(t) t.click();">
-            ⭐ 檢視 9/6 戰果
+            ⭐ 檢視歐冠 36 強戰況
           </button>
         </div>
       </div>
