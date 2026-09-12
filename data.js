@@ -2277,6 +2277,37 @@ const footballData = {
         { "num": 21, "name": "安東尼·埃蘭加 (Anthony Elanga)", "nat": "瑞典 🇸🇪", "role": "極速反擊爆破手" },
         { "num": 9, "name": "塔伊沃·阿沃尼伊 (Taiwo Awoniyi)", "nat": "奈及利亞 🇳🇬", "role": "強力前鋒" }
       ]
+    },
+    "富勒姆": {
+      "manager": "馬爾科·席爾瓦 (Marco Silva)",
+      "captain": "湯姆·凱爾尼 (Tom Cairney)",
+      "gk": [
+        { "num": 1, "name": "貝恩德·萊諾 (Bernd Leno)", "nat": "德國 🇩🇪", "role": "主力門將/德國國門級守門神" },
+        { "num": 23, "name": "史蒂芬·班達 (Steven Benda)", "nat": "德國 🇩🇪", "role": "二號替補門將" }
+      ],
+      "df": [
+        { "num": 3, "name": "卡爾文·巴錫 (Calvin Bassey)", "nat": "奈及利亞 🇳🇬", "role": "主力強力出球中衛" },
+        { "num": 15, "name": "約阿希姆·安德森 (Joachim Andersen)", "nat": "丹麥 🇩🇰", "role": "3000萬鎊自水晶宮重磅回歸/防線指揮官 🔥新加盟" },
+        { "num": 5, "name": "豪爾赫·昆卡 (Jorge Cuenca)", "nat": "西班牙 🇪🇸", "role": "自比利亞雷亞爾加盟之西班牙中衛 🔥新加盟" },
+        { "num": 33, "name": "安東尼·羅賓遜 (Antonee Robinson)", "nat": "美國 🇺🇸", "role": "英超頂級爆發力左後衛/助攻利刃" },
+        { "num": 2, "name": "肯尼·泰特 (Kenny Tete)", "nat": "荷蘭 🇳🇱", "role": "防守型右後衛" },
+        { "num": 21, "name": "蒂莫西·卡斯塔涅 (Timothy Castagne)", "nat": "比利時 🇧🇪", "role": "比利時國腳左右邊衛多面手" }
+      ],
+      "mf": [
+        { "num": 10, "name": "湯姆·凱爾尼 (Tom Cairney)", "nat": "蘇格蘭 🏴󠁧󠁢󠁳󠁣󠁴󠁿", "role": "隊長/隊魂傳控中場" },
+        { "num": 18, "name": "安德烈亞斯·佩雷拉 (Andreas Pereira)", "nat": "巴西 🇧🇷", "role": "進攻組織核心/死球自由球大師" },
+        { "num": 32, "name": "埃米爾·史密斯·羅 (Emile Smith Rowe)", "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", "role": "隊史標王(3400萬鎊)自兵工廠重磅加盟/前場進攻靈魂 🔥新加盟" },
+        { "num": 16, "name": "桑德·貝格 (Sander Berge)", "nat": "挪威 🇳🇴", "role": "2500萬鎊自伯恩利引進/高大防守型後腰鐵閘 🔥新加盟" },
+        { "num": 6, "name": "哈里森·里德 (Harrison Reed)", "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", "role": "防守掃蕩型中場" },
+        { "num": 8, "name": "哈里·威爾遜 (Harry Wilson)", "nat": "威爾斯 🏴󠁧󠁢󠁷󠁬󠁳󠁿", "role": "威爾斯國腳/邊路技術組織者" }
+      ],
+      "fw": [
+        { "num": 9, "name": "羅德里戈·穆尼斯 (Rodrigo Muniz)", "nat": "巴西 🇧🇷", "role": "主力巴西神鋒/禁區終結者" },
+        { "num": 7, "name": "勞爾·希門尼斯 (Raúl Jiménez)", "nat": "墨西哥 🇲🇽", "role": "墨西哥資深高中鋒/支點戰術殺手" },
+        { "num": 17, "name": "阿達瑪·特勞雷 (Adama Traoré)", "nat": "西班牙 🇪🇸", "role": "世界最高爆發力衝刺肌肉邊鋒" },
+        { "num": 11, "name": "亞歷克斯·伊沃比 (Alex Iwobi)", "nat": "奈及利亞 🇳🇬", "role": "前場推進突破爆破手" },
+        { "num": 24, "name": "雷斯·內爾森 (Reiss Nelson)", "nat": "英格蘭 🏴󠁧󠁢󠁥󠁮󠁧󠁿", "role": "自兵工廠租借加盟之英格蘭快馬邊鋒 🔥新加盟" }
+      ]
     }
   },
   leagueStandings: {
