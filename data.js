@@ -2314,14 +2314,14 @@ const footballData = {
     epl: [
       { rank: 1, team: "曼徹斯特城", played: 4, won: 3, drawn: 1, lost: 0, gf: 11, ga: 4, gd: "+7", pts: 10, form: ["W", "W", "W", "D"] },
       { rank: 2, team: "利物浦", played: 4, won: 3, drawn: 1, lost: 0, gf: 9, ga: 2, gd: "+7", pts: 10, form: ["W", "W", "W", "D"] },
-      { rank: 3, team: "布萊頓", played: 3, won: 2, drawn: 1, lost: 0, gf: 6, ga: 2, gd: "+4", pts: 7, form: ["W", "W", "D"] },
-      { rank: 4, team: "阿森納", played: 3, won: 2, drawn: 1, lost: 0, gf: 5, ga: 1, gd: "+4", pts: 7, form: ["W", "W", "D"] },
+      { rank: 3, team: "阿森納", played: 4, won: 3, drawn: 1, lost: 0, gf: 7, ga: 1, gd: "+6", pts: 10, form: ["W", "W", "D", "W"] },
+      { rank: 4, team: "布萊頓", played: 3, won: 2, drawn: 1, lost: 0, gf: 6, ga: 2, gd: "+4", pts: 7, form: ["W", "W", "D"] },
       { rank: 5, team: "紐卡索聯", played: 3, won: 2, drawn: 1, lost: 0, gf: 4, ga: 2, gd: "+2", pts: 7, form: ["W", "D", "W"] },
       { rank: 6, team: "布倫特福德", played: 3, won: 2, drawn: 0, lost: 1, gf: 5, ga: 4, gd: "+1", pts: 6, form: ["W", "L", "W"] },
       { rank: 7, team: "阿斯頓維拉", played: 3, won: 2, drawn: 0, lost: 1, gf: 4, ga: 4, gd: "0", pts: 6, form: ["W", "L", "W"] },
       { rank: 8, team: "伯恩茅斯", played: 3, won: 1, drawn: 2, lost: 0, gf: 5, ga: 4, gd: "+1", pts: 5, form: ["D", "D", "W"] },
       { rank: 9, team: "諾丁漢森林", played: 3, won: 1, drawn: 2, lost: 0, gf: 3, ga: 2, gd: "+1", pts: 5, form: ["D", "W", "D"] },
-      { rank: 10, team: "熱刺", played: 3, won: 1, drawn: 1, lost: 1, gf: 6, ga: 3, gd: "+3", pts: 4, form: ["D", "W", "L"] },
+      { rank: 10, team: "熱刺", played: 4, won: 1, drawn: 2, lost: 1, gf: 6, ga: 3, gd: "+3", pts: 5, form: ["D", "W", "L", "D"] },
       { rank: 11, team: "切爾西", played: 3, won: 1, drawn: 1, lost: 1, gf: 7, ga: 5, gd: "+2", pts: 4, form: ["L", "W", "D"] },
       { rank: 12, team: "富勒姆", played: 3, won: 1, drawn: 1, lost: 1, gf: 3, ga: 3, gd: "0", pts: 4, form: ["L", "W", "D"] },
       { rank: 13, team: "西漢姆聯", played: 3, won: 1, drawn: 0, lost: 2, gf: 4, ga: 5, gd: "-1", pts: 3, form: ["L", "W", "L"] },
@@ -2330,8 +2330,8 @@ const footballData = {
       { rank: 16, team: "水晶宮", played: 3, won: 0, drawn: 1, lost: 2, gf: 2, ga: 5, gd: "-3", pts: 1, form: ["L", "L", "D"] },
       { rank: 17, team: "伊普斯維奇", played: 3, won: 0, drawn: 1, lost: 2, gf: 2, ga: 7, gd: "-5", pts: 1, form: ["L", "L", "D"] },
       { rank: 18, team: "狼隊", played: 3, won: 0, drawn: 1, lost: 2, gf: 3, ga: 9, gd: "-6", pts: 1, form: ["L", "L", "D"] },
-      { rank: 19, team: "南安普敦", played: 3, won: 0, drawn: 0, lost: 3, gf: 1, ga: 5, gd: "-4", pts: 0, form: ["L", "L", "L"] },
-      { rank: 20, team: "埃弗頓", played: 3, won: 0, drawn: 0, lost: 3, gf: 2, ga: 10, gd: "-8", pts: 0, form: ["L", "L", "L"] }
+      { rank: 19, team: "埃弗頓", played: 4, won: 0, drawn: 1, lost: 3, gf: 2, ga: 10, gd: "-8", pts: 1, form: ["L", "L", "L", "D"] },
+      { rank: 20, team: "南安普敦", played: 3, won: 0, drawn: 0, lost: 3, gf: 1, ga: 5, gd: "-4", pts: 0, form: ["L", "L", "L"] }
     ],
     laliga: [
       { rank: 1, team: "巴塞隆納", played: 4, won: 4, drawn: 0, lost: 0, gf: 13, ga: 3, gd: "+10", pts: 12, form: ["W", "W", "W", "W"] },
@@ -2891,13 +2891,25 @@ const footballData = {
     ],
     "epl": [
         {
-            "round": "第 4 輪",
+            "round": "第 4 輪 (完賽)",
+            "date": "2026-09-13 03:00",
+            "home": "桑德蘭",
+            "away": "阿森納",
+            "score": "0 - 2",
+            "status": "完賽",
+            "stadium": "光明球場",
+            "highlight": "🔥 槍手客場完勝・吉馬良斯打破僵局、薩卡點射鎖定勝局，槍手4輪不敗登頂爭冠第一集團",
+            "isGiant": true
+        },
+        {
+            "round": "第 4 輪 (完賽)",
             "date": "2026-09-13 00:30",
             "home": "熱刺",
             "away": "埃弗頓",
-            "status": "進行中 / 即將開踢",
+            "score": "0 - 0",
+            "status": "完賽",
             "stadium": "托特納姆熱刺球場",
-            "highlight": "🔥 倫敦之夜主場出擊・白百合迎戰太妃糖",
+            "highlight": "雙方互交白卷・太妃糖鐵血防守逼平熱刺各取1分",
             "isGiant": true
         },
         {
