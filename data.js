@@ -2872,12 +2872,12 @@ const footballData = {
         },
         {
             "round": "第 4 輪",
-            "date": "2026-09-12 23:00",
-            "home": "阿森納",
-            "away": "切爾西",
+            "date": "2026-09-15 21:00",
+            "home": "熱刺",
+            "away": "阿森納",
             "status": "即將上演",
-            "stadium": "酋長球場",
-            "highlight": "北倫敦 vs 西倫敦傳統大戰",
+            "stadium": "熱刺熱刺球場",
+            "highlight": "🔥 舉世聞名北倫敦德比 (North London Derby)・週日焦點死敵交鋒",
             "isGiant": true
         },
         {

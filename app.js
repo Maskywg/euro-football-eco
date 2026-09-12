@@ -554,7 +554,7 @@ function initDedicatedStandings() {
                 【9/12 歐洲五大聯賽重磅重啟・英超爭冠天王山戰報即時登錄】
               </div>
               <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0 0 0.4rem 0; line-height: 1.5;">
-                • <strong>9/12 英超最新戰報</strong>：<strong>曼城 2-2 利物浦</strong>（哈蘭德開賽閃擊、薩拉赫傳射逆轉、福登世界波扳平，雙雄同積10分持續領跑積分榜！）；後續阿森納對決切爾西、曼聯迎戰阿斯頓維拉即將打響。<br>
+                • <strong>9/12 英超最新戰報</strong>：<strong>曼城 2-2 利物浦</strong>（哈蘭德開賽閃擊、薩拉赫傳射逆轉、福登世界波扳平，雙雄同積10分持續領跑積分榜！）；曼聯即將迎戰阿斯頓維拉，熱刺對陣阿森納的「北倫敦德比」則將於週日上演。<br>
                 • <strong>歐冠最新動態</strong>：2026/27 歐冠 36 強瑞士制第 1 輪已全數完賽，PSG 與拜仁大捷領跑，切換上方「跨聯盟歐戰」分頁即可查閱完整 36 隊積分榜！
               </p>
               <div style="font-size: 0.82rem; color: var(--color-blue); font-weight: 600;">
