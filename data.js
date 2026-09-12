@@ -2891,6 +2891,16 @@ const footballData = {
     ],
     "epl": [
         {
+            "round": "第 4 輪",
+            "date": "2026-09-13 00:30",
+            "home": "熱刺",
+            "away": "埃弗頓",
+            "status": "進行中 / 即將開踢",
+            "stadium": "托特納姆熱刺球場",
+            "highlight": "🔥 倫敦之夜主場出擊・白百合迎戰太妃糖",
+            "isGiant": true
+        },
+        {
             "round": "第 4 輪 (完賽)",
             "date": "2026-09-12 20:30",
             "home": "曼徹斯特城",
