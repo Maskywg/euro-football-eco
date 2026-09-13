@@ -107,20 +107,20 @@ const footballData = {
         "多特蒙德 (Borussia Dortmund)",
         "拜耳勒沃庫森 (Bayer 04 Leverkusen)",
         "RB萊比錫 (RB Leipzig)",
-        "斯圖加特 (VfB Stuttgart)",
-        "法蘭克福 (Eintracht Frankfurt)",
-        "霍芬海姆 (TSG Hoffenheim)",
         "弗萊堡 (SC Freiburg)",
-        "海登海姆 (1. FC Heidenheim)",
-        "文達不萊梅 (SV Werder Bremen)",
-        "沃爾夫斯堡 (VfL Wolfsburg)",
         "奧格斯堡 (FC Augsburg)",
-        "門興格拉德巴赫 (Borussia Mönchengladbach)",
+        "埃爾弗斯貝格 (SV Elversberg)",
+        "法蘭克福 (Eintracht Frankfurt)",
+        "斯圖加特 (VfB Stuttgart)",
+        "霍芬海姆 (TSG Hoffenheim)",
+        "文達不萊梅 (SV Werder Bremen)",
         "美因茲 05 (1. FSV Mainz 05)",
+        "門興格拉德巴赫 (Borussia Mönchengladbach)",
         "柏林聯 (1. FC Union Berlin)",
-        "波鴻 (VfL Bochum)",
-        "聖保利 (FC St. Pauli)",
-        "霍爾斯坦基爾 (Holstein Kiel)"
+        "科隆 (FC Cologne)",
+        "沙爾克 04 (FC Schalke 04)",
+        "漢堡 (Hamburger SV)",
+        "帕德博恩 (SC Paderborn 07)"
       ]
     },
     {
@@ -522,24 +522,24 @@ const footballData = {
     { name: "吉羅納", engName: "Girona FC", league: "西甲", leagueKey: "laliga", city: "赫羅納 (Girona)", stadium: "蒙蒂利維球場 (Montilivi)", capacity: 14624, lat: 41.9609, lng: 2.8286 },
 
     /* 德國甲級聯賽 (Bundesliga) */
-    { name: "勒沃庫森", engName: "Bayer Leverkusen", league: "德甲", leagueKey: "bundesliga", city: "勒沃庫森 (Leverkusen)", stadium: "拜耳競技場 (BayArena)", capacity: 30210, lat: 51.0383, lng: 7.0022 },
-    { name: "斯圖加特", engName: "VfB Stuttgart", league: "德甲", leagueKey: "bundesliga", city: "斯圖加特 (Stuttgart)", stadium: "MHP 競技場 (MHPArena)", capacity: 60449, lat: 48.7923, lng: 9.2321 },
     { name: "拜仁慕尼黑", engName: "Bayern Munich", league: "德甲", leagueKey: "bundesliga", city: "慕尼黑 (Munich)", stadium: "安聯球場 (Allianz Arena)", capacity: 75024, lat: 48.2188, lng: 11.6247 },
-    { name: "RB萊比錫", engName: "RB Leipzig", league: "德甲", leagueKey: "bundesliga", city: "萊比錫 (Leipzig)", stadium: "紅牛競技場 (Red Bull Arena)", capacity: 47069, lat: 51.3458, lng: 12.3483 },
     { name: "多特蒙德", engName: "Borussia Dortmund", league: "德甲", leagueKey: "bundesliga", city: "多特蒙德 (Dortmund)", stadium: "西格納伊度納公園 (Signal Iduna Park)", capacity: 81365, lat: 51.4926, lng: 7.4519 },
-    { name: "法蘭克福", engName: "Eintracht Frankfurt", league: "德甲", leagueKey: "bundesliga", city: "法蘭克福 (Frankfurt)", stadium: "德意志銀行公園 (Deutsche Bank Park)", capacity: 58000, lat: 50.0686, lng: 8.6455 },
-    { name: "霍芬海姆", engName: "TSG Hoffenheim", league: "德甲", leagueKey: "bundesliga", city: "辛斯海姆 (Sinsheim)", stadium: "PreZero 競技場 (PreZero Arena)", capacity: 30150, lat: 49.2384, lng: 8.8878 },
-    { name: "海登海姆", engName: "1. FC Heidenheim", league: "德甲", leagueKey: "bundesliga", city: "海登海姆 (Heidenheim)", stadium: "福伊特競技場 (Voith-Arena)", capacity: 15000, lat: 48.6685, lng: 10.1392 },
-    { name: "雲達不萊梅", engName: "Werder Bremen", league: "德甲", leagueKey: "bundesliga", city: "不萊梅 (Bremen)", stadium: "威悉體育場 (Weserstadion)", capacity: 42100, lat: 53.0664, lng: 8.8376 },
+    { name: "勒沃庫森", engName: "Bayer Leverkusen", league: "德甲", leagueKey: "bundesliga", city: "勒沃庫森 (Leverkusen)", stadium: "拜耳競技場 (BayArena)", capacity: 30210, lat: 51.0383, lng: 7.0022 },
+    { name: "RB萊比錫", engName: "RB Leipzig", league: "德甲", leagueKey: "bundesliga", city: "萊比錫 (Leipzig)", stadium: "紅牛競技場 (Red Bull Arena)", capacity: 47069, lat: 51.3458, lng: 12.3483 },
     { name: "弗萊堡", engName: "SC Freiburg", league: "德甲", leagueKey: "bundesliga", city: "弗萊堡 (Freiburg)", stadium: "歐洲公園球場 (Europa-Park Stadion)", capacity: 34700, lat: 48.0208, lng: 7.8283 },
     { name: "奧格斯堡", engName: "FC Augsburg", league: "德甲", leagueKey: "bundesliga", city: "奧格斯堡 (Augsburg)", stadium: "WWK 競技場 (WWK Arena)", capacity: 30660, lat: 48.3231, lng: 10.8860 },
-    { name: "沃夫斯堡", engName: "VfL Wolfsburg", league: "德甲", leagueKey: "bundesliga", city: "沃夫斯堡 (Wolfsburg)", stadium: "大眾汽車競技場 (Volkswagen Arena)", capacity: 30000, lat: 52.4326, lng: 10.8039 },
-    { name: "美因茲", engName: "Mainz 05", league: "德甲", leagueKey: "bundesliga", city: "美因茲 (Mainz)", stadium: "美娃競技場 (Mewa Arena)", capacity: 33305, lat: 49.9840, lng: 8.2243 },
+    { name: "埃爾弗斯貝格", engName: "SV Elversberg", league: "德甲", leagueKey: "bundesliga", city: "施皮森-埃爾弗斯貝格 (Spiesen-Elversberg)", stadium: "烏爾斯帕爾競技場 (Ursapharm-Arena an der Kaiserlinde)", capacity: 10000, lat: 49.3146, lng: 7.1292 },
+    { name: "法蘭克福", engName: "Eintracht Frankfurt", league: "德甲", leagueKey: "bundesliga", city: "法蘭克福 (Frankfurt)", stadium: "德意志銀行公園 (Deutsche Bank Park)", capacity: 58000, lat: 50.0686, lng: 8.6455 },
+    { name: "斯圖加特", engName: "VfB Stuttgart", league: "德甲", leagueKey: "bundesliga", city: "斯圖加特 (Stuttgart)", stadium: "MHP 競技場 (MHPArena)", capacity: 60449, lat: 48.7923, lng: 9.2321 },
+    { name: "霍芬海姆", engName: "TSG Hoffenheim", league: "德甲", leagueKey: "bundesliga", city: "辛斯海姆 (Sinsheim)", stadium: "PreZero 競技場 (PreZero Arena)", capacity: 30150, lat: 49.2384, lng: 8.8878 },
+    { name: "文達不萊梅", engName: "Werder Bremen", league: "德甲", leagueKey: "bundesliga", city: "不萊梅 (Bremen)", stadium: "威悉體育場 (Weserstadion)", capacity: 42100, lat: 53.0664, lng: 8.8376 },
+    { name: "美因茲 05", engName: "Mainz 05", league: "德甲", leagueKey: "bundesliga", city: "美因茲 (Mainz)", stadium: "美娃競技場 (Mewa Arena)", capacity: 33305, lat: 49.9840, lng: 8.2243 },
     { name: "門興格拉德巴赫", engName: "Borussia Mönchengladbach", league: "德甲", leagueKey: "bundesliga", city: "門興格拉德巴赫 (Mönchengladbach)", stadium: "普魯士公園球場 (Borussia-Park)", capacity: 54042, lat: 51.1746, lng: 6.3855 },
     { name: "柏林聯", engName: "Union Berlin", league: "德甲", leagueKey: "bundesliga", city: "柏林 (Berlin)", stadium: "老林務所畔體育場 (Stadion An der Alten Försterei)", capacity: 22012, lat: 52.4572, lng: 13.5681 },
-    { name: "波鴻", engName: "VfL Bochum", league: "德甲", leagueKey: "bundesliga", city: "波鴻 (Bochum)", stadium: "沃諾維亞魯爾球場 (Vonovia Ruhrstadion)", capacity: 26000, lat: 51.4900, lng: 7.2364 },
-    { name: "聖保利", engName: "FC St. Pauli", league: "德甲", leagueKey: "bundesliga", city: "漢堡 (Hamburg)", stadium: "米勒門球場 (Millerntor-Stadion)", capacity: 29546, lat: 53.5546, lng: 9.9678 },
-    { name: "荷爾斯泰因基爾", engName: "Holstein Kiel", league: "德甲", leagueKey: "bundesliga", city: "基爾 (Kiel)", stadium: "荷爾斯泰因球場 (Holstein-Stadion)", capacity: 15034, lat: 54.3494, lng: 10.1232 },
+    { name: "科隆", engName: "FC Cologne", league: "德甲", leagueKey: "bundesliga", city: "科隆 (Cologne)", stadium: "萊茵能源球場 (RheinEnergieStadion)", capacity: 50000, lat: 50.9333, lng: 6.8750 },
+    { name: "沙爾克 04", engName: "FC Schalke 04", league: "德甲", leagueKey: "bundesliga", city: "蓋爾森基興 (Gelsenkirchen)", stadium: "費爾廷斯競技場 (Veltins-Arena)", capacity: 62271, lat: 51.5546, lng: 7.0675 },
+    { name: "漢堡", engName: "Hamburger SV", league: "德甲", leagueKey: "bundesliga", city: "漢堡 (Hamburg)", stadium: "人民公園球場 (Volksparkstadion)", capacity: 57000, lat: 53.5872, lng: 9.8986 },
+    { name: "帕德博恩", engName: "SC Paderborn 07", league: "德甲", leagueKey: "bundesliga", city: "帕德博恩 (Paderborn)", stadium: "Home Deluxe 競技場 (Home Deluxe Arena)", capacity: 15000, lat: 51.7314, lng: 8.7117 },
 
     /* 義大利甲級聯賽 (Serie A) */
     { name: "國際米蘭", engName: "Inter Milan", league: "意甲", leagueKey: "seriea", city: "米蘭 (Milan)", stadium: "朱塞佩·梅阿查球場 (San Siro)", capacity: 75923, lat: 45.4781, lng: 9.1240 },
@@ -1855,6 +1855,96 @@ const footballData = {
                   "name": "洛伊斯·奧蓬達 (Loïs Openda)",
                   "nat": "比利時 🇧🇪",
                   "role": "閃電射手"
+            }
+      ]
+},
+    "埃爾弗斯貝格": {
+      "manager": "霍斯特·斯特芬 (Horst Steffen)",
+      "captain": "盧卡·施內爾巴赫 (Luca Schnellbacher)",
+      "gk": [
+            {
+                  "num": 1,
+                  "name": "弗蘭克·萊曼 (Frank Lehmann)",
+                  "nat": "德國 🇩🇪",
+                  "role": "主力功勳門將"
+            },
+            {
+                  "num": 20,
+                  "name": "尼古拉斯·克里斯托夫 (Nicolas Kristof)",
+                  "nat": "奧地利 🇦🇹",
+                  "role": "奧地利實力門將"
+            }
+      ],
+      "df": [
+            {
+                  "num": 31,
+                  "name": "馬克西米利安·羅爾 (Maximilian Rohr)",
+                  "nat": "德國 🇩🇪",
+                  "role": "防線中堅核心"
+            },
+            {
+                  "num": 3,
+                  "name": "弗洛里安·勒容庫爾 (Florian Le Joncour)",
+                  "nat": "法國 🇫🇷",
+                  "role": "法國主力中衛"
+            },
+            {
+                  "num": 30,
+                  "name": "揚·賈梅拉 (Jan Gyamerah)",
+                  "nat": "迦納 🇬🇭",
+                  "role": "邊路防守大將"
+            },
+            {
+                  "num": 2,
+                  "name": "尼古拉斯·米克爾森 (Nicholas Mickelson)",
+                  "nat": "泰國/挪威 🇹🇭",
+                  "role": "邊路速度飛翼"
+            }
+      ],
+      "mf": [
+            {
+                  "num": 24,
+                  "name": "盧卡·施內爾巴赫 (Luca Schnellbacher)",
+                  "nat": "德國 🇩🇪",
+                  "role": "球隊精神領袖與隊長"
+            },
+            {
+                  "num": 10,
+                  "name": "諾亞·達爾維奇 (Noah Darvich)",
+                  "nat": "德國 🇩🇪",
+                  "role": "德國U17世界盃奪冠隊長/前場天才司令塔"
+            },
+            {
+                  "num": 6,
+                  "name": "阿馬拉·孔戴 (Amara Condé)",
+                  "nat": "德國 🇩🇪",
+                  "role": "中場鐵閘後腰"
+            },
+            {
+                  "num": 7,
+                  "name": "莫里斯·克拉滕馬赫 (Maurice Krattenmacher)",
+                  "nat": "德國 🇩🇪",
+                  "role": "極具衝擊力進攻中場"
+            }
+      ],
+      "fw": [
+            {
+                  "num": 16,
+                  "name": "盧卡·普法伊費爾 (Luca Pfeiffer)",
+                  "nat": "德國 🇩🇪",
+                  "role": "前德甲高中鋒支點"
+            },
+            {
+                  "num": 9,
+                  "name": "諾埃爾·富特克烏 (Noel Futkeu)",
+                  "nat": "德國 🇩🇪",
+                  "role": "主力得分射手"
+            },
+            {
+                  "num": 11,
+                  "name": "傑森·切卡 (Jason Ceka)",
+                  "nat": "德國 🇩🇪",
+                  "role": "靈動突破型邊鋒"
             }
       ]
 },
