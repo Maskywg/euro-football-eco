@@ -67,24 +67,24 @@ const footballData = {
       teamsList: [
         "皇家馬德里 (Real Madrid)",
         "巴塞隆納 (FC Barcelona)",
+        "萊萬特 (Levante UD)",
         "馬德里競技 (Atlético Madrid)",
         "畢爾包競技 (Athletic Club)",
         "皇家社會 (Real Sociedad)",
         "皇家貝蒂斯 (Real Betis)",
-        "吉羅納 (Girona FC)",
-        "瓦倫西亞 (Valencia CF)",
-        "塞維利亞 (Sevilla FC)",
         "比利亞雷爾 (Villarreal CF)",
+        "瓦倫西亞 (Valencia CF)",
+        "阿拉維斯 (Deportivo Alavés)",
         "奧薩蘇納 (CA Osasuna)",
         "赫塔費 (Getafe CF)",
         "塞爾塔維戈 (Celta de Vigo)",
-        "馬約卡 (RCD Mallorca)",
+        "塞維利亞 (Sevilla FC)",
         "巴列卡諾 (Rayo Vallecano)",
-        "拉斯帕爾馬斯 (UD Las Palmas)",
-        "阿拉維斯 (Deportivo Alavés)",
-        "雷加利斯 (CD Leganés)",
-        "皇家巴利亞多利德 (Real Valladolid)",
-        "西班牙人 (RCD Espanyol)"
+        "西班牙人 (RCD Espanyol)",
+        "拉科魯尼亞 (Deportivo La Coruña)",
+        "桑坦德競技 (Racing Santander)",
+        "埃爾切 (Elche CF)",
+        "馬拉加 (Málaga CF)"
       ]
     },
     {
@@ -501,7 +501,7 @@ const footballData = {
     /* 西班牙甲級聯賽 (La Liga) */
     { name: "皇家馬德里", engName: "Real Madrid", league: "西甲", leagueKey: "laliga", city: "馬德里 (Madrid)", stadium: "聖地亞哥·伯納烏球場 (Santiago Bernabéu)", capacity: 85000, lat: 40.4531, lng: -3.6883 },
     { name: "巴塞隆納", engName: "FC Barcelona", league: "西甲", leagueKey: "laliga", city: "巴塞隆納 (Barcelona)", stadium: "蒙特惠奇奧林匹克球場 / 諾坎普 (Camp Nou)", capacity: 54367, lat: 41.3638, lng: 2.1556 },
-    { name: "吉羅納", engName: "Girona FC", league: "西甲", leagueKey: "laliga", city: "赫羅納 (Girona)", stadium: "蒙蒂利維球場 (Montilivi)", capacity: 14624, lat: 41.9609, lng: 2.8286 },
+    { name: "萊萬特", engName: "Levante UD", league: "西甲", leagueKey: "laliga", city: "瓦倫西亞 (Valencia)", stadium: "巴倫西亞城市體育場 (Estadi Ciutat de València)", capacity: 26354, lat: 39.4947, lng: -0.3644 },
     { name: "馬德里競技", engName: "Atlético Madrid", league: "西甲", leagueKey: "laliga", city: "馬德里 (Madrid)", stadium: "大都會球場 (Cívitas Metropolitano)", capacity: 70460, lat: 40.4362, lng: -3.5995 },
     { name: "畢爾包競技", engName: "Athletic Club", league: "西甲", leagueKey: "laliga", city: "畢爾包 (Bilbao)", stadium: "聖馬梅斯球場 (San Mamés)", capacity: 53289, lat: 43.2642, lng: -2.9493 },
     { name: "皇家社會", engName: "Real Sociedad", league: "西甲", leagueKey: "laliga", city: "聖塞巴斯提安 (San Sebastián)", stadium: "雷阿萊競技場 (Reale Arena)", capacity: 39500, lat: 43.3014, lng: -1.9736 },
@@ -513,12 +513,13 @@ const footballData = {
     { name: "赫塔費", engName: "Getafe CF", league: "西甲", leagueKey: "laliga", city: "赫塔費 (Getafe)", stadium: "阿方索·佩雷斯球場 (Coliseum)", capacity: 16500, lat: 40.3257, lng: -3.7149 },
     { name: "塞爾塔維戈", engName: "Celta Vigo", league: "西甲", leagueKey: "laliga", city: "維戈 (Vigo)", stadium: "巴拉伊多斯球場 (Abanca-Balaídos)", capacity: 24791, lat: 42.2119, lng: -8.7397 },
     { name: "塞維亞", engName: "Sevilla FC", league: "西甲", leagueKey: "laliga", city: "塞維亞 (Seville)", stadium: "拉蒙·桑切斯·皮斯胡安球場 (Ramón Sánchez-Pizjuán)", capacity: 43883, lat: 37.3840, lng: -5.9706 },
-    { name: "馬略卡", engName: "RCD Mallorca", league: "西甲", leagueKey: "laliga", city: "帕爾馬 (Palma)", stadium: "孫莫什球場 (Mallorca Son Moix)", capacity: 23142, lat: 39.5900, lng: 2.6300 },
-    { name: "拉斯帕爾馬斯", engName: "UD Las Palmas", league: "西甲", leagueKey: "laliga", city: "大加那利 (Las Palmas)", stadium: "大加那利體育場 (Estadio Gran Canaria)", capacity: 32400, lat: 28.1004, lng: -15.4566 },
     { name: "巴列卡諾", engName: "Rayo Vallecano", league: "西甲", leagueKey: "laliga", city: "馬德里 (Madrid)", stadium: "巴列卡斯球場 (Campo de Vallecas)", capacity: 14708, lat: 40.3919, lng: -3.6588 },
-    { name: "萊加內斯", engName: "CD Leganés", league: "西甲", leagueKey: "laliga", city: "萊加內斯 (Leganés)", stadium: "布塔克市政球場 (Estadio Butarque)", capacity: 12450, lat: 40.3404, lng: -3.7607 },
-    { name: "皇家瓦拉多利德", engName: "Real Valladolid", league: "西甲", leagueKey: "laliga", city: "瓦拉多利德 (Valladolid)", stadium: "索里利亞球場 (José Zorrilla)", capacity: 27618, lat: 41.6444, lng: -4.7611 },
     { name: "西班牙人", engName: "RCD Espanyol", league: "西甲", leagueKey: "laliga", city: "巴塞隆納 (Barcelona)", stadium: "RCDE 球場 (RCDE Stadium)", capacity: 40000, lat: 41.3478, lng: 2.0756 },
+    { name: "拉科魯尼亞", engName: "Deportivo La Coruña", league: "西甲", leagueKey: "laliga", city: "拉科魯尼亞 (A Coruña)", stadium: "里亞索球場 (Estadio Riazor)", capacity: 32490, lat: 43.3687, lng: -8.4175 },
+    { name: "桑坦德競技", engName: "Racing Santander", league: "西甲", leagueKey: "laliga", city: "桑坦德 (Santander)", stadium: "沙丁魚人球場 (El Sardinero)", capacity: 22222, lat: 43.4764, lng: -3.7933 },
+    { name: "埃爾切", engName: "Elche CF", league: "西甲", leagueKey: "laliga", city: "埃爾切 (Elche)", stadium: "馬丁內斯·巴萊羅球場 (Manuel Martínez Valero)", capacity: 31388, lat: 38.2671, lng: -0.6630 },
+    { name: "馬拉加", engName: "Málaga CF", league: "西甲", leagueKey: "laliga", city: "馬拉加 (Málaga)", stadium: "玫瑰園球場 (La Rosaleda)", capacity: 30044, lat: 36.7340, lng: -4.4264 },
+    { name: "吉羅納", engName: "Girona FC", league: "西甲", leagueKey: "laliga", city: "赫羅納 (Girona)", stadium: "蒙蒂利維球場 (Montilivi)", capacity: 14624, lat: 41.9609, lng: 2.8286 },
 
     /* 德國甲級聯賽 (Bundesliga) */
     { name: "勒沃庫森", engName: "Bayer Leverkusen", league: "德甲", leagueKey: "bundesliga", city: "勒沃庫森 (Leverkusen)", stadium: "拜耳競技場 (BayArena)", capacity: 30210, lat: 51.0383, lng: 7.0022 },
@@ -1548,6 +1549,102 @@ const footballData = {
                   "name": "戈爾卡·古魯澤塔 (Gorka Guruzeta)",
                   "nat": "西班牙 🇪🇸",
                   "role": "主力中鋒"
+            }
+      ]
+},
+    "萊萬特": {
+      "manager": "胡利安·卡萊羅 (Julián Calero)",
+      "captain": "何塞·莫拉萊斯 (José Luis Morales)",
+      "gk": [
+            {
+                  "num": 13,
+                  "name": "馬修·瑞恩 (Mathew Ryan)",
+                  "nat": "澳洲 🇦🇺",
+                  "role": "澳洲國門/英超與西甲豐富征戰經驗"
+            },
+            {
+                  "num": 1,
+                  "name": "巴勃羅·庫尼亞特 (Pablo Cuñat)",
+                  "nat": "西班牙 🇪🇸",
+                  "role": "年輕門將新星"
+            }
+      ],
+      "df": [
+            {
+                  "num": 2,
+                  "name": "艾薩·曼迪 (Aïssa Mandi)",
+                  "nat": "阿爾及利亞 🇩🇿",
+                  "role": "阿爾及利亞國腳中衛/防線領袖"
+            },
+            {
+                  "num": 22,
+                  "name": "傑里米·托利安 (Jeremy Toljan)",
+                  "nat": "德國 🇩🇪",
+                  "role": "全能邊後衛"
+            },
+            {
+                  "num": 4,
+                  "name": "阿德里安·德拉富恩特 (Adrián de la Fuente)",
+                  "nat": "西班牙 🇪🇸",
+                  "role": "主力中後衛"
+            },
+            {
+                  "num": 23,
+                  "name": "馬努·桑切斯 (Manu Sánchez)",
+                  "nat": "西班牙 🇪🇸",
+                  "role": "主力左後衛"
+            }
+      ],
+      "mf": [
+            {
+                  "num": 7,
+                  "name": "羅格·布魯格 (Roger Brugué)",
+                  "nat": "西班牙 🇪🇸",
+                  "role": "進攻中場核心"
+            },
+            {
+                  "num": 20,
+                  "name": "奧里奧·雷 (Oriol Rey)",
+                  "nat": "西班牙 🇪🇸",
+                  "role": "防守型後腰"
+            },
+            {
+                  "num": 8,
+                  "name": "洪·安德爾·奧拉薩加斯蒂 (Jon Ander Olasagasti)",
+                  "nat": "西班牙 🇪🇸",
+                  "role": "中場組織調度"
+            },
+            {
+                  "num": 5,
+                  "name": "烏戈·索特洛 (Hugo Sotelo)",
+                  "nat": "西班牙 🇪🇸",
+                  "role": "前場推進策應"
+            }
+      ],
+      "fw": [
+            {
+                  "num": 11,
+                  "name": "何塞·莫拉萊斯 (José Luis Morales)",
+                  "nat": "西班牙 🇪🇸",
+                  "role": "萊萬特傳奇隊長/隊史靈魂人物「大指揮官」"
+            },
+            {
+                  "num": 9,
+                  "name": "伊萬·羅梅羅 (Iván Romero)",
+                  "nat": "西班牙 🇪🇸",
+                  "role": "速度型前鋒"
+            },
+            {
+                  "num": 10,
+                  "name": "佩塔爾·拉特科夫 (Petar Ratkov)",
+                  "nat": "塞爾維亞 🇷🇸",
+                  "role": "高大中鋒支點"
+            },
+            {
+                  "num": 21,
+                  "name": "埃塔·埃永 (Etta Eyong)",
+                  "nat": "喀麥隆 🇨🇲",
+                  "role": "衝擊力強鋒線新援"
             }
       ]
 },
