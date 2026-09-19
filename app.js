@@ -280,8 +280,8 @@ function renderLeagueDetail(leagueId) {
         <!-- Tab 4: Match Fixtures -->
         <div class="detail-tab-content" id="detail-tab-fixtures" style="display: none;">
           <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 8px; padding: 0.6rem 0.9rem; margin-bottom: 1rem; font-size: 0.8rem; color: var(--text-secondary); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
-            <span>🌍 <strong>國際比賽日週 (9/1 - 9/11)</strong>：歐洲五大聯賽各俱樂部全面休賽，第 4 輪賽事將於 <strong>9/12 (週六)</strong> 展開。</span>
-            <span style="color: #0284c7; font-weight: 600;">最後登錄：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-09-06'}</span>
+            <span>⚽ <strong>2026/27 賽季五大聯賽火熱進行中</strong>：各國聯賽進入白熱化階段，歐戰 36 強瑞士制賽程同步即時更新。</span>
+            <span style="color: #0284c7; font-weight: 600;">最後登錄：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-09-19'}</span>
           </div>
           <div class="fixtures-container">
             ${(footballData.leagueFixtures && footballData.leagueFixtures[league.id] ? footballData.leagueFixtures[league.id] : []).map(f => {
@@ -551,14 +551,16 @@ function initDedicatedStandings() {
             <span style="font-size: 1.6rem; line-height: 1;">⚽</span>
             <div>
               <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
-                【9/12 歐洲五大聯賽重磅重啟・英超爭冠天王山戰報即時登錄】
+                【9/19 歐洲五大聯賽戰況速遞・拜仁7球狂勝登頂、巴薩6連勝領跑】
               </div>
               <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0 0 0.4rem 0; line-height: 1.5;">
-                • <strong>9/12 英超最新戰報</strong>：<strong>曼城 2-2 利物浦</strong>（哈蘭德開賽閃擊、薩拉赫傳射逆轉、福登世界波扳平，雙雄同積10分持續領跑積分榜！）；曼聯即將迎戰阿斯頓維拉，熱刺對陣阿森納的「北倫敦德比」則將於週日上演。<br>
-                • <strong>歐冠最新動態</strong>：2026/27 歐冠 36 強瑞士制第 1 輪已全數完賽，PSG 與拜仁大捷領跑，切換上方「跨聯盟歐戰」分頁即可查閱完整 36 隊積分榜！
+                • <strong>德甲戰報</strong>：<strong>拜仁 7-0 柏林聯</strong>（奧利塞戴帽、凱恩德甲百球里程碑雙響、穆西亞拉破門，拜仁積10分強勢登頂！）；今晚多特客戰斯圖加特、週日勒沃庫森決戰萊比錫。<br>
+                • <strong>英超戰報</strong>：<strong>布倫特福德 3-0 切爾西</strong>爆大冷升至第3；今晚熱刺迎戰維拉、領頭羊兵工廠客戰布萊頓、曼城主場迎戰桑德蘭。<br>
+                • <strong>西甲戰報</strong>：<strong>巴薩 7-2 桑坦德競技</strong>（拉菲尼亞戴帽），巴薩豪取開季 6 連勝 18 分獨霸榜首；皇馬 3-2 險勝埃爾切；週日馬德里德比即將開打！<br>
+                • <strong>意甲戰報</strong>：羅馬與國米開季 4 連勝齊聚榜首，今晚即將上演天王山正面交鋒！
               </p>
               <div style="font-size: 0.82rem; color: var(--color-blue); font-weight: 600;">
-                💡 完整 365Scores 賽事數據已即時對齊，點擊球隊可直接開啟現役球員陣容！
+                💡 完整 365Scores 賽事數據與積分榜已即時同步對齊，點擊球隊可直接開啟現役陣容！
               </div>
             </div>
           </div>
