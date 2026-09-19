@@ -301,11 +301,17 @@ function renderLeagueDetail(leagueId) {
                   <span class="fixture-date">📅 ${f.date}</span>
                 </div>
                 <div class="fixture-matchup">
-                  <span class="fixture-team" onclick="openClubSquadModal('${f.home}')" title="查看主隊球員陣容">${f.home}</span>
+                  <span class="fixture-team" onclick="openClubSquadModal('${f.home}')" title="查看主隊球員陣容">
+                    <span class="team-name-cn">${f.home}</span>
+                    ${getTeamEnglishName(f.home) ? `<span class="team-name-en">${getTeamEnglishName(f.home)}</span>` : ''}
+                  </span>
                   ${f.score 
                     ? `<span class="fixture-score-badge">${f.score}</span>` 
                     : `<span class="fixture-vs-badge">VS</span>`}
-                  <span class="fixture-team" onclick="openClubSquadModal('${f.away}')" title="查看客隊球員陣容">${f.away}</span>
+                  <span class="fixture-team" onclick="openClubSquadModal('${f.away}')" title="查看客隊球員陣容">
+                    <span class="team-name-cn">${f.away}</span>
+                    ${getTeamEnglishName(f.away) ? `<span class="team-name-en">${getTeamEnglishName(f.away)}</span>` : ''}
+                  </span>
                 </div>
                 <div class="fixture-info-right">
                   <span class="fixture-highlight">${f.highlight}</span>
@@ -386,11 +392,17 @@ function initDedicatedStandings() {
             <span class="fixture-date">📅 ${f.date}</span>
           </div>
           <div class="fixture-matchup">
-            <span class="fixture-team" onclick="openClubSquadModal('${f.home}')" title="查看主隊球員陣容">${f.home}</span>
+            <span class="fixture-team" onclick="openClubSquadModal('${f.home}')" title="查看主隊球員陣容">
+              <span class="team-name-cn">${f.home}</span>
+              ${getTeamEnglishName(f.home) ? `<span class="team-name-en">${getTeamEnglishName(f.home)}</span>` : ''}
+            </span>
             ${f.score 
               ? `<span class="fixture-score-badge">${f.score}</span>` 
               : `<span class="fixture-vs-badge">VS</span>`}
-            <span class="fixture-team" onclick="openClubSquadModal('${f.away}')" title="查看客隊球員陣容">${f.away}</span>
+            <span class="fixture-team" onclick="openClubSquadModal('${f.away}')" title="查看客隊球員陣容">
+              <span class="team-name-cn">${f.away}</span>
+              ${getTeamEnglishName(f.away) ? `<span class="team-name-en">${getTeamEnglishName(f.away)}</span>` : ''}
+            </span>
           </div>
           <div class="fixture-info-right">
             <span class="fixture-highlight">${f.highlight}</span>
@@ -2459,4 +2471,69 @@ function init3DBackground() {
   animate();
 }
 
-
+/**
+ * Helper to get English club/team name from footballData or fallback dictionary
+ */
+function getTeamEnglishName(teamCnName) {
+  if (!teamCnName) return '';
+  
+  // 1. Try finding in footballData.clubLocations
+  if (footballData && Array.isArray(footballData.clubLocations)) {
+    const found = footballData.clubLocations.find(c => c.name === teamCnName || c.engName === teamCnName);
+    if (found && found.engName) return found.engName;
+  }
+  
+  // 2. Try finding in footballData.legendaryClubs
+  if (footballData && Array.isArray(footballData.legendaryClubs)) {
+    const found = footballData.legendaryClubs.find(c => c.name === teamCnName || c.engName === teamCnName);
+    if (found && found.engName) return found.engName;
+  }
+  
+  // 3. Fallback dictionary for national teams and other European clubs in UEFA fixtures
+  const fallbackDict = {
+    '里茲聯': 'Leeds United',
+    '桑德蘭': 'Sunderland',
+    '薩索羅': 'Sassuolo',
+    '波隆那': 'Bologna',
+    '科莫': 'Como 1907',
+    '科莫 1907': 'Como 1907',
+    '特魯瓦': 'Troyes',
+    '比利亞雷亞爾': 'Villarreal CF',
+    '比亞雷亞爾': 'Villarreal CF',
+    '布魯日': 'Club Brugge',
+    '飛燕諾': 'Feyenoord',
+    '波爾圖': 'FC Porto',
+    '波多格林特': 'FK Bodø/Glimt',
+    '布拉提斯拉瓦斯拉萬': 'ŠK Slovan Bratislava',
+    '沙巴赫': 'Sabah FK',
+    '加拉塔薩雷': 'Galatasaray',
+    '基輔迪納摩': 'Dynamo Kyiv',
+    '伯爾尼年輕人': 'BSC Young Boys',
+    '薩爾斯堡紅牛': 'FC Red Bull Salzburg',
+    // National teams (Nations League / World Cup Qualifiers)
+    '英格蘭': 'England',
+    '西班牙': 'Spain',
+    '德國': 'Germany',
+    '法國': 'France',
+    '義大利': 'Italy',
+    '葡萄牙': 'Portugal',
+    '荷蘭': 'Netherlands',
+    '比利時': 'Belgium',
+    '克羅埃西亞': 'Croatia',
+    '塞爾維亞': 'Serbia',
+    '愛爾蘭': 'Republic of Ireland',
+    '希臘': 'Greece',
+    '芬蘭': 'Finland',
+    '匈牙利': 'Hungary',
+    '土耳其': 'Turkey',
+    '威爾斯': 'Wales',
+    '以色列': 'Israel',
+    '波士尼亞與赫塞哥維納': 'Bosnia and Herzegovina',
+    '巴西': 'Brazil',
+    '厄瓜多': 'Ecuador',
+    '烏拉圭': 'Uruguay',
+    '巴拉圭': 'Paraguay'
+  };
+  
+  return fallbackDict[teamCnName] || '';
+}

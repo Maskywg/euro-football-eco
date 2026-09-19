@@ -2371,13 +2371,41 @@ body.dark-theme .leaflet-popup-tip {
   color: var(--text-primary);
   cursor: pointer;
   transition: var(--transition-fast);
-  padding: 0.2rem 0.5rem;
-  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  border-radius: 8px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.fixture-team .team-name-cn {
+  font-weight: 700;
+  color: var(--text-primary);
+  transition: var(--transition-fast);
+}
+
+.fixture-team .team-name-en {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.2px;
+  margin-top: 0.15rem;
+  transition: var(--transition-fast);
 }
 
 .fixture-team:hover {
-  color: var(--color-blue);
   background: rgba(2, 132, 199, 0.08);
+}
+
+.fixture-team:hover .team-name-cn {
+  color: var(--color-blue);
+}
+
+.fixture-team:hover .team-name-en {
+  color: var(--color-blue);
+  opacity: 0.85;
 }
 
 .fixture-score-badge {
