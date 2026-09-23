@@ -280,8 +280,8 @@ function renderLeagueDetail(leagueId) {
         <!-- Tab 4: Match Fixtures -->
         <div class="detail-tab-content" id="detail-tab-fixtures" style="display: none;">
           <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 8px; padding: 0.6rem 0.9rem; margin-bottom: 1rem; font-size: 0.8rem; color: var(--text-secondary); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
-            <span>⚽ <strong>2026/27 賽季五大聯賽火熱進行中</strong>：各國聯賽進入白熱化階段，歐戰 36 強瑞士制賽程同步即時更新。</span>
-            <span style="color: #0284c7; font-weight: 600;">最後登錄：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-09-19'}</span>
+            <span>🌍 <strong>超級國際比賽週進行中 (9/21 - 10/6)</strong>：FIFA改革首度實施16天超級國際比賽週，歐洲五大聯賽暫停，各國國家隊出征歐國聯、梅西告別巡演與國際大賽！</span>
+            <span style="color: #0284c7; font-weight: 600;">最後登錄：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-09-23'}</span>
           </div>
           <div class="fixtures-container">
             ${(footballData.leagueFixtures && footballData.leagueFixtures[league.id] ? footballData.leagueFixtures[league.id] : []).map(f => {
@@ -516,7 +516,7 @@ function initDedicatedStandings() {
         <div style="margin-bottom: 1.25rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
             <div>
-              <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.25rem;">📅 跨聯盟焦點豪門對決賽程 (每週賽程更新)</h3>
+              <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.25rem;">📅 超級國際比賽週 (9/21-10/6) & 歐戰焦點賽程</h3>
               <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                 <span style="color: var(--text-secondary); font-size: 0.88rem;">點擊對戰球隊名稱即可直接檢視該隊完整一線球員名單與球星陣容</span>
                 <a href="https://www.365scores.com/zh-tw" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; color: var(--color-blue); text-decoration: underline; font-weight: 600;">🔗 數據即時對齊自 365Scores (zh-tw)</a>
@@ -560,24 +560,24 @@ function initDedicatedStandings() {
       <div style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(2, 132, 199, 0.08)); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1.5rem;">
         <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
           <div style="display: flex; align-items: flex-start; gap: 0.75rem; max-width: 800px;">
-            <span style="font-size: 1.6rem; line-height: 1;">⚽</span>
+            <span style="font-size: 1.6rem; line-height: 1;">🌍</span>
             <div>
               <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
-                【9/19 歐洲五大聯賽戰況速遞・拜仁7球狂勝登頂、巴薩6連勝領跑】
+                【🔥 FIFA 超級國際比賽週全面啟動 (2026/09/21 - 10/06)・五大聯賽暫停・國際賽焦點盛宴】
               </div>
               <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0 0 0.4rem 0; line-height: 1.5;">
-                • <strong>德甲戰報</strong>：<strong>拜仁 7-0 柏林聯</strong>（奧利塞戴帽、凱恩德甲百球里程碑雙響、穆西亞拉破門，拜仁積10分強勢登頂！）；今晚多特客戰斯圖加特、週日勒沃庫森決戰萊比錫。<br>
-                • <strong>英超戰報</strong>：<strong>布倫特福德 3-0 切爾西</strong>爆大冷升至第3；今晚熱刺迎戰維拉、領頭羊兵工廠客戰布萊頓、曼城主場迎戰桑德蘭。<br>
-                • <strong>西甲戰報</strong>：<strong>巴薩 7-2 桑坦德競技</strong>（拉菲尼亞戴帽），巴薩豪取開季 6 連勝 18 分獨霸榜首；皇馬 3-2 險勝埃爾切；週日馬德里德比即將開打！<br>
-                • <strong>意甲戰報</strong>：羅馬與國米開季 4 連勝齊聚榜首，今晚即將上演天王山正面交鋒！
+                • <strong>賽曆重大變革</strong>：國際足聯合併9月與10月窗口，打造<strong>長達16天的「超級國際比賽週」</strong>，每支國家隊將出戰最多4場正式或巡迴賽事！<br>
+                • <strong>歐國聯 A 級名帥首秀</strong>：<strong>克洛普執教德國首秀迎戰哈維荷蘭隊</strong>；<strong>齊達內正式掛帥法國迎戰土耳其與比利時</strong>；<strong>圖赫爾英格蘭溫布利決戰西班牙</strong>！<br>
+                • <strong>球王梅西本土告別巡演</strong>：阿根廷本土迎戰玻利維亞、布吉納法索、貝南，<strong>梅西身披金色10號戰袍迎本土終極告別戰</strong>！<br>
+                • <strong>全球巡迴熱戰</strong>：安切洛蒂五星巴西全球巡演（澳洲/印度站）、波切蒂諾美國隊考驗16歲神童蘇利文、非洲盃外圍賽與東盟盃、海灣盃同步打響。
               </p>
               <div style="font-size: 0.82rem; color: var(--color-blue); font-weight: 600;">
-                💡 完整 365Scores 賽事數據與積分榜已即時同步對齊，點擊球隊可直接開啟現役陣容！
+                💡 歐洲五大聯賽將於 10/07 重啟；在此期間所有超級國際比賽週焦點強強對話已收錄至跨聯盟賽程區！
               </div>
             </div>
           </div>
           <button class="btn-tab" style="background: rgba(2, 132, 199, 0.15); border-color: var(--color-blue); color: var(--color-blue); font-weight: 700; padding: 0.5rem 0.9rem; border-radius: 8px; white-space: nowrap;" onclick="const t = document.querySelector('[data-standings-league=uefa]'); if(t) t.click();">
-            ⭐ 檢視歐冠 36 強戰況
+            ⭐ 檢視超級國際比賽週賽程
           </button>
         </div>
       </div>
@@ -2532,7 +2532,26 @@ function getTeamEnglishName(teamCnName) {
     '巴西': 'Brazil',
     '厄瓜多': 'Ecuador',
     '烏拉圭': 'Uruguay',
-    '巴拉圭': 'Paraguay'
+    '巴拉圭': 'Paraguay',
+    '阿根廷': 'Argentina',
+    '玻利維亞': 'Bolivia',
+    '布吉納法索': 'Burkina Faso',
+    '貝南': 'Benin',
+    '澳大利亞': 'Australia',
+    '印度': 'India',
+    '美國': 'USA',
+    '墨西哥': 'Mexico',
+    '加拿大': 'Canada',
+    '秘魯': 'Peru',
+    '智利': 'Chile',
+    '象牙海岸': 'Ivory Coast',
+    '加納': 'Ghana',
+    '馬利': 'Mali',
+    '維德角': 'Cape Verde',
+    '摩洛哥': 'Morocco',
+    '加彭': 'Gabon',
+    '沙烏地阿拉伯': 'Saudi Arabia',
+    '卡達': 'Qatar'
   };
   
   return fallbackDict[teamCnName] || '';
