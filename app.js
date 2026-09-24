@@ -215,7 +215,7 @@ function renderLeagueDetail(leagueId) {
         <div class="detail-tab-content" id="detail-tab-standings" style="display: none;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
             <span style="font-size: 0.8rem; color: #0284c7; background: rgba(2, 132, 199, 0.1); border: 1px solid rgba(2, 132, 199, 0.25); padding: 0.2rem 0.6rem; border-radius: 6px; font-weight: 600;">
-              🗓️ 最後登錄日期：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-09-06'}（最後完賽日：${(footballData.meta && footballData.meta.lastMatchDate) || '2026-09-05'}）
+              🗓️ 最後登錄日期：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-09-24'}（最後完賽日：${(footballData.meta && footballData.meta.lastMatchDate) || '2026-09-20'}）
             </span>
             <span style="font-size: 0.8rem; color: var(--text-secondary);">點擊球隊名稱可直接開啟球員陣容</span>
           </div>
@@ -281,7 +281,7 @@ function renderLeagueDetail(leagueId) {
         <div class="detail-tab-content" id="detail-tab-fixtures" style="display: none;">
           <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 8px; padding: 0.6rem 0.9rem; margin-bottom: 1rem; font-size: 0.8rem; color: var(--text-secondary); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
             <span>🌍 <strong>超級國際比賽週進行中 (9/21 - 10/6)</strong>：FIFA改革首度實施16天超級國際比賽週，歐洲五大聯賽暫停，各國國家隊出征歐國聯、梅西告別巡演與國際大賽！</span>
-            <span style="color: #0284c7; font-weight: 600;">最後登錄：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-09-23'}</span>
+            <span style="color: #0284c7; font-weight: 600;">最後登錄：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-09-24'}</span>
           </div>
           <div class="fixtures-container">
             ${(footballData.leagueFixtures && footballData.leagueFixtures[league.id] ? footballData.leagueFixtures[league.id] : []).map(f => {
@@ -534,10 +534,10 @@ function initDedicatedStandings() {
     }
 
     const metaInfo = footballData.meta || {
-      lastUpdatedDate: "2026-09-06",
-      lastMatchDate: "2026-09-05",
-      intlBreakWindow: "2026-09-01 至 2026-09-11",
-      nextRoundStartDate: "2026-09-12 (週六)"
+      lastUpdatedDate: "2026-09-24",
+      lastMatchDate: "2026-09-20",
+      intlBreakWindow: "2026-09-21 至 2026-10-06 (超級國際比賽週・長達16天)",
+      nextRoundStartDate: "2026-10-07 (各國聯賽重啟)"
     };
 
     container.innerHTML = `

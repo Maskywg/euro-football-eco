@@ -2644,7 +2644,7 @@ const footballData = {
     ]
   },
   meta: {
-    lastUpdatedDate: "2026-09-23",
+    lastUpdatedDate: "2026-09-24",
     lastMatchDate: "2026-09-20",
     intlBreakWindow: "2026-09-21 至 2026-10-06 (超級國際比賽週・長達16天)",
     nextRoundStartDate: "2026-10-07 (各國聯賽重啟)"
