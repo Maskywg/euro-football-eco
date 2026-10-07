@@ -215,7 +215,7 @@ function renderLeagueDetail(leagueId) {
         <div class="detail-tab-content" id="detail-tab-standings" style="display: none;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
             <span style="font-size: 0.8rem; color: #0284c7; background: rgba(2, 132, 199, 0.1); border: 1px solid rgba(2, 132, 199, 0.25); padding: 0.2rem 0.6rem; border-radius: 6px; font-weight: 600;">
-              🗓️ 最後登錄日期：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-09-24'}（最後完賽日：${(footballData.meta && footballData.meta.lastMatchDate) || '2026-09-20'}）
+              🗓️ 最後登錄日期：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-10-08'}（最後完賽日：${(footballData.meta && footballData.meta.lastMatchDate) || '2026-10-06'}）
             </span>
             <span style="font-size: 0.8rem; color: var(--text-secondary);">點擊球隊名稱可直接開啟球員陣容</span>
           </div>
@@ -279,9 +279,9 @@ function renderLeagueDetail(leagueId) {
 
         <!-- Tab 4: Match Fixtures -->
         <div class="detail-tab-content" id="detail-tab-fixtures" style="display: none;">
-          <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 8px; padding: 0.6rem 0.9rem; margin-bottom: 1rem; font-size: 0.8rem; color: var(--text-secondary); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
-            <span>🌍 <strong>超級國際比賽週進行中 (9/21 - 10/6)</strong>：FIFA改革首度實施16天超級國際比賽週，歐洲五大聯賽暫停，各國國家隊出征歐國聯、梅西告別巡演與國際大賽！</span>
-            <span style="color: #0284c7; font-weight: 600;">最後登錄：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-09-24'}</span>
+          <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 8px; padding: 0.6rem 0.9rem; margin-bottom: 1rem; font-size: 0.8rem; color: var(--text-secondary); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+            <span>⚽ <strong>超級國際比賽週結束・五大聯賽與歐戰全面重啟</strong>：各大球星回歸俱樂部，歐冠 36 強第 2 輪強強對話即將打響！</span>
+            <span style="color: #0284c7; font-weight: 600;">最後登錄：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-10-08'}</span>
           </div>
           <div class="fixtures-container">
             ${(footballData.leagueFixtures && footballData.leagueFixtures[league.id] ? footballData.leagueFixtures[league.id] : []).map(f => {
@@ -516,7 +516,7 @@ function initDedicatedStandings() {
         <div style="margin-bottom: 1.25rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
             <div>
-              <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.25rem;">📅 超級國際比賽週 (9/21-10/6) & 歐戰焦點賽程</h3>
+              <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.25rem;">📅 歐冠聯賽階段第 2 輪 & 跨聯盟豪門焦點賽程</h3>
               <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                 <span style="color: var(--text-secondary); font-size: 0.88rem;">點擊對戰球隊名稱即可直接檢視該隊完整一線球員名單與球星陣容</span>
                 <a href="https://www.365scores.com/zh-tw" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; color: var(--color-blue); text-decoration: underline; font-weight: 600;">🔗 數據即時對齊自 365Scores (zh-tw)</a>
@@ -534,10 +534,10 @@ function initDedicatedStandings() {
     }
 
     const metaInfo = footballData.meta || {
-      lastUpdatedDate: "2026-09-24",
-      lastMatchDate: "2026-09-20",
-      intlBreakWindow: "2026-09-21 至 2026-10-06 (超級國際比賽週・長達16天)",
-      nextRoundStartDate: "2026-10-07 (各國聯賽重啟)"
+      lastUpdatedDate: "2026-10-08",
+      lastMatchDate: "2026-10-06",
+      intlBreakWindow: "2026-09-21 至 2026-10-06 (超級國際比賽週・已圓滿落幕)",
+      nextRoundStartDate: "2026-10-07 (五大聯賽與歐戰全面重啟)"
     };
 
     container.innerHTML = `
@@ -557,27 +557,26 @@ function initDedicatedStandings() {
       </div>
 
       <!-- International Match Window Notice Banner -->
-      <div style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(2, 132, 199, 0.08)); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1.5rem;">
+      <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(2, 132, 199, 0.08)); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1.5rem;">
         <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
           <div style="display: flex; align-items: flex-start; gap: 0.75rem; max-width: 800px;">
-            <span style="font-size: 1.6rem; line-height: 1;">🌍</span>
+            <span style="font-size: 1.6rem; line-height: 1;">⚽</span>
             <div>
               <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
-                【🔥 FIFA 超級國際比賽週全面啟動 (2026/09/21 - 10/06)・五大聯賽暫停・國際賽焦點盛宴】
+                【🔥 超級國際比賽週圓滿落幕・五大聯賽重啟＆歐冠第2輪火熱登場！】
               </div>
               <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0 0 0.4rem 0; line-height: 1.5;">
-                • <strong>賽曆重大變革</strong>：國際足聯合併9月與10月窗口，打造<strong>長達16天的「超級國際比賽週」</strong>，每支國家隊將出戰最多4場正式或巡迴賽事！<br>
-                • <strong>歐國聯 A 級名帥首秀</strong>：<strong>克洛普執教德國首秀迎戰哈維荷蘭隊</strong>；<strong>齊達內正式掛帥法國迎戰土耳其與比利時</strong>；<strong>圖赫爾英格蘭溫布利決戰西班牙</strong>！<br>
-                • <strong>球王梅西本土告別巡演</strong>：阿根廷本土迎戰玻利維亞、布吉納法索、貝南，<strong>梅西身披金色10號戰袍迎本土終極告別戰</strong>！<br>
-                • <strong>全球巡迴熱戰</strong>：安切洛蒂五星巴西全球巡演（澳洲/印度站）、波切蒂諾美國隊考驗16歲神童蘇利文、非洲盃外圍賽與東盟盃、海灣盃同步打響。
+                • <strong>國家隊賽況總結</strong>：齊達內執教法國隊迎歐國聯兩連勝（勝土耳其、勝義大利）；球王梅西本土告別巡演以自由球雙響完美謝幕；安切洛蒂巴西隊巡演狂轟大捷。<br>
+                • <strong>各國聯賽重啟</strong>：10/07 起歐洲五大聯賽重燃戰火！英超槍手與曼城爭冠、西甲巴薩連勝領跑、德甲拜仁火力全開。<br>
+                • <strong>歐冠聯賽階段第 2 輪預告</strong>：<strong>皇馬 vs 多特蒙德</strong>（決賽重演）、<strong>阿森納 vs 巴黎聖日耳曼</strong>（英法榜首對決）、<strong>巴塞隆納 vs 拜仁慕尼黑</strong>（天王山之戰）即將上演！
               </p>
               <div style="font-size: 0.82rem; color: var(--color-blue); font-weight: 600;">
-                💡 歐洲五大聯賽將於 10/07 重啟；在此期間所有超級國際比賽週焦點強強對話已收錄至跨聯盟賽程區！
+                💡 完整國際賽成果與歐冠最新賽程已全面更新對齊，點擊球隊可即時檢視球員陣容名單！
               </div>
             </div>
           </div>
           <button class="btn-tab" style="background: rgba(2, 132, 199, 0.15); border-color: var(--color-blue); color: var(--color-blue); font-weight: 700; padding: 0.5rem 0.9rem; border-radius: 8px; white-space: nowrap;" onclick="const t = document.querySelector('[data-standings-league=uefa]'); if(t) t.click();">
-            ⭐ 檢視超級國際比賽週賽程
+            ⭐ 檢視歐冠與跨聯盟賽程
           </button>
         </div>
       </div>
