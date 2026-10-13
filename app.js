@@ -215,7 +215,7 @@ function renderLeagueDetail(leagueId) {
         <div class="detail-tab-content" id="detail-tab-standings" style="display: none;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
             <span style="font-size: 0.8rem; color: #0284c7; background: rgba(2, 132, 199, 0.1); border: 1px solid rgba(2, 132, 199, 0.25); padding: 0.2rem 0.6rem; border-radius: 6px; font-weight: 600;">
-              🗓️ 最後登錄日期：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-10-08'}（最後完賽日：${(footballData.meta && footballData.meta.lastMatchDate) || '2026-10-06'}）
+              🗓️ 最後登錄日期：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-10-13'}（最後完賽日：${(footballData.meta && footballData.meta.lastMatchDate) || '2026-10-11'}）
             </span>
             <span style="font-size: 0.8rem; color: var(--text-secondary);">點擊球隊名稱可直接開啟球員陣容</span>
           </div>
@@ -280,8 +280,8 @@ function renderLeagueDetail(leagueId) {
         <!-- Tab 4: Match Fixtures -->
         <div class="detail-tab-content" id="detail-tab-fixtures" style="display: none;">
           <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 8px; padding: 0.6rem 0.9rem; margin-bottom: 1rem; font-size: 0.8rem; color: var(--text-secondary); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
-            <span>⚽ <strong>超級國際比賽週結束・五大聯賽與歐戰全面重啟</strong>：各大球星回歸俱樂部，歐冠 36 強第 2 輪強強對話即將打響！</span>
-            <span style="color: #0284c7; font-weight: 600;">最後登錄：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-10-08'}</span>
+            <span>⚽ <strong>五大聯賽最新戰報全面同步・歐冠 36 強第 2 輪倒數</strong>：曼城力克紅軍、皇馬巴薩大捷、拜仁穩居榜首！</span>
+            <span style="color: #0284c7; font-weight: 600;">最後登錄：${(footballData.meta && footballData.meta.lastUpdatedDate) || '2026-10-13'}</span>
           </div>
           <div class="fixtures-container">
             ${(footballData.leagueFixtures && footballData.leagueFixtures[league.id] ? footballData.leagueFixtures[league.id] : []).map(f => {
@@ -534,10 +534,10 @@ function initDedicatedStandings() {
     }
 
     const metaInfo = footballData.meta || {
-      lastUpdatedDate: "2026-10-08",
-      lastMatchDate: "2026-10-06",
+      lastUpdatedDate: "2026-10-13",
+      lastMatchDate: "2026-10-11",
       intlBreakWindow: "2026-09-21 至 2026-10-06 (超級國際比賽週・已圓滿落幕)",
-      nextRoundStartDate: "2026-10-07 (五大聯賽與歐戰全面重啟)"
+      nextRoundStartDate: "2026-10-17 (五大聯賽新一輪開戰・歐冠第2輪倒數)"
     };
 
     container.innerHTML = `
@@ -563,15 +563,16 @@ function initDedicatedStandings() {
             <span style="font-size: 1.6rem; line-height: 1;">⚽</span>
             <div>
               <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
-                【🔥 超級國際比賽週圓滿落幕・五大聯賽重啟＆歐冠第2輪火熱登場！】
+                【🔥 五大聯賽週末焦點戰圓滿完賽・最新戰績出爐＆歐冠第2輪倒數！】
               </div>
               <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0 0 0.4rem 0; line-height: 1.5;">
-                • <strong>國家隊賽況總結</strong>：齊達內執教法國隊迎歐國聯兩連勝（勝土耳其、勝義大利）；球王梅西本土告別巡演以自由球雙響完美謝幕；安切洛蒂巴西隊巡演狂轟大捷。<br>
-                • <strong>各國聯賽重啟</strong>：10/07 起歐洲五大聯賽重燃戰火！英超槍手與曼城爭冠、西甲巴薩連勝領跑、德甲拜仁火力全開。<br>
-                • <strong>歐冠聯賽階段第 2 輪預告</strong>：<strong>皇馬 vs 多特蒙德</strong>（決賽重演）、<strong>阿森納 vs 巴黎聖日耳曼</strong>（英法榜首對決）、<strong>巴塞隆納 vs 拜仁慕尼黑</strong>（天王山之戰）即將上演！
+                • <strong>英超</strong>：曼城 2-1 客勝利物浦、阿森納 2-0 力克布倫特福德、曼聯 2-1 擊退切爾西升至第3！槍手藍月雙雄 6 戰全勝領跑。<br>
+                • <strong>西甲與德甲</strong>：巴薩 3-1 德比勝赫羅納 8 戰全勝傲視西甲；皇馬 2-0 挫黃潛；拜仁 3-1 破斯圖加特、多特 2-1 斬萊比錫穩佔前二。<br>
+                • <strong>意甲與法甲</strong>：米蘭 1-0 絕殺尤文升至前三、國米 2-0 杜林豪取 6 連勝領跑；大巴黎 3-0 橫掃斯特拉斯堡、摩納哥 2-1 擒里爾。<br>
+                • <strong>歐冠聯賽第 2 輪預告</strong>：<strong>皇馬 vs 多特蒙德</strong>（決賽重演）、<strong>阿森納 vs 巴黎聖日耳曼</strong>、<strong>巴塞隆納 vs 拜仁慕尼黑</strong>即將震撼登場！
               </p>
               <div style="font-size: 0.82rem; color: var(--color-blue); font-weight: 600;">
-                💡 完整國際賽成果與歐冠最新賽程已全面更新對齊，點擊球隊可即時檢視球員陣容名單！
+                💡 五大聯賽最新已賽場次、勝負進失球與球隊近況 Form 均已同步校準，點擊俱樂部即可查看球員名冊！
               </div>
             </div>
           </div>
