@@ -569,10 +569,10 @@ function initDedicatedStandings() {
                 • <strong>英超</strong>：曼城 2-1 客勝利物浦、阿森納 2-0 力克布倫特福德、曼聯 2-1 擊退切爾西升至第3！槍手藍月雙雄 6 戰全勝領跑。<br>
                 • <strong>西甲與德甲</strong>：巴薩 3-1 德比勝赫羅納 8 戰全勝傲視西甲；皇馬 2-0 挫黃潛；拜仁 3-1 破斯圖加特、多特 2-1 斬萊比錫穩佔前二。<br>
                 • <strong>意甲與法甲</strong>：米蘭 1-0 絕殺尤文升至前三、國米 2-0 杜林豪取 6 連勝領跑；大巴黎 3-0 橫掃斯特拉斯堡、摩納哥 2-1 擒里爾。<br>
-                • <strong>歐冠聯賽第 2 輪預告</strong>：<strong>皇馬 vs 多特蒙德</strong>（決賽重演）、<strong>阿森納 vs 巴黎聖日耳曼</strong>、<strong>巴塞隆納 vs 拜仁慕尼黑</strong>即將震撼登場！
+                • <strong>歐冠聯賽第 2 輪熱血開戰</strong>：<strong>10/14 雙 FCB 出擊</strong>（加拉塔薩雷 vs 巴塞隆納、維京 vs 拜仁慕尼黑），接續更有<strong>皇馬 vs 多特蒙德</strong>、<strong>阿森納 vs 巴黎聖日耳曼</strong>即將震撼登場！
               </p>
               <div style="font-size: 0.82rem; color: var(--color-blue); font-weight: 600;">
-                💡 五大聯賽最新已賽場次、勝負進失球與球隊近況 Form 均已同步校準，點擊俱樂部即可查看球員名冊！
+                💡 五大聯賽最新戰績與 10/14 歐冠雙 FCB 焦點賽程已同步登錄，點擊俱樂部即可查看現役陣容！
               </div>
             </div>
           </div>

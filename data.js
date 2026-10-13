@@ -2648,10 +2648,34 @@ const footballData = {
     lastUpdatedDate: "2026-10-13",
     lastMatchDate: "2026-10-11",
     intlBreakWindow: "2026-09-21 至 2026-10-06 (超級國際比賽週・已圓滿落幕)",
-    nextRoundStartDate: "2026-10-17 (五大聯賽新一輪開戰・歐冠第2輪倒數)"
+    nextRoundStartDate: "2026-10-14 (歐冠第2輪開打・雙FCB巴薩與拜仁出擊)"
   },
   leagueFixtures: {
     "uefa": [
+        {
+            "round": "歐冠 聯賽第 2 輪",
+            "competition": "歐洲冠軍聯賽 (UCL)",
+            "date": "2026-10-14 03:00",
+            "home": "加拉塔薩雷",
+            "away": "巴塞隆納",
+            "status": "即將上演",
+            "stadium": "拉姆斯公園球場 (RAMS Park, 伊斯坦堡)",
+            "highlight": "🔥 FCB巴薩出征土耳其魔鬼主場！弗里克軍團攜西甲8連勝氣勢客戰加拉塔薩雷，萊萬、拉菲尼亞領銜出擊",
+            "isGiant": true,
+            "isCrossLeague": true
+        },
+        {
+            "round": "歐冠 聯賽第 2 輪",
+            "competition": "歐洲冠軍聯賽 (UCL)",
+            "date": "2026-10-14 03:00",
+            "home": "維京",
+            "away": "拜仁慕尼黑",
+            "status": "即將上演",
+            "stadium": "維京體育場 (SR-Bank Arena, 挪威)",
+            "highlight": "🔥 FCB拜仁遠征北歐！凱恩、奧利塞、穆西亞拉領軍客戰挪超黑馬維京，衝擊歐冠二連勝",
+            "isGiant": true,
+            "isCrossLeague": true
+        },
         {
             "round": "歐冠 聯賽第 2 輪",
             "competition": "歐洲冠軍聯賽 (UCL)",
