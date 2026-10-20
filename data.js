@@ -1855,6 +1855,12 @@ const footballData = {
                   "name": "洛伊斯·奧蓬達 (Loïs Openda)",
                   "nat": "比利時 🇧🇪",
                   "role": "閃電射手"
+            },
+            {
+                  "num": 7,
+                  "name": "安東尼奧·努薩 (Antonio Nusa)",
+                  "nat": "挪威 🇳🇴",
+                  "role": "突破爆破型邊鋒 / 挪威天才神童"
             }
       ]
 },
